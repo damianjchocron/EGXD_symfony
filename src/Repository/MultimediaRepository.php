@@ -47,4 +47,19 @@ class MultimediaRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function Guardar(Multimedia $Multimedia): Multimedia
+    {
+        $entitymanager = $this->getEntityManager();
+        $entitymanager->persist($Multimedia);
+        $entitymanager->flush();
+        return $Multimedia;
+    }
+
+    public function findByArray($idproduct)
+    {
+        $qb = $this->createQueryBuilder('u')
+            ->select('u')
+            ->andWhere("u.idproduct = :idproduct")->setParameter('idproduct', $idproduct);
+        return $qb->getQuery()->getArrayResult();
+    }
 }

@@ -3,5 +3,17 @@ index:
    controller: App\Controller\HomeController::index
 
 all:
-   path: /product/all
+   path: /product/all/{idproducto?}/{sort?}/{page?}/{search?}
    controller: App\Controller\ProductController::all
+
+insertform:
+   path: /product/insertform
+   controller: App\Controller\ProductController::insertform
+
+modify:
+   path: /product/modify
+   controller: App\Controller\ProductController::modify
+
+ajaxFind:
+   path: /multimedia/ajaxFind
+   controller: App\Controller\MultimediaController::ajaxFind

@@ -16,7 +16,9 @@ return [
         '/product' => [[['_route' => 'product', '_controller' => 'App\\Controller\\ProductController::index'], null, null, null, false, false, null]],
         '/usuario' => [[['_route' => 'usuario', '_controller' => 'App\\Controller\\UsuarioController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
-        '/product/all' => [[['_route' => 'all', '_controller' => 'App\\Controller\\ProductController::all'], null, null, null, false, false, null]],
+        '/product/insertform' => [[['_route' => 'insertform', '_controller' => 'App\\Controller\\ProductController::insertform'], null, null, null, false, false, null]],
+        '/product/modify' => [[['_route' => 'modify', '_controller' => 'App\\Controller\\ProductController::modify'], null, null, null, false, false, null]],
+        '/multimedia/ajaxFind' => [[['_route' => 'ajaxFind', '_controller' => 'App\\Controller\\MultimediaController::ajaxFind'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -35,6 +37,7 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
+                .'|/product/all(?:/([^/]++)(?:/([^/]++)(?:/([^/]++)(?:/([^/]++))?)?)?)?(*:237)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -44,8 +47,9 @@ return [
         116 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        159 => [
-            [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
+        159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
+        237 => [
+            [['_route' => 'all', 'idproducto' => null, 'sort' => null, 'page' => null, 'search' => null, '_controller' => 'App\\Controller\\ProductController::all'], ['idproducto', 'sort', 'page', 'search'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

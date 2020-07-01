@@ -18,5 +18,8 @@ return [
     'product' => [[], ['_controller' => 'App\\Controller\\ProductController::index'], [], [['text', '/product']], [], []],
     'usuario' => [[], ['_controller' => 'App\\Controller\\UsuarioController::index'], [], [['text', '/usuario']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
-    'all' => [[], ['_controller' => 'App\\Controller\\ProductController::all'], [], [['text', '/product/all']], [], []],
+    'all' => [['idproducto', 'sort', 'page', 'search'], ['idproducto' => null, 'sort' => null, 'page' => null, 'search' => null, '_controller' => 'App\\Controller\\ProductController::all'], [], [['variable', '/', '[^/]++', 'search', true], ['variable', '/', '[^/]++', 'page', true], ['variable', '/', '[^/]++', 'sort', true], ['variable', '/', '[^/]++', 'idproducto', true], ['text', '/product/all']], [], []],
+    'insertform' => [[], ['_controller' => 'App\\Controller\\ProductController::insertform'], [], [['text', '/product/insertform']], [], []],
+    'modify' => [[], ['_controller' => 'App\\Controller\\ProductController::modify'], [], [['text', '/product/modify']], [], []],
+    'ajaxFind' => [[], ['_controller' => 'App\\Controller\\MultimediaController::ajaxFind'], [], [['text', '/multimedia/ajaxFind']], [], []],
 ];

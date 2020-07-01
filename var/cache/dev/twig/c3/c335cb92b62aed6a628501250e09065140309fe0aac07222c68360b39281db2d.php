@@ -92,12 +92,10 @@ class __TwigTemplate_9facf1c5f57c300932a26ed786beaad12751d8b79dac364f0baa62be3be
 \t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
 \t\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
 \t\t<script src=\"https://kit.fontawesome.com/2ce703cfa3.js\" crossorigin=\"anonymous\"></script>
-\t\t<script src=\"/js/cesta.js\"></script>
-\t\t<script src=\"/js/header.js\"></script>
 \t\t";
-        // line 35
+        // line 33
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 36
+        // line 34
         echo "\t</body>
 </html>
 ";
@@ -229,7 +227,7 @@ class __TwigTemplate_9facf1c5f57c300932a26ed786beaad12751d8b79dac364f0baa62be3be
 
     }
 
-    // line 35
+    // line 33
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -254,7 +252,7 @@ class __TwigTemplate_9facf1c5f57c300932a26ed786beaad12751d8b79dac364f0baa62be3be
 
     public function getDebugInfo()
     {
-        return array (  233 => 35,  223 => 25,  220 => 24,  210 => 23,  192 => 20,  182 => 17,  179 => 16,  169 => 15,  151 => 11,  131 => 7,  113 => 5,  101 => 36,  99 => 35,  88 => 26,  86 => 23,  82 => 21,  80 => 20,  76 => 18,  74 => 15,  69 => 12,  67 => 11,  63 => 9,  61 => 7,  58 => 6,  56 => 5,  50 => 1,);
+        return array (  231 => 33,  221 => 25,  218 => 24,  208 => 23,  190 => 20,  180 => 17,  177 => 16,  167 => 15,  149 => 11,  129 => 7,  111 => 5,  99 => 34,  97 => 33,  88 => 26,  86 => 23,  82 => 21,  80 => 20,  76 => 18,  74 => 15,  69 => 12,  67 => 11,  63 => 9,  61 => 7,  58 => 6,  56 => 5,  50 => 1,);
     }
 
     public function getSourceContext()
@@ -291,8 +289,6 @@ class __TwigTemplate_9facf1c5f57c300932a26ed786beaad12751d8b79dac364f0baa62be3be
 \t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
 \t\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
 \t\t<script src=\"https://kit.fontawesome.com/2ce703cfa3.js\" crossorigin=\"anonymous\"></script>
-\t\t<script src=\"/js/cesta.js\"></script>
-\t\t<script src=\"/js/header.js\"></script>
 \t\t{% block javascripts %}{% endblock %}
 \t</body>
 </html>

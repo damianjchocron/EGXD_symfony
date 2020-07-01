@@ -103,13 +103,13 @@ class __TwigTemplate_a5d4ef9bd7542d6b1828e45d9c6ac4766c3720e2c21da7e2a77c5a10bb5
             echo "\t\t\t\t\t\t<!-- Aca en los href van los FILTROS  -->
 \t\t\t\t\t\t";
             // line 18
-            echo "\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"all?";
+            echo "\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"all?";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idcategoria", [], "any", false, false, false, 18), "html", null, true);
             echo " ";
             echo twig_escape_filter($this->env, (isset($context["filtersort"]) || array_key_exists("filtersort", $context) ? $context["filtersort"] : (function () { throw new RuntimeError('Variable "filtersort" does not exist.', 18, $this->source); })()), "html", null, true);
             echo " ";
             echo twig_escape_filter($this->env, (isset($context["filterpage"]) || array_key_exists("filterpage", $context) ? $context["filterpage"] : (function () { throw new RuntimeError('Variable "filterpage" does not exist.', 18, $this->source); })()), "html", null, true);
-            echo "\">";
+            echo "\"> ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "nombrecategoria", [], "any", false, false, false, 18), "html", null, true);
             echo "</a>
 \t\t\t\t\t";
@@ -127,25 +127,25 @@ class __TwigTemplate_a5d4ef9bd7542d6b1828e45d9c6ac4766c3720e2c21da7e2a77c5a10bb5
 \t\t\t\t<div
 \t\t\t\t\tclass=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
 \t\t\t\t\t<!-- Aca en los href van los FILTROS  -->
-\t\t\t\t\t<a class=\"dropdown-item\" href=\"product/all&sort=1 ";
+\t\t\t\t\t<a class=\"dropdown-item\" href=\"all?&sort=1 ";
         // line 29
         echo twig_escape_filter($this->env, (isset($context["filtercategory"]) || array_key_exists("filtercategory", $context) ? $context["filtercategory"] : (function () { throw new RuntimeError('Variable "filtercategory" does not exist.', 29, $this->source); })()), "html", null, true);
         echo " ";
         echo twig_escape_filter($this->env, (isset($context["filterpage"]) || array_key_exists("filterpage", $context) ? $context["filterpage"] : (function () { throw new RuntimeError('Variable "filterpage" does not exist.', 29, $this->source); })()), "html", null, true);
         echo " \">Mas Reciente</a>
-\t\t\t\t\t<a class=\"dropdown-item\" href=\"product/all&sort=2 ";
+\t\t\t\t\t<a class=\"dropdown-item\" href=\"all?&sort=2 ";
         // line 30
         echo twig_escape_filter($this->env, (isset($context["filtercategory"]) || array_key_exists("filtercategory", $context) ? $context["filtercategory"] : (function () { throw new RuntimeError('Variable "filtercategory" does not exist.', 30, $this->source); })()), "html", null, true);
         echo " ";
         echo twig_escape_filter($this->env, (isset($context["filterpage"]) || array_key_exists("filterpage", $context) ? $context["filterpage"] : (function () { throw new RuntimeError('Variable "filterpage" does not exist.', 30, $this->source); })()), "html", null, true);
         echo " \">Mas Antiguo</a>
-\t\t\t\t\t<a class=\"dropdown-item\" href=\"product/all&sort=3 ";
+\t\t\t\t\t<a class=\"dropdown-item\" href=\"all?&sort=3 ";
         // line 31
         echo twig_escape_filter($this->env, (isset($context["filtercategory"]) || array_key_exists("filtercategory", $context) ? $context["filtercategory"] : (function () { throw new RuntimeError('Variable "filtercategory" does not exist.', 31, $this->source); })()), "html", null, true);
         echo " ";
         echo twig_escape_filter($this->env, (isset($context["filterpage"]) || array_key_exists("filterpage", $context) ? $context["filterpage"] : (function () { throw new RuntimeError('Variable "filterpage" does not exist.', 31, $this->source); })()), "html", null, true);
         echo " \">Mayor Precio</a>
-\t\t\t\t\t<a class=\"dropdown-item\" href=\"product/all&sort=4 ";
+\t\t\t\t\t<a class=\"dropdown-item\" href=\"all?&sort=4 ";
         // line 32
         echo twig_escape_filter($this->env, (isset($context["filtercategory"]) || array_key_exists("filtercategory", $context) ? $context["filtercategory"] : (function () { throw new RuntimeError('Variable "filtercategory" does not exist.', 32, $this->source); })()), "html", null, true);
         echo " ";
@@ -230,25 +230,70 @@ class __TwigTemplate_a5d4ef9bd7542d6b1828e45d9c6ac4766c3720e2c21da7e2a77c5a10bb5
         echo "\t\t</div>
 \t</div>
 
-<nav aria-label=\"Page navigation example\" class=\"m-5\">
-\t<ul
-\t\tclass=\"pagination\">
-\t\t<!-- Aca en los href van los FILTROS  -->
-\t\t<li class=\"page-item\">
-\t\t\t<a class=\"page-link\" href=\"product/all&page=\" . \$prev . \$filtersort . \$filtercategory ?>\">Anterior</a>
-\t\t</li>
-\t\t";
-        // line 83
-        echo "<li class=\"page-item <?php echo \$active ?>\">
-\t\t\t<a class=\"page-link\" href=\"product/all&page=\" . \$i . \$filtersort . \$filtercategory ?>\"><?php echo \$i ?></a>
-\t\t</li>
-\t\t";
-        // line 87
-        echo "\t\t<li class=\"page-item\">
-\t\t\t<a class=\"page-link\" href=\"product/all&page= . \$next . \$filtersort . \$filtercategory . \$filtersearch\">Siguiente</a>
-\t\t</li>
-\t</ul>
-</nav>";
+\t<nav aria-label=\"Page navigation example\" class=\"m-5\">
+\t\t<ul
+\t\t\tclass=\"pagination\">
+\t\t\t<!-- Aca en los href van los FILTROS  -->
+\t\t\t<li class=\"page-item\">
+\t\t\t\t<a class=\"page-link\" href=\"all?&page=";
+        // line 78
+        echo twig_escape_filter($this->env, (isset($context["prev"]) || array_key_exists("prev", $context) ? $context["prev"] : (function () { throw new RuntimeError('Variable "prev" does not exist.', 78, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["filtersort"]) || array_key_exists("filtersort", $context) ? $context["filtersort"] : (function () { throw new RuntimeError('Variable "filtersort" does not exist.', 78, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["filtercategory"]) || array_key_exists("filtercategory", $context) ? $context["filtercategory"] : (function () { throw new RuntimeError('Variable "filtercategory" does not exist.', 78, $this->source); })()), "html", null, true);
+        echo "\">Anterior</a>
+\t\t\t</li>
+\t\t\t";
+        // line 81
+        echo "\t\t\t";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["numPaginas"]) || array_key_exists("numPaginas", $context) ? $context["numPaginas"] : (function () { throw new RuntimeError('Variable "numPaginas" does not exist.', 81, $this->source); })())));
+        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+            // line 82
+            echo "\t\t\t\t";
+            $context["active"] = "";
+            // line 83
+            echo "\t\t\t\t";
+            if (0 === twig_compare((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 83, $this->source); })()), $context["i"])) {
+                // line 84
+                echo "\t\t\t\t\t";
+                $context["active"] = "active";
+                // line 85
+                echo "\t\t\t\t";
+            }
+            // line 86
+            echo "\t\t\t\t<li class=\"page-item ";
+            echo twig_escape_filter($this->env, (isset($context["active"]) || array_key_exists("active", $context) ? $context["active"] : (function () { throw new RuntimeError('Variable "active" does not exist.', 86, $this->source); })()), "html", null, true);
+            echo "\">
+\t\t\t\t\t<a class=\"page-link\" href=\"all?&page=";
+            // line 87
+            echo twig_escape_filter($this->env, $context["i"], "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["filtersort"]) || array_key_exists("filtersort", $context) ? $context["filtersort"] : (function () { throw new RuntimeError('Variable "filtersort" does not exist.', 87, $this->source); })()), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["filtercategory"]) || array_key_exists("filtercategory", $context) ? $context["filtercategory"] : (function () { throw new RuntimeError('Variable "filtercategory" does not exist.', 87, $this->source); })()), "html", null, true);
+            echo "\">
+\t\t\t\t\t\t";
+            // line 88
+            echo twig_escape_filter($this->env, $context["i"], "html", null, true);
+            echo "
+\t\t\t\t\t</a>
+\t\t\t\t</li>
+\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 92
+        echo "\t\t\t<li class=\"page-item\">
+\t\t\t\t<a class=\"page-link\" href=\"all?&page=";
+        // line 93
+        echo twig_escape_filter($this->env, (isset($context["next"]) || array_key_exists("next", $context) ? $context["next"] : (function () { throw new RuntimeError('Variable "next" does not exist.', 93, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["filtersort"]) || array_key_exists("filtersort", $context) ? $context["filtersort"] : (function () { throw new RuntimeError('Variable "filtersort" does not exist.', 93, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["filtercategory"]) || array_key_exists("filtercategory", $context) ? $context["filtercategory"] : (function () { throw new RuntimeError('Variable "filtercategory" does not exist.', 93, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["filtersearch"]) || array_key_exists("filtersearch", $context) ? $context["filtersearch"] : (function () { throw new RuntimeError('Variable "filtersearch" does not exist.', 93, $this->source); })()), "html", null, true);
+        echo "\">Siguiente</a>
+\t\t\t</li>
+\t\t</ul>
+\t</nav>
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -269,7 +314,7 @@ class __TwigTemplate_a5d4ef9bd7542d6b1828e45d9c6ac4766c3720e2c21da7e2a77c5a10bb5
 
     public function getDebugInfo()
     {
-        return array (  247 => 87,  242 => 83,  230 => 70,  218 => 64,  214 => 63,  210 => 62,  206 => 61,  201 => 59,  196 => 56,  192 => 55,  171 => 42,  164 => 38,  161 => 37,  159 => 36,  150 => 32,  144 => 31,  138 => 30,  132 => 29,  121 => 20,  106 => 18,  103 => 16,  99 => 15,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  288 => 93,  285 => 92,  275 => 88,  269 => 87,  264 => 86,  261 => 85,  258 => 84,  255 => 83,  252 => 82,  247 => 81,  240 => 78,  230 => 70,  218 => 64,  214 => 63,  210 => 62,  206 => 61,  201 => 59,  196 => 56,  192 => 55,  171 => 42,  164 => 38,  161 => 37,  159 => 36,  150 => 32,  144 => 31,  138 => 30,  132 => 29,  121 => 20,  106 => 18,  103 => 16,  99 => 15,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -291,7 +336,7 @@ class __TwigTemplate_a5d4ef9bd7542d6b1828e45d9c6ac4766c3720e2c21da7e2a77c5a10bb5
 \t\t\t\t\t{% for value in categorias %}
 \t\t\t\t\t\t<!-- Aca en los href van los FILTROS  -->
 \t\t\t\t\t\t{# <a class=\"dropdown-item\" href=\"{{ path(\"all\", {idcategoria: value.idcategoria}, {sort: sort}, {page: page}) }}>{{value.nombrecategoria}}</a> #}
-\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"all?{{value.idcategoria}} {{filtersort}} {{filterpage}}\">{{value.nombrecategoria}}</a>
+\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"all?{{value.idcategoria}} {{filtersort}} {{filterpage}}\"> {{value.nombrecategoria}}</a>
 \t\t\t\t\t{% endfor %}
 \t\t\t\t</div>
 \t\t\t</div>
@@ -302,10 +347,10 @@ class __TwigTemplate_a5d4ef9bd7542d6b1828e45d9c6ac4766c3720e2c21da7e2a77c5a10bb5
 \t\t\t\t<div
 \t\t\t\t\tclass=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
 \t\t\t\t\t<!-- Aca en los href van los FILTROS  -->
-\t\t\t\t\t<a class=\"dropdown-item\" href=\"product/all&sort=1 {{filtercategory}} {{filterpage}} \">Mas Reciente</a>
-\t\t\t\t\t<a class=\"dropdown-item\" href=\"product/all&sort=2 {{filtercategory}} {{filterpage}} \">Mas Antiguo</a>
-\t\t\t\t\t<a class=\"dropdown-item\" href=\"product/all&sort=3 {{filtercategory}} {{filterpage}} \">Mayor Precio</a>
-\t\t\t\t\t<a class=\"dropdown-item\" href=\"product/all&sort=4 {{filtercategory}} {{filterpage}} \">Menor Precio</a>
+\t\t\t\t\t<a class=\"dropdown-item\" href=\"all?&sort=1 {{filtercategory}} {{filterpage}} \">Mas Reciente</a>
+\t\t\t\t\t<a class=\"dropdown-item\" href=\"all?&sort=2 {{filtercategory}} {{filterpage}} \">Mas Antiguo</a>
+\t\t\t\t\t<a class=\"dropdown-item\" href=\"all?&sort=3 {{filtercategory}} {{filterpage}} \">Mayor Precio</a>
+\t\t\t\t\t<a class=\"dropdown-item\" href=\"all?&sort=4 {{filtercategory}} {{filterpage}} \">Menor Precio</a>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
@@ -346,25 +391,31 @@ class __TwigTemplate_a5d4ef9bd7542d6b1828e45d9c6ac4766c3720e2c21da7e2a77c5a10bb5
 \t\t</div>
 \t</div>
 
-<nav aria-label=\"Page navigation example\" class=\"m-5\">
-\t<ul
-\t\tclass=\"pagination\">
-\t\t<!-- Aca en los href van los FILTROS  -->
-\t\t<li class=\"page-item\">
-\t\t\t<a class=\"page-link\" href=\"product/all&page=\" . \$prev . \$filtersort . \$filtercategory ?>\">Anterior</a>
-\t\t</li>
-\t\t{# <?php for (\$i = 1; \$i <= \$numPaginas; \$i++) : ?>
-\t\t<?php \$active = \"\" ?>
-\t\t<?php if (\$page == \$i) \$active = \"active\" ?>
-\t\t #}<li class=\"page-item <?php echo \$active ?>\">
-\t\t\t<a class=\"page-link\" href=\"product/all&page=\" . \$i . \$filtersort . \$filtercategory ?>\"><?php echo \$i ?></a>
-\t\t</li>
-\t\t{# <?php endfor ?> #}
-\t\t<li class=\"page-item\">
-\t\t\t<a class=\"page-link\" href=\"product/all&page= . \$next . \$filtersort . \$filtercategory . \$filtersearch\">Siguiente</a>
-\t\t</li>
-\t</ul>
-</nav>{% endblock %}
+\t<nav aria-label=\"Page navigation example\" class=\"m-5\">
+\t\t<ul
+\t\t\tclass=\"pagination\">
+\t\t\t<!-- Aca en los href van los FILTROS  -->
+\t\t\t<li class=\"page-item\">
+\t\t\t\t<a class=\"page-link\" href=\"all?&page={{prev}}{{filtersort}}{{filtercategory}}\">Anterior</a>
+\t\t\t</li>
+\t\t\t{# {{numPaginas}} #}
+\t\t\t{% for i in 1..numPaginas %}
+\t\t\t\t{% set active = \"\" %}
+\t\t\t\t{% if page==i %}
+\t\t\t\t\t{% set active = \"active\" %}
+\t\t\t\t{% endif %}
+\t\t\t\t<li class=\"page-item {{active}}\">
+\t\t\t\t\t<a class=\"page-link\" href=\"all?&page={{i}}{{filtersort}}{{filtercategory}}\">
+\t\t\t\t\t\t{{i}}
+\t\t\t\t\t</a>
+\t\t\t\t</li>
+\t\t\t{% endfor %}
+\t\t\t<li class=\"page-item\">
+\t\t\t\t<a class=\"page-link\" href=\"all?&page={{next}}{{filtersort}}{{filtercategory}}{{filtersearch}}\">Siguiente</a>
+\t\t\t</li>
+\t\t</ul>
+\t</nav>
+{% endblock %}
 ", "product/all.html.twig", "/var/www/html/EGXD_symfony/templates/product/all.html.twig");
     }
 }

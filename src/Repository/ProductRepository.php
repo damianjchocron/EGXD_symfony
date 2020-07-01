@@ -116,20 +116,13 @@ class ProductRepository extends ServiceEntityRepository
         return $array;
     }
 
-    public function guardar(Producto $producto): Producto
-    {
-        $entitymanager = $this->getEntityManager();
-        $entitymanager->persist($producto);
-        $entitymanager->flush();
-        return $producto;
-    }
-    public function Delete(Producto $producto): Producto
+    public function Delete(Product $product): Product
     {
         $em = $this->getEntityManager();
-        $em->remove($producto);
+        $em->remove($product);
         $em->flush();
 
-        return $producto;
+        return $product;
     }
     public function viewhome(): array
     {
@@ -171,5 +164,13 @@ class ProductRepository extends ServiceEntityRepository
         $stmt->execute();
 
         return $stmt->fetchAll();
+    }
+
+    public function Guardar(Product $product): Product
+    {
+        $entitymanager = $this->getEntityManager();
+        $entitymanager->persist($product);
+        $entitymanager->flush();
+        return $product;
     }
 }
