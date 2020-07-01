@@ -18,17 +18,10 @@ class MultimediaController extends AbstractController
 
         $idproduct = $request->request->get('idproduct');
 
-        // $arrayObj = [];
-        // $objImg = $multimediaRepositoryInstance->findBy(['idproduct' => $idproduct]);
-
-
+        /* Necesito esto porque lo devuelve de una manera que puedo acceder en el fronte end */
         $objImg = $multimediaRepositoryInstance->findByArray($idproduct);
 
-        
         return new JsonResponse(array('objImg' => $objImg));
-
-        /* No puedo acceder a las propiedades */
-
    }
 
    public function Guardar(Request $request)

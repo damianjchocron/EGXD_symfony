@@ -88,7 +88,7 @@ function ajaxWithImg(objBtn) {
         url: '/multimedia/ajaxFind',
         method: 'post',
         data: data,
-        dataType: "html"
+        dataType: 'json',
     });
     request.done(function (response) {
         console.log(response);
