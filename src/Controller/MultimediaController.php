@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MultimediaController extends AbstractController
 {
- 
+
     public function ajaxFind(Request $request)
     {
         $multimediaRepositoryInstance = $this->getDoctrine()->getRepository(Multimedia::class);
@@ -22,28 +22,29 @@ class MultimediaController extends AbstractController
         $objImg = $multimediaRepositoryInstance->findByArray($idproduct);
 
         return new JsonResponse(array('objImg' => $objImg));
-   }
+    }
 
-   public function Guardar(Request $request)
+    public function Guardar(Request $request)
     {
         $idProducto = $request->request->get('idProducto');
         $uplodedFile = $request->files->get('fichero');
         $objProducto = $this->getDoctrine()->getRepository(Producto::class)->find($idProducto);
         $productoRepo = $this->getDoctrine()->getRepository(Producto::class)->findAll();
 
-        $ruta = "img/".$idProducto;
+        $rutaMove = "img/" . $idProducto;
+        $rutaBBDD = "/img/" . $idProducto;
         $objImagenes = [];
 
         foreach ($uplodedFile as $item) {
             $nombre = $item->getClientOriginalName();
-            $url = $ruta ."/". $nombre;
+            $url = $rutaBBDD . "/" . $nombre;
             $imagenes = new Multimedia();
             $imagenes->setIdproduct($objProducto);
             $imagenes->setPriority("0");
             $imagenes->setUrl($url);
-            $item->move($ruta, $nombre);
+            $item->move($rutaMove, $nombre);
 
-            $itemImagen = $this->getDoctrine()->getRepository(Imagenes::class)->Guardar($imagenes);
+            $itemImagen = $this->getDoctrine()->getRepository(Multimedia::class)->Guardar($imagenes);
             array_push($objImagenes, $itemImagen);
         }
 
@@ -55,21 +56,15 @@ class MultimediaController extends AbstractController
     }
     public function Borrar(Request $request)
     {
-        $id = $request->request->get('id');
-        $repo = $this->getDoctrine()->getRepository(Imagenes::class);
-        $img = $repo->find($id);
-        $idProducto = $img->getIdproducto()->getIdproducto();
-        $nombre = $img->getNombre();
-        $ruta = "imagen/producto/" . $idProducto . "/" . $nombre;
+        $idMultimedia = $request->request->get('idmultimedia');
+        $repoMultimedia = $this->getDoctrine()->getRepository(Multimedia::class);
+        $img = $repoMultimedia->find($idMultimedia);
+        $ruta = "." . $img->getUrl();
 
         unlink($ruta);
 
-        $repo->Delete($img);
+        $repoMultimedia->Delete($img);
 
-        $response = new Response();
-        $response->setContent(json_encode([
-            'msg' => "Fichero Eliminado",
-        ]));
-        return new JsonResponse(array('msg' => 'Fichero eliminado'));
+        return new JsonResponse(array('msj' => 'Fichero eliminado'));
     }
 }

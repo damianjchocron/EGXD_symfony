@@ -115,9 +115,9 @@ class __TwigTemplate_123cca0a6f993bbef6f424b07bb5d462251d0d5ac4f88defbef2260ba09
 \t\t</div>
 \t\t<div class=\"form-group inputFiles\">
 \t\t\t<label class=\"col-12 mt-3\" for=\"image\">Imagenes, la primera sera la Predefinida.</label>
-\t\t\t<button class=\"btn-primary btn\" id=\"btnAdd\">Agregar Foto</button>
+\t\t\t<button type=\"button\" class=\"btn-primary btn\" id=\"btnAdd\">Agregar Foto</button>
 \t\t\t<div class=\"mt-3\">
-\t\t\t\t<input type=\"file\" id=\"image\" class=\"form-control\" name=\"image\" aria-describedby=\"fichero\" placeholder=\"Fichero\">
+\t\t\t\t<input type=\"file\" id=\"image\" class=\"form-control\" name=\"fichero[]\" aria-describedby=\"fichero\" placeholder=\"Fichero\">
 \t\t\t</div>
 \t\t</div>
 \t\t<input type=\"submit\" class=\"btn btn-primary m-3\" name=\"submit\" value=\"Upload\"/>
@@ -201,9 +201,9 @@ class __TwigTemplate_123cca0a6f993bbef6f424b07bb5d462251d0d5ac4f88defbef2260ba09
 \t\t</div>
 \t\t<div class=\"form-group inputFiles\">
 \t\t\t<label class=\"col-12 mt-3\" for=\"image\">Imagenes, la primera sera la Predefinida.</label>
-\t\t\t<button class=\"btn-primary btn\" id=\"btnAdd\">Agregar Foto</button>
+\t\t\t<button type=\"button\" class=\"btn-primary btn\" id=\"btnAdd\">Agregar Foto</button>
 \t\t\t<div class=\"mt-3\">
-\t\t\t\t<input type=\"file\" id=\"image\" class=\"form-control\" name=\"image\" aria-describedby=\"fichero\" placeholder=\"Fichero\">
+\t\t\t\t<input type=\"file\" id=\"image\" class=\"form-control\" name=\"fichero[]\" aria-describedby=\"fichero\" placeholder=\"Fichero\">
 \t\t\t</div>
 \t\t</div>
 \t\t<input type=\"submit\" class=\"btn btn-primary m-3\" name=\"submit\" value=\"Upload\"/>

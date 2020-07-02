@@ -83,7 +83,9 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
         $context['_seq'] = twig_ensure_traversable((isset($context["dataproductforrender"]) || array_key_exists("dataproductforrender", $context) ? $context["dataproductforrender"] : (function () { throw new RuntimeError('Variable "dataproductforrender" does not exist.', 15, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
             // line 16
-            echo "\t\t\t\t<tr>
+            echo "\t\t\t\t<tr id=\"product";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 16), "html", null, true);
+            echo "\">
 \t\t\t\t\t<form method=\"POST\" action=\"/product/modify\">
 \t\t\t\t\t\t<th scope=\"row\"><input name=\"idproductmodify\" type=\"number\" class=\"form-control\" value=\"";
             // line 18
@@ -141,10 +143,12 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 \t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-success\">Actualizar</button>
 \t\t\t\t\t\t</td>
 \t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<a class=\"btn btn-danger\" href=\"/product/modify&delete=";
+\t\t\t\t\t\t\t<button data-idproduct=\"";
             // line 40
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 40), "html", null, true);
-            echo "\">Borrar</a>
+            echo "\" type=\"button\" class=\"btn btn-danger deleteproduct\" data-toggle=\"modal\" data-target=\"#ModalScrollable\">
+\t\t\t\t\t\t\t\tBorrar
+\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t</td>
 \t\t\t\t\t</form>
 \t\t\t\t</tr>
@@ -153,14 +157,14 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 45
+        // line 47
         echo "\t\t</tbody>
 \t</table>
 
 \t";
-        // line 48
-        if ( !twig_test_empty((isset($context["showmodal"]) || array_key_exists("showmodal", $context) ? $context["showmodal"] : (function () { throw new RuntimeError('Variable "showmodal" does not exist.', 48, $this->source); })()))) {
-            // line 49
+        // line 50
+        if ( !twig_test_empty((isset($context["showmodal"]) || array_key_exists("showmodal", $context) ? $context["showmodal"] : (function () { throw new RuntimeError('Variable "showmodal" does not exist.', 50, $this->source); })()))) {
+            // line 51
             echo "\t\t<div id=\"myModal\" class=\"modal\" tabindex=\"-1\" role=\"dialog\">
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
@@ -172,8 +176,8 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t<p>";
-            // line 59
-            echo twig_escape_filter($this->env, (isset($context["showmodal"]) || array_key_exists("showmodal", $context) ? $context["showmodal"] : (function () { throw new RuntimeError('Variable "showmodal" does not exist.', 59, $this->source); })()), "html", null, true);
+            // line 61
+            echo twig_escape_filter($this->env, (isset($context["showmodal"]) || array_key_exists("showmodal", $context) ? $context["showmodal"] : (function () { throw new RuntimeError('Variable "showmodal" does not exist.', 61, $this->source); })()), "html", null, true);
             echo "</p>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -181,7 +185,7 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 \t\t</div>
 \t";
         }
-        // line 65
+        // line 67
         echo "\t<!-- Button trigger modal -->
 
 \t<!-- Modal -->
@@ -202,7 +206,7 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 \t\t\t\t</div>
 \t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
-\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>
+\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary submitmodal\" data-dismiss=\"modal\">Save changes</button>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
@@ -216,7 +220,7 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 
     }
 
-    // line 92
+    // line 94
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -226,16 +230,8 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 93
-        echo "\t<script>
-\t\t// Pasa Json a frontEND
-\t\tvar url_base = \"<?php echo URL_BASE\";
-\t\tvar objImg =  ";
-        // line 96
-        echo twig_escape_filter($this->env, (isset($context["json"]) || array_key_exists("json", $context) ? $context["json"] : (function () { throw new RuntimeError('Variable "json" does not exist.', 96, $this->source); })()), "html", null, true);
-        echo ";
-\t</script>
-\t<script src=\"../js/jsmodalimagenesmodify.js\" type=\"text/javascript\"></script>
+        // line 95
+        echo "\t<script src=\"../js/jsmodalimagenesmodify.js\" type=\"text/javascript\"></script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -257,7 +253,7 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 
     public function getDebugInfo()
     {
-        return array (  235 => 96,  230 => 93,  220 => 92,  185 => 65,  176 => 59,  164 => 49,  162 => 48,  157 => 45,  146 => 40,  135 => 32,  130 => 29,  119 => 27,  114 => 26,  108 => 24,  102 => 21,  98 => 20,  94 => 19,  90 => 18,  86 => 16,  82 => 15,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  234 => 95,  224 => 94,  189 => 67,  180 => 61,  168 => 51,  166 => 50,  161 => 47,  148 => 40,  137 => 32,  132 => 29,  121 => 27,  116 => 26,  110 => 24,  104 => 21,  100 => 20,  96 => 19,  92 => 18,  86 => 16,  82 => 15,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -277,7 +273,7 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 \t\t</thead>
 \t\t<tbody>
 \t\t\t{% for value in dataproductforrender %}
-\t\t\t\t<tr>
+\t\t\t\t<tr id=\"product{{value.idproduct}}\">
 \t\t\t\t\t<form method=\"POST\" action=\"/product/modify\">
 \t\t\t\t\t\t<th scope=\"row\"><input name=\"idproductmodify\" type=\"number\" class=\"form-control\" value=\"{{value.idproduct}}\" readonly></th>
 \t\t\t\t\t\t<td><input name=\"titulo\" type=\"text\" class=\"form-control\" value=\"{{value.titulo}}\"></td>
@@ -301,7 +297,9 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 \t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-success\">Actualizar</button>
 \t\t\t\t\t\t</td>
 \t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<a class=\"btn btn-danger\" href=\"/product/modify&delete={{value.idproduct}}\">Borrar</a>
+\t\t\t\t\t\t\t<button data-idproduct=\"{{value.idproduct}}\" type=\"button\" class=\"btn btn-danger deleteproduct\" data-toggle=\"modal\" data-target=\"#ModalScrollable\">
+\t\t\t\t\t\t\t\tBorrar
+\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t</td>
 \t\t\t\t\t</form>
 \t\t\t\t</tr>
@@ -346,7 +344,7 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 \t\t\t\t</div>
 \t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
-\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>
+\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary submitmodal\" data-dismiss=\"modal\">Save changes</button>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
@@ -354,11 +352,6 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 {% endblock %}
 
 {% block javascripts %}
-\t<script>
-\t\t// Pasa Json a frontEND
-\t\tvar url_base = \"<?php echo URL_BASE\";
-\t\tvar objImg =  {{ json }};
-\t</script>
 \t<script src=\"../js/jsmodalimagenesmodify.js\" type=\"text/javascript\"></script>
 {% endblock %}
 ", "product/modify.html.twig", "/var/www/html/EGXD_symfony/templates/product/modify.html.twig");

@@ -61,7 +61,7 @@ class __TwigTemplate_9facf1c5f57c300932a26ed786beaad12751d8b79dac364f0baa62be3be
         $this->displayBlock('title', $context, $blocks);
         // line 9
         echo "\t\t</title>
-\t\t<link rel=\"stylesheet\" href=\"../css/css.css\">
+\t\t<link rel=\"stylesheet\" href=\"/css/css.css\">
 \t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\"> ";
         // line 11
         $this->displayBlock('stylesheets', $context, $blocks);
@@ -266,7 +266,7 @@ class __TwigTemplate_9facf1c5f57c300932a26ed786beaad12751d8b79dac364f0baa62be3be
 \t\t\t{% block title %}Welcome!
 \t\t\t{% endblock %}
 \t\t</title>
-\t\t<link rel=\"stylesheet\" href=\"../css/css.css\">
+\t\t<link rel=\"stylesheet\" href=\"/css/css.css\">
 \t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\"> {% block stylesheets %}{% endblock %}
 \t</head>
 \t<body>

@@ -8,10 +8,10 @@ function InicializarImagen() {
 
 function EventosImagen() {
     $('#btnAdd').on("click", function (e) {
-        e.preventDefault();
+        //e.preventDefault();
         $('.inputFiles').append(
             `   <div class="mt-5">
-                <input type="file" class="form-control" name="fichero" aria-describedby="fichero" placeholder="Fichero">
+                <input type="file" class="form-control" name="fichero[]" aria-describedby="fichero" placeholder="Fichero">
                 <button type="delete" onclick="QuitarUpload(this);">Quitar</button>
             </div>
         `);

@@ -62,4 +62,12 @@ class MultimediaRepository extends ServiceEntityRepository
             ->andWhere("u.idproduct = :idproduct")->setParameter('idproduct', $idproduct);
         return $qb->getQuery()->getArrayResult();
     }
+    public function Delete(Multimedia $Multimedia): Multimedia
+    {
+        $em = $this->getEntityManager();
+        $em->remove($Multimedia);
+        $em->flush();
+
+        return $Multimedia;
+    }
 }

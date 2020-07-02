@@ -2,18 +2,57 @@ index:
    path: /
    controller: App\Controller\HomeController::index
 
-all:
-   path: /product/all/{idproducto?}/{sort?}/{page?}/{search?}
+
+   
+allProduct:
+   path: /product/all/{idcategoria?}/{sort?}/{page?}/{search?}
    controller: App\Controller\ProductController::all
 
-insertform:
+insertformProduct:
    path: /product/insertform
    controller: App\Controller\ProductController::insertform
 
-modify:
+modifyProduct:
    path: /product/modify
    controller: App\Controller\ProductController::modify
 
-ajaxFind:
+ajaxDeleteProduct:
+   path: /product/borrar
+   controller: App\Controller\ProductController::borrar
+
+   
+
+ajaxFindMultimedia:
    path: /multimedia/ajaxFind
    controller: App\Controller\MultimediaController::ajaxFind
+
+ajaxDeleteMultimedia:
+   path: /multimedia/borrar
+   controller: App\Controller\MultimediaController::Borrar
+
+ajaxGuardarMultimedia:
+   path: /multimedia/guardar
+   controller: App\Controller\MultimediaController::Guardar
+
+
+categorianuevopost:
+    path: /categoria/nuevo/{id?}
+    controller: App\Controller\CategoriaController::insertupdate
+
+categoriaeditarpost:
+    path: /categoria/editar/{id}
+    controller: App\Controller\CategoriaController::insertupdate
+  
+categoriaguardarpost:
+    path: /categoria/guardar
+    controller: App\Controller\CategoriaController::insertupdatepost
+    methods: [POST]
+
+categoriaDelete:
+    path: /categoria/borrar/{id}
+    controller: App\Controller\CategoriaController::delete
+    methods: [GET]
+
+Categoria:
+    path: /categoria/{page?}
+    controller: App\Controller\CategoriaController::index

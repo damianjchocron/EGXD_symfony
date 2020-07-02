@@ -69,16 +69,16 @@ class __TwigTemplate_fbd6da2c74fe6611029e0f66b92801b3b4ec3d8fbe5175f254531823c1a
 \t\t\t\t<span class='navbar-brand mb-0 h2 col-12 eslogan'>Carlos Alfredo Gonzalez</span>
 \t\t\t</div>
 \t\t\t<div class=\" paraPadingImagen col-md-5 col-sm-12 col-xl-3 mt-5\">
-\t\t\t\t<img id=\"maquinaHeader\" src=\"../img/header/maquinaheader.png\" alt=\"maquina\">
+\t\t\t\t<img id=\"maquinaHeader\" src=\"/img/header/maquinaheader.png\" alt=\"maquina\">
 \t\t\t</div>
 \t\t\t<div class='align-items-end col-xl-3 col-sm-12 col-md-3 mt-5 infoCabecera '>
 \t\t\t\t<span class='navbar-brand mb-0 h4 col-12'>Carlos Pellegrini 1055 - CP 1842</span>
 \t\t\t\t<span class='navbar-brand mb-0 h4 col-12'>Monte Grande - Bs. As. | Argentina
 \t\t\t\t</span>
-\t\t\t\t<span class='navbar-brand mb-0 h4 col-12'><img class=\"imagenesHeader\" src=\"../img/header/mail.png\" alt=\"mail\">
+\t\t\t\t<span class='navbar-brand mb-0 h4 col-12'><img class=\"imagenesHeader\" src=\"/img/header/mail.png\" alt=\"mail\">
 \t\t\t\t\tequipamientografico@gmail.com
 \t\t\t\t</span>
-\t\t\t\t<span class='navbar-brand mb-0 h4 col-12'><img class=\"imagenesHeader\" src=\"../img/header/whatsapp.png\" alt=\"telf\">
+\t\t\t\t<span class='navbar-brand mb-0 h4 col-12'><img class=\"imagenesHeader\" src=\"/img/header/whatsapp.png\" alt=\"telf\">
 \t\t\t\t\t(011) 9 11 6110 0402
 \t\t\t\t</span>
 \t\t\t</div>
@@ -129,16 +129,16 @@ class __TwigTemplate_fbd6da2c74fe6611029e0f66b92801b3b4ec3d8fbe5175f254531823c1a
 \t\t\t\t<span class='navbar-brand mb-0 h2 col-12 eslogan'>Carlos Alfredo Gonzalez</span>
 \t\t\t</div>
 \t\t\t<div class=\" paraPadingImagen col-md-5 col-sm-12 col-xl-3 mt-5\">
-\t\t\t\t<img id=\"maquinaHeader\" src=\"../img/header/maquinaheader.png\" alt=\"maquina\">
+\t\t\t\t<img id=\"maquinaHeader\" src=\"/img/header/maquinaheader.png\" alt=\"maquina\">
 \t\t\t</div>
 \t\t\t<div class='align-items-end col-xl-3 col-sm-12 col-md-3 mt-5 infoCabecera '>
 \t\t\t\t<span class='navbar-brand mb-0 h4 col-12'>Carlos Pellegrini 1055 - CP 1842</span>
 \t\t\t\t<span class='navbar-brand mb-0 h4 col-12'>Monte Grande - Bs. As. | Argentina
 \t\t\t\t</span>
-\t\t\t\t<span class='navbar-brand mb-0 h4 col-12'><img class=\"imagenesHeader\" src=\"../img/header/mail.png\" alt=\"mail\">
+\t\t\t\t<span class='navbar-brand mb-0 h4 col-12'><img class=\"imagenesHeader\" src=\"/img/header/mail.png\" alt=\"mail\">
 \t\t\t\t\tequipamientografico@gmail.com
 \t\t\t\t</span>
-\t\t\t\t<span class='navbar-brand mb-0 h4 col-12'><img class=\"imagenesHeader\" src=\"../img/header/whatsapp.png\" alt=\"telf\">
+\t\t\t\t<span class='navbar-brand mb-0 h4 col-12'><img class=\"imagenesHeader\" src=\"/img/header/whatsapp.png\" alt=\"telf\">
 \t\t\t\t\t(011) 9 11 6110 0402
 \t\t\t\t</span>
 \t\t\t</div>

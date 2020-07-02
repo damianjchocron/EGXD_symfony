@@ -51,6 +51,7 @@ class ProductRepository extends ServiceEntityRepository
 
     function all($pagination = 1, $idcategoria = "", $sort = "", $search = "", $numRegisPos = 0)
     {
+        $array = [];
         //esta logica en algun momento la puedo pasar al controlador para dejar esto mas limpio
         $filtercampoOrden = "";
         if (!empty($sort)) {
@@ -76,9 +77,9 @@ class ProductRepository extends ServiceEntityRepository
             $filterpagination = " LIMIT $pagination , $numRegisPos ";
         }
         $filtersearch = "";
-        if (!empty($search)) $filtersearch = " AND titulo LIKE '%" . $search . "%' ";
+        if (!empty($search) && $search != "empty") $filtersearch = " AND titulo LIKE '%" . $search . "%' ";
         $filtercategoria = "";
-        if (!empty($idcategoria)) $filtercategoria = " AND product.idcategoria = $idcategoria  ";
+        if (!empty($idcategoria) && $idcategoria != "0") $filtercategoria = " AND product.idcategoria = $idcategoria  ";
         $conn = $this->getEntityManager()->getConnection();
         $sql = <<<EOD
         SELECT categoria.nombrecategoria , multimedia.priority , multimedia.url, product.idproduct, titulo, descripcion, precio, product.idcategoria, fecha_alta
@@ -146,8 +147,8 @@ class ProductRepository extends ServiceEntityRepository
         $filterQueryCategoria = "";
         $filterQuerySearch = "";
 
-        if (!empty($idcategoria)) $filterQueryCategoria =  " AND idcategoria = $idcategoria ";
-        if (!empty($search)) $filterQuerySearch = " AND product.titulo LIKE '$search' ";
+        if (!empty($idcategoria) && $idcategoria != "0") $filterQueryCategoria =  " AND idcategoria = $idcategoria ";
+        if (!empty($search) && $search != "empty") $filterQuerySearch = " AND product.titulo LIKE '$search' ";
 
 
         $conn = $this->getEntityManager()->getConnection();

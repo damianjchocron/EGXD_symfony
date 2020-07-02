@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Product;
 use App\Entity\Categoria;
 use App\Entity\Multimedia;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 class ProductController extends AbstractController
@@ -33,36 +34,31 @@ class ProductController extends AbstractController
 
         $page = 1;
         //No logro agarrar lo que viene por GET
-        $idcategoria  = $request->request->get("idcategoria");
-        $sort = $request->request->get("sort");
-        $search = $request->request->get("search");
-        $page = $request->request->get("page");
+
+        $idcategoria  = $request->attributes->get("idcategoria");
+        $sort = $request->attributes->get("sort");
+        $search = $request->attributes->get("search");
+        $page = $request->attributes->get("page");
         $forDropDown = "Ordenar Por";
-        $filtersort = "";
-        $filterpage = "";
-        $filtercategory = "";
-        $filtersearch = "";
         $categoriaunica = "";
 
         /* Aca va con $request  */
-        if (isset($seach) && (!empty($seach))) {
-            $filtersearch = "&search = " . $_GET["search"];
+        if (!isset($search) && (empty($search))) {
+            $search = "empty";
         }
 
         if (isset($idcategoria) && (!empty($idcategoria))) {
             //Para Filtro Categoria
-            $filtercategory = "&idcategoria=" . $_GET["idcategoria"];
             $forDropDown =  "";
-            $categoriaunica = $categoriainstace->findBy($idcategoria);
-        }
-        if (isset($sort) && (!empty($sort))) {
-            $filtersort = "&sort=" . $_GET["sort"]; //Para filtro Sort 
+            $categoriaunica = $categoriainstace->find($idcategoria);
         } else {
+            $idcategoria = "0";
+        }
+
+        if (!isset($sort) && (empty($sort))) {
             $sort = 1;
         }
-        if (isset($page) && (!empty($page))) {
-            $filterpage = "&page=" . $_GET["page"]; //Para filtro page
-        } else {
+        if (!isset($page) && (empty($page))) {
             $page = 1;
         }
 
@@ -92,17 +88,18 @@ class ProductController extends AbstractController
             'dataproductforrender' => $dataproductforrender,
             'categorias' => $categorias,
             'forDropDown' => $forDropDown,
-            'filtersort' => $filtersort,
-            'filtercategory' => $filtercategory,
-            'filtersearch' => $filtersearch,
-            'filterpage' => $filterpage,
             'categoriaunica' => $categoriaunica,
             'numPaginas' => $numPaginas,
             'page' => $page,
             'next' => $next,
             'prev' => $prev,
+            'idcategoria' => $idcategoria,
+            'sort' => $sort,
+            'search' => $search,
+            'page' => $page,
         ]);
     }
+
     public function insertform(Request $request)
     {
         $productrepositoryinstance = $this
@@ -148,27 +145,25 @@ class ProductController extends AbstractController
         }
 
 
-        $uplodedFile = $request->files;
+        $uplodedFile = $request->files->get('fichero');
 
-        if ($request->files->get('image') != null) {
+        if ($uplodedFile != null) {
             $directorynumber = $nuevoProduct->getIdproduct();
-            $directory = "img/" . $directorynumber;
-            foreach ($uplodedFile as $key => $item) {
-
-                $priority = "0";
-                if ($key == "image") $priority = "1";
-
-                echo $key;
+            $directoryMove = "img/" . $directorynumber;
+            $directoryBBDD = "/img/" . $directorynumber;
+            $priority = "1";
+            foreach ($uplodedFile as $item) {
                 $nombre = $item->getClientOriginalName();
-                $url = $directory . "/" . $nombre;
+                $url = $directoryBBDD . "/" . $nombre;
                 $multimedia = new Multimedia();
                 $multimedia->setIdproduct($nuevoProduct);/* NOSE SI ES ESTE*/
                 $multimedia->setUrl($url);
                 $multimedia->setPriority($priority);
-                $upload = $item->move($directory, $nombre);
-
+                $upload = $item->move($directoryMove, $nombre);
 
                 $itemImagen = $multimediarepositoryinstace->Guardar($multimedia);
+
+                $priority = "0";
             }
         }
 
@@ -187,10 +182,6 @@ class ProductController extends AbstractController
             ->getDoctrine()
             ->getRepository(Product::class);
 
-        $multimediarepositoryinstace = $this
-            ->getDoctrine()
-            ->getRepository(Multimedia::class);
-
         $categoriarepositoryinstace = $this
             ->getDoctrine()
             ->getRepository(Categoria::class);
@@ -201,12 +192,12 @@ class ProductController extends AbstractController
         $descripcion = $request->request->get('descripcion');
         $precio = $request->request->get('precio');
         $idcategoria = $request->request->get('idcategoria');
-        $idproductdelete = $request->request->get('delete');
+        $showmodal = "";
 
         if (isset($idproductmodify) && !empty($idproductmodify)) {
             $productInstance = $productrepositoryinstance->find($idproductmodify);
             $categoriaInstance = $categoriarepositoryinstace->find($idcategoria);
-            
+
             $productInstance->setDescripcion($descripcion);
             $productInstance->setPrecio($precio);
             $productInstance->setIdcategoria($categoriaInstance);
@@ -214,26 +205,7 @@ class ProductController extends AbstractController
 
             $productrepositoryinstance->Guardar($productInstance);
             $showmodal = "Modificado con exito";
-
         }
-
-
-        $showmodal = "";
-
-
-        if ($idproductdelete) {
-            $productInstanceDelete = $productrepositoryinstance->find($idproductdelete);
-            $productrepositoryinstance->Delete($productInstanceDelete); //Modificar el Repositorio
-            $realpathdirectorydelete = realpath("img/" . $idproductdelete);
-            $check2 = array_map('unlink', glob("$realpathdirectorydelete/*.*"));
-            $check = rmdir($realpathdirectorydelete);
-            $showmodal = "Borrado con exito";
-        }
-
-        /* Ver si esto lo puedo sacar y cambiar por una peticion ajax de la imagen en particular */
-        $variableimagenes = $multimediarepositoryinstace->findAll(); //Todas las imagenes
-        $json = json_encode($variableimagenes);
-        //var_dump($variableimagenes); 
 
         $dataproductforrender = $productrepositoryinstance->findAll();
         $categorias = $categoriarepositoryinstace->findAll();
@@ -243,7 +215,32 @@ class ProductController extends AbstractController
             'showmodal' => $showmodal,
             'dataproductforrender' => $dataproductforrender,
             'categorias' => $categorias,
-            'json' => $json,
         ]);
+    }
+    public function borrar(Request $request)
+    {
+
+        $productrepositoryinstance = $this
+            ->getDoctrine()
+            ->getRepository(Product::class);
+
+        $multimediarepositoryinstace = $this
+            ->getDoctrine()
+            ->getRepository(Multimedia::class);
+
+
+        $idproductdelete = $request->request->get('idproduct');
+        $productInstance = $productrepositoryinstance->find($idproductdelete);
+        $arrayImgToDelete = $multimediarepositoryinstace->findBy(["idproduct" => $productInstance]);
+        foreach ($arrayImgToDelete as $value) {
+            $multimediarepositoryinstace->Delete($value);
+        }
+        $productrepositoryinstance->Delete($productInstance);
+        $realpathdirectorydelete = realpath("img/" . $idproductdelete);
+        $check2 = array_map('unlink', glob("$realpathdirectorydelete/*.*"));
+        $check = rmdir($realpathdirectorydelete);
+        $showmodal = "Borrado con exito";
+
+        return new JsonResponse(array('msj' => $showmodal));
     }
 }
