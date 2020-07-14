@@ -90,12 +90,28 @@ class __TwigTemplate_fbd6da2c74fe6611029e0f66b92801b3b4ec3d8fbe5175f254531823c1a
 \t\t</button>
 \t\t<div class=\"collapse navbar-collapse col-xl-12 col-md-6 offset-md-5\" id=\"navbarNavAltMarkup\">
 \t\t\t<div class=\"navbar-nav\">
-\t\t\t\t<a class=\"navbar-brand\" href=\"/\">Principal</a>
-\t\t\t\t<a class=\"nav-item nav-link navbar-brand\" href=\"./product/all\">Maquinas</a>
-\t\t\t\t<a class=\"nav-item nav-link navbar-brand\" href=\"contacto.html\">Contacto</a>
+\t\t\t\t<a class=\"nav-item nav-link navbar-brand\" href=\"/\">Principal</a>
+\t\t\t\t<a class=\"nav-item nav-link navbar-brand\" href=\"/product/all\">Maquinas</a>
+\t\t\t\t<a class=\"nav-item nav-link navbar-brand\" href=\"/contacto\">Contacto</a>
 \t\t\t</div>
-";
-        // line 45
+\t\t\t";
+        // line 36
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 36, $this->source); })()), "user", [], "any", false, false, false, 36)) {
+            // line 37
+            echo "\t\t\t\t<div class=\"dropdown\">
+\t\t\t\t\t<button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+\t\t\t\t\t\tMantenimiento
+\t\t\t\t\t</button>
+\t\t\t\t\t<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
+\t\t\t\t\t\t<a id=\"linkinsert\" class=\"dropdown-item\" href=\"/product/insertform\">Insertar Maquina</a>
+\t\t\t\t\t\t<a id=\"linkmodify\" class=\"dropdown-item\" href=\"/product/modify\">Modificar Maquina</a>
+\t\t\t\t\t\t<a id=\"linkcategoria\" class=\"dropdown-item\" href=\"/categoria\">Agregar Categorias</a>
+\t\t\t\t\t\t<a  class=\"dropdown-item\" href=\"/logout\">Cerrar Sesion</a>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t";
+        }
+        // line 49
         echo "\t\t</div>
 \t</nav>
 ";
@@ -114,7 +130,7 @@ class __TwigTemplate_fbd6da2c74fe6611029e0f66b92801b3b4ec3d8fbe5175f254531823c1a
 
     public function getDebugInfo()
     {
-        return array (  99 => 45,  63 => 2,  44 => 1,);
+        return array (  115 => 49,  101 => 37,  99 => 36,  63 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -150,20 +166,24 @@ class __TwigTemplate_fbd6da2c74fe6611029e0f66b92801b3b4ec3d8fbe5175f254531823c1a
 \t\t</button>
 \t\t<div class=\"collapse navbar-collapse col-xl-12 col-md-6 offset-md-5\" id=\"navbarNavAltMarkup\">
 \t\t\t<div class=\"navbar-nav\">
-\t\t\t\t<a class=\"navbar-brand\" href=\"/\">Principal</a>
-\t\t\t\t<a class=\"nav-item nav-link navbar-brand\" href=\"./product/all\">Maquinas</a>
-\t\t\t\t<a class=\"nav-item nav-link navbar-brand\" href=\"contacto.html\">Contacto</a>
+\t\t\t\t<a class=\"nav-item nav-link navbar-brand\" href=\"/\">Principal</a>
+\t\t\t\t<a class=\"nav-item nav-link navbar-brand\" href=\"/product/all\">Maquinas</a>
+\t\t\t\t<a class=\"nav-item nav-link navbar-brand\" href=\"/contacto\">Contacto</a>
 \t\t\t</div>
-{# \t\t\t<div class=\"dropdown\">
-\t\t\t\t<button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-\t\t\t\t\tUsuario
-\t\t\t\t</button>
-\t\t\t\t<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-\t\t\t\t\t<a id=\"linkinsert\" class=\"dropdown-item\" href=\"./product/insertform\">Insertar Maquina</a>
-\t\t\t\t\t<a id=\"linkmodify\" class=\"dropdown-item\" href=\"./product/modify\">Modificar Maquina</a>
+\t\t\t{% if app.user %}
+\t\t\t\t<div class=\"dropdown\">
+\t\t\t\t\t<button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+\t\t\t\t\t\tMantenimiento
+\t\t\t\t\t</button>
+\t\t\t\t\t<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
+\t\t\t\t\t\t<a id=\"linkinsert\" class=\"dropdown-item\" href=\"/product/insertform\">Insertar Maquina</a>
+\t\t\t\t\t\t<a id=\"linkmodify\" class=\"dropdown-item\" href=\"/product/modify\">Modificar Maquina</a>
+\t\t\t\t\t\t<a id=\"linkcategoria\" class=\"dropdown-item\" href=\"/categoria\">Agregar Categorias</a>
+\t\t\t\t\t\t<a  class=\"dropdown-item\" href=\"/logout\">Cerrar Sesion</a>
+\t\t\t\t\t</div>
 \t\t\t\t</div>
-\t\t\t</div>
- #}\t\t</div>
+\t\t\t{% endif %}
+\t\t</div>
 \t</nav>
 {% endblock %}
 ", "header.html.twig", "/var/www/html/EGXD_symfony/templates/header.html.twig");

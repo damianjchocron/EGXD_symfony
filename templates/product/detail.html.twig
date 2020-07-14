@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="row">
+		<div class="col-xl-6 mb-3 mt-3">
+			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					{% for value in forrenderimg %}
+						<!-- Aca le doy el el active para el carrusel -->
+						{% set active = "" %}
+						{% if value.priority == "1" %}
+							{% set active = "active" %}
+						{% endif %}
+						<div class="carousel-item {{active}}">
+							<img src="{{value.url}}" class="d-block w-100" alt="FotosMaquinas">
+						</div>
+					{% endfor %}
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+		<div class="col-xl-5 mb-3">
+			<ul class="list-group list-group-flush">
+					<li class="list-group-item"><h1>Maquina: {{oneProduct.titulo}}</h1></li>
+					<li class="list-group-item">Descripcion: {{oneProduct.descripcion}}</li>
+					<li class="list-group-item">U$D {{oneProduct.precio}}</li>
+					<li class="list-group-item">Categoria: {{categoryInstance.nombrecategoria}}</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}

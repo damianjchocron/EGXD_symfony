@@ -47,22 +47,20 @@ class CategoriaRepository extends ServiceEntityRepository
         ;
     }
     */
-    public function ListadoCategoria($column, $tipo = "ASC", $pos, $cant = 10): array
+    public function ListadoCategoria($pos, $cant = 10): array
     {
         $tbl = "c";
         $qb = $this->createQueryBuilder($tbl)
-            ->OrderBy($tbl . "." . strtolower($column), $tipo)
             ->setFirstResult($pos)
             ->setMaxResults($cant);
         $query = $qb->getQuery();
         return $query->execute();
     }
 
-    public function ListadoPaginacion($col, $tipo = "ASC", $pos, $cant = 10)
+    public function ListadoPaginacion($pos, $cant = 10)
     {
         $tbl = "c";
         $qb = $this->createQueryBuilder($tbl)
-            ->orderBy($tbl . "." . strtolower($col), $tipo)
             ->setFirstResult($pos)
             ->setMaxResults($cant);
         $query = $qb->getQuery();

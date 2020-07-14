@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Controller;
+    namespace App\Controller;
 
 use App\Entity\Categoria;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class CategoriaController extends AbstractController
@@ -26,9 +27,9 @@ class CategoriaController extends AbstractController
         $next = $page;
         if($page<$numPaginas) $next = $page+1;
 
-        $categoriaPaginacion = $repo->ListadoPaginacion("fechacreacion","ASC",$pos,$numRegisPos);
+        $categoriaPaginacion = $repo->ListadoPaginacion($pos,$numRegisPos);
 
-        return $this->render('categorias/index.html.twig', [
+        return $this->render('categoria/index.html.twig', [
             'categoria' => $categoriaPaginacion,
             'page'=>$page,
             'numPag'=>$numPaginas,
@@ -44,7 +45,7 @@ class CategoriaController extends AbstractController
         if ($getId) {
             $categoria = $this->getDoctrine()->getRepository(Categoria::class)->find($id);
         }
-        return $this->render('categorias/insertupdate.html.twig', [
+        return $this->render('categoria/insertupdate.html.twig', [
             'categoria' => $categoria,
             // 'mensaje'=> null,
 
@@ -54,7 +55,6 @@ class CategoriaController extends AbstractController
     {
         //guardar o editar dependiendo si viene ID
         $categoria = new Categoria();
-        $categoria->setFechacreacion(new \DateTime);
 
         //Pregunto si viene la variable para saber si edito
         $getId = $request->request->get('id');
@@ -65,14 +65,14 @@ class CategoriaController extends AbstractController
         }
 
         //Le asigno el nuevo nombre que viene por post al objeto 
-        $categoria->setNombre($request->request->get('nombre'));
+        $categoria->setNombrecategoria($request->request->get('nombre'));
 
-        //guardo el objeto con el nombre modificado o no
+        //guardo el objeto con el nombre modifitcado o no
         $categoriaRepositoryManager = $this->getDoctrine()->getRepository(Categoria::class)->guardar($categoria);
         
-        return $this->render('categorias/insertupdate.html.twig', [
+        return $this->render('categoria/insertupdate.html.twig', [
             'categoria' => $categoria,
-            'mensaje' => "Guardado Satisfatoriamente",
+            'mensaje' => "Guardado Satisfatoriamente. Para crear uno nuevo, haga click en Nuevo.",
         ]);
     }
     public function delete($id)

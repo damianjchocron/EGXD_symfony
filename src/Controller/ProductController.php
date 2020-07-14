@@ -243,4 +243,34 @@ class ProductController extends AbstractController
 
         return new JsonResponse(array('msj' => $showmodal));
     }
+
+    public function detail($idproduct)
+    {
+        $productrepositoryinstance = $this
+            ->getDoctrine()
+            ->getRepository(Product::class);
+
+        $multimediarepositoryinstace = $this
+            ->getDoctrine()
+            ->getRepository(Multimedia::class);
+
+        $categoriarepositoryinstace = $this
+            ->getDoctrine()
+            ->getRepository(Categoria::class);
+
+        $oneProduct = $productrepositoryinstance->find($idproduct);
+
+        $forrenderimg = $multimediarepositoryinstace->findBy(["idproduct" => $oneProduct]);
+
+        $idcategoria = $oneProduct->getIdcategoria();
+
+        $categoryInstance = $categoriarepositoryinstace->find($idcategoria);
+
+        return $this->render('product/detail.html.twig', [
+
+            'oneProduct' => $oneProduct,
+            'forrenderimg' => $forrenderimg,
+            'categoryInstance' => $categoryInstance,
+        ]);
+    }
 }

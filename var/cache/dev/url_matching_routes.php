@@ -14,6 +14,9 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/product' => [[['_route' => 'product', '_controller' => 'App\\Controller\\ProductController::index'], null, null, null, false, false, null]],
+        '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
+        '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
+        '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/usuario' => [[['_route' => 'usuario', '_controller' => 'App\\Controller\\UsuarioController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
         '/product/insertform' => [[['_route' => 'insertformProduct', '_controller' => 'App\\Controller\\ProductController::insertform'], null, null, null, false, false, null]],
@@ -23,6 +26,7 @@ return [
         '/multimedia/borrar' => [[['_route' => 'ajaxDeleteMultimedia', '_controller' => 'App\\Controller\\MultimediaController::Borrar'], null, null, null, false, false, null]],
         '/multimedia/guardar' => [[['_route' => 'ajaxGuardarMultimedia', '_controller' => 'App\\Controller\\MultimediaController::Guardar'], null, null, null, false, false, null]],
         '/categoria/guardar' => [[['_route' => 'categoriaguardarpost', '_controller' => 'App\\Controller\\CategoriaController::insertupdatepost'], null, ['POST' => 0], null, false, false, null]],
+        '/contacto' => [[['_route' => 'contacto', '_controller' => 'App\\Controller\\ContactoController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -41,14 +45,17 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/product/all(?:/([^/]++)(?:/([^/]++)(?:/([^/]++)(?:/([^/]++))?)?)?)?(*:237)'
+                .'|/product/(?'
+                    .'|all(?:/([^/]++)(?:/([^/]++)(?:/([^/]++)(?:/([^/]++))?)?)?)?(*:240)'
+                    .'|detail(?:/([^/]++))?(*:268)'
+                .')'
                 .'|/categoria(?'
                     .'|/(?'
-                        .'|nuevo(?:/([^/]++))?(*:281)'
-                        .'|editar/([^/]++)(*:304)'
-                        .'|borrar/([^/]++)(*:327)'
+                        .'|nuevo(?:/([^/]++))?(*:313)'
+                        .'|editar/([^/]++)(*:336)'
+                        .'|borrar/([^/]++)(*:359)'
                     .')'
-                    .'|(?:/([^/]++))?(*:350)'
+                    .'|(?:/([^/]++))?(*:382)'
                 .')'
             .')/?$}sDu',
     ],
@@ -60,11 +67,12 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        237 => [[['_route' => 'allProduct', 'idcategoria' => null, 'sort' => null, 'page' => null, 'search' => null, '_controller' => 'App\\Controller\\ProductController::all'], ['idcategoria', 'sort', 'page', 'search'], null, null, false, true, null]],
-        281 => [[['_route' => 'categorianuevopost', 'id' => null, '_controller' => 'App\\Controller\\CategoriaController::insertupdate'], ['id'], null, null, false, true, null]],
-        304 => [[['_route' => 'categoriaeditarpost', '_controller' => 'App\\Controller\\CategoriaController::insertupdate'], ['id'], null, null, false, true, null]],
-        327 => [[['_route' => 'categoriaDelete', '_controller' => 'App\\Controller\\CategoriaController::delete'], ['id'], ['GET' => 0], null, false, true, null]],
-        350 => [
+        240 => [[['_route' => 'allProduct', 'idcategoria' => null, 'sort' => null, 'page' => null, 'search' => null, '_controller' => 'App\\Controller\\ProductController::all'], ['idcategoria', 'sort', 'page', 'search'], null, null, false, true, null]],
+        268 => [[['_route' => 'detailProduct', 'idproduct' => null, '_controller' => 'App\\Controller\\ProductController::detail'], ['idproduct'], null, null, false, true, null]],
+        313 => [[['_route' => 'categorianuevopost', 'id' => null, '_controller' => 'App\\Controller\\CategoriaController::insertupdate'], ['id'], null, null, false, true, null]],
+        336 => [[['_route' => 'categoriaeditarpost', '_controller' => 'App\\Controller\\CategoriaController::insertupdate'], ['id'], null, null, false, true, null]],
+        359 => [[['_route' => 'categoriaDelete', '_controller' => 'App\\Controller\\CategoriaController::delete'], ['id'], ['GET' => 0], null, false, true, null]],
+        382 => [
             [['_route' => 'Categoria', 'page' => null, '_controller' => 'App\\Controller\\CategoriaController::index'], ['page'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

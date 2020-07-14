@@ -8,8 +8,7 @@
     text-decoration: none;
 }
 
-.card,
-.list-group {
+.card, .list-group {
     box-shadow: 10px 10px 31px 3px rgba(0, 0, 0, 0.75);
 }
 

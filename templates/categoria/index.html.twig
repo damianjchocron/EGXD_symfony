@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Listado Categorias
+{% endblock %}
+
+{% block body %}
+	<div class="row pl-5">
+		<a class="btn btn-primary p-3 m-2" href="{{ path("categorianuevopost") }}" role="button">Nuevo</a>
+	</div>
+	<div class="row">
+		<div class="col-12 p-5">
+			{% for item in categoria %}
+				<div class="row my-2">
+					<div class="col-3">{{item.nombrecategoria}}</div>
+					<div class="col-1">
+						<a class="btn btn-success" href="{{ path("categoriaeditarpost", {id: item.idcategoria}) }}" role="button">Editar</a>
+					</div>
+					<div class="col-1">
+						<a class="btn btn-danger" href="{{ path("categoriaDelete", {id: item.idcategoria}) }}" role="button">Borrar</a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="col-12 p-5">
+				        <nav aria-label="Paginador categoria">
+				            <ul class="pagination">
+				                <li class="page-item"><a class="page-link" href="{{ path("Categoria", {page: prev}) }}">Primera</a></li>
+				                <li class="page-item"><a class="page-link" href="{{ path("Categoria", {page: prev}) }}">Anterior</a></li>
+				                {% for i in 1..numPag %}                
+				                    {% set active = "" %}
+				                    {% if page==i %}
+				                        {% set active = "active" %}
+				                    {% endif %}
+				                    <li class="page-item {{active}}"><a class="page-link" href="{{ path("Categoria", {page: i}) }}">{{i}}</a></li>
+				                {% endfor %}                        
+				                <li class="page-item"><a class="page-link" href="{{ path("Categoria", {page: next}) }}">Ultima</a></li>
+				                <li class="page-item"><a class="page-link" href="{{ path("Categoria", {page: next}) }}">Siguiente</a></li>
+				            </ul>
+				        </nav>
+				    </div>
+	</div>
+{% endblock %}

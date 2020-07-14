@@ -77,6 +77,8 @@ return [[
 '%5B%5BC%5DApp%5CController%5CProductController%23modify%5D%5B1%5D' => 2,
 '%5BApp%5CController%5CProductController%23borrar%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CController%5CProductController%23borrar%5D%5B1%5D' => 2,
+'%5BApp%5CController%5CProductController%23detail%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CController%5CProductController%23detail%5D%5B1%5D' => 2,
 '%5BApp%5CController%5CUsuarioController%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CController%5CUsuarioController%5D%5B1%5D' => 2,
 '%5BApp%5CController%5CUsuarioController%23index%5D%5B1%5D' => 4,
@@ -175,6 +177,24 @@ return [[
 '%5B%5BC%5DApp%5CEntity%5CUsuario%23getEmail%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CUsuario%23setEmail%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CUsuario%23setEmail%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUsuario%23getIdrol%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CUsuario%23getIdrol%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUsuario%23setIdrol%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CUsuario%23setIdrol%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUsuario%23getPassword%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CUsuario%23getPassword%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUsuario%23getUsername%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CUsuario%23getUsername%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUsuario%23getSalt%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CUsuario%23getSalt%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUsuario%23getRoles%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CUsuario%23getRoles%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUsuario%23eraseCredentials%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CUsuario%23eraseCredentials%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUsuario%23serialize%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CUsuario%23serialize%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUsuario%23unserialize%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CUsuario%23unserialize%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CUsuario%24idusuario%5D%5B1%5D' => 22,
 '%5B%5BC%5DApp%5CEntity%5CUsuario%24idusuario%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CUsuario%24nombreusuario%5D%5B1%5D' => 23,
@@ -183,6 +203,8 @@ return [[
 '%5B%5BC%5DApp%5CEntity%5CUsuario%24passwordd%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CUsuario%24email%5D%5B1%5D' => 25,
 '%5B%5BC%5DApp%5CEntity%5CUsuario%24email%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUsuario%24idrol%5D%5B1%5D' => 26,
+'%5B%5BC%5DApp%5CEntity%5CUsuario%24idrol%5D%5B1%5D' => 2,
 '%5BDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%5D%5B1%5D' => 1,
 '%5B%5BC%5DDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%5D%5B1%5D' => 2,
 '%5BDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%23setContainer%5D%5B1%5D' => 1,
@@ -720,7 +742,7 @@ return [[
 
 0 => 'N;',
 1 => [],
-2 => 1593694151,
+2 => 1594399784,
 3 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -1197,22 +1219,52 @@ return [[
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Table'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Table')),
+            clone ($p['Doctrine\\ORM\\Mapping\\Index'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Index')),
+            clone $p['Doctrine\\ORM\\Mapping\\Index'],
             clone ($p['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+            clone ($p['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
         ],
         null,
         [
             'stdClass' => [
                 'name' => [
                     'usuario',
+                    'idrol',
+                    'index2',
                 ],
-                'repositoryClass' => [
-                    1 => 'App\\Repository\\UsuarioRepository',
+                'indexes' => [
+                    [
+                        $o[1],
+                        $o[2],
+                    ],
+                ],
+                'columns' => [
+                    1 => [
+                        'idrol',
+                    ],
+                    [
+                        'idrol',
+                    ],
+                ],
+                'message' => [
+                    4 => 'There is already an account with this email',
+                ],
+                'fields' => [
+                    4 => [
+                        'email',
+                    ],
+                ],
+                'groups' => [
+                    4 => [
+                        'Default',
+                    ],
                 ],
             ],
         ],
         [
             $o[0],
-            $o[1],
+            $o[3],
+            $o[4],
         ],
         []
     );
@@ -1280,7 +1332,7 @@ return [[
                     'passwordd',
                 ],
                 'length' => [
-                    45,
+                    10000,
                 ],
             ],
         ],
@@ -1311,6 +1363,44 @@ return [[
         ],
         [
             $o[0],
+        ],
+        []
+    );
+},
+26 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\GeneratedValue'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\GeneratedValue')),
+            clone ($p['Doctrine\\ORM\\Mapping\\OneToOne'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\OneToOne')),
+            clone ($p['Doctrine\\ORM\\Mapping\\JoinColumns'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\JoinColumns')),
+            clone ($p['Doctrine\\ORM\\Mapping\\JoinColumn'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\JoinColumn')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'strategy' => [
+                    'NONE',
+                ],
+                'targetEntity' => [
+                    1 => 'Rol',
+                ],
+                'value' => [
+                    2 => [
+                        $o[3],
+                    ],
+                ],
+                'name' => [
+                    3 => 'idrol',
+                ],
+                'referencedColumnName' => [
+                    3 => 'idrol',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+            $o[1],
+            $o[2],
         ],
         []
     );

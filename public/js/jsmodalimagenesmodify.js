@@ -96,32 +96,12 @@ function callBackAjaxWithImg(objImg) {
 
     });
     $('.modal-body').prepend(inputfile);
+    guardarImg(idproduct);
 }
 
 function EventShowModal(objModal) {
     //Evento para submit de subida imagen.
-    $('#submitformimg').on('click', function (event) {
-        event.preventDefault();
-        idproduct = objModal.getAttribute('data-idproduct');
-        //Necesito enviar este id por Ajax
-        var formData = new FormData($("#uploadimage")[0]);
-        formData.append('idproduct', idproduct);
-
-        var ruta = "/multimedia/guardar";
-        var request = $.ajax({
-            url: ruta,
-            type: "POST",
-            data: formData,
-            contentType: false,
-            processData: false,
-        });
-        request.done(function (response) {
-            alert("Cargada con exito");
-        });
-        request.fail(function (jqXHR, textStatus) {
-            alert("Hubo un error: " + textStatus);
-        });
-    });
+    // guardarImg();
 }
 
 function CallBackDelete(response, idmultimedia) {
@@ -179,5 +159,29 @@ function CallBackDeleteProduct(response, idProduct) {
 
     alert("Borrado con exito");
 
+}
 
+function guardarImg(idproduct){
+    $('#submitformimg').on('click', function (event) {
+        event.preventDefault();
+        // idproduct = objModal.getAttribute('data-idproduct');
+        //Necesito enviar este id por Ajax
+        var formData = new FormData($("#uploadimage")[0]);
+        formData.append('idproduct', idproduct);
+
+        var ruta = "/multimedia/guardar";
+        var request = $.ajax({
+            url: ruta,
+            type: "POST",
+            data: formData,
+            contentType: false,
+            processData: false,
+        });
+        request.done(function (response) {
+            alert("Cargada con exito");
+        });
+        request.fail(function (jqXHR, textStatus) {
+            alert("Hubo un error: " + textStatus);
+        });
+    });
 }

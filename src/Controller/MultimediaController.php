@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Multimedia;
+use App\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -26,33 +27,28 @@ class MultimediaController extends AbstractController
 
     public function Guardar(Request $request)
     {
-        $idProducto = $request->request->get('idProducto');
-        $uplodedFile = $request->files->get('fichero');
-        $objProducto = $this->getDoctrine()->getRepository(Producto::class)->find($idProducto);
-        $productoRepo = $this->getDoctrine()->getRepository(Producto::class)->findAll();
+        $idProducto = $request->request->get('idproduct');
+        $uplodedFile = $request->files->get('inputfileimg');
+        $repoProduct = $this->getDoctrine()->getRepository(Product::class);
+        $objProducto = $repoProduct->find($idProducto);
+        $listProduct = $repoProduct->findAll();
 
         $rutaMove = "img/" . $idProducto;
         $rutaBBDD = "/img/" . $idProducto;
-        $objImagenes = [];
 
-        foreach ($uplodedFile as $item) {
-            $nombre = $item->getClientOriginalName();
-            $url = $rutaBBDD . "/" . $nombre;
-            $imagenes = new Multimedia();
-            $imagenes->setIdproduct($objProducto);
-            $imagenes->setPriority("0");
-            $imagenes->setUrl($url);
-            $item->move($rutaMove, $nombre);
+        $nombre = $uplodedFile->getClientOriginalName();
+        $url = $rutaBBDD . "/" . $nombre;
+        $imagenes = new Multimedia();
+        $imagenes->setIdproduct($objProducto);
+        $imagenes->setPriority("0");
+        $imagenes->setUrl($url);
 
-            $itemImagen = $this->getDoctrine()->getRepository(Multimedia::class)->Guardar($imagenes);
-            array_push($objImagenes, $itemImagen);
-        }
+        $check = $uplodedFile->move($rutaMove, $nombre);
 
-        return $this->render('imagenes/CrearEditar.html.twig', [
-            'listProducto' => $productoRepo,
-            'imagenes' => $imagenes,
-            'arrayImagen' => $objImagenes,
-        ]);
+        $itemImagen = $this->getDoctrine()->getRepository(Multimedia::class)->Guardar($imagenes);
+
+        return new JsonResponse(array('objImg' => $itemImagen));
+
     }
     public function Borrar(Request $request)
     {

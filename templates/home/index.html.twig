@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!
+{% block title %}Equipamiento Grafico - Principal
 {% endblock %}
 
 {% block body %}
@@ -15,7 +15,7 @@
 								<h5 class="card-title">{{value.titulo}}</h5>
 								<p class="card-text">{{value.descripcion}}</p>
 								<p class="card-text">Precio ${{value.precio}}</p>
-								<a href="/product/detail&idproduct={{value.idproduct}}" class="btn btn-primary">Ver Mas</a>
+								<a href={{ path("detailProduct", {idproduct:value.idproduct } ) }} class="btn btn-primary">Ver Mas</a>
 							</div>
 						</div>
 					</div>

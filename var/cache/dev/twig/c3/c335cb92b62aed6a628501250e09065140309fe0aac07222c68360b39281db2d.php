@@ -66,38 +66,39 @@ class __TwigTemplate_9facf1c5f57c300932a26ed786beaad12751d8b79dac364f0baa62be3be
         // line 11
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 12
-        echo "\t</head>
-\t<body>
-\t\t<header>
-\t\t\t";
+        echo "\t\t</head>
+\t\t<body>
+\t\t\t<header>
+\t\t\t\t";
         // line 15
         $this->displayBlock('header', $context, $blocks);
         // line 18
-        echo "\t\t</header>
-\t\t<main>
-\t\t\t";
+        echo "\t\t\t</header>
+\t\t\t<main>
+\t\t\t\t";
         // line 20
         $this->displayBlock('body', $context, $blocks);
         // line 21
-        echo "\t\t</main>
-\t\t<footer>
-\t\t\t";
+        echo "\t\t\t</main>
+\t\t\t<footer>
+\t\t\t\t";
         // line 23
         $this->displayBlock('footer', $context, $blocks);
         // line 26
-        echo "\t\t</footer>
-\t\t<!-- Optional JavaScript -->
-\t\t<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-\t\t<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\" integrity=\"sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=\" crossorigin=\"anonymous\"></script>
-\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
-\t\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
-\t\t<script src=\"https://kit.fontawesome.com/2ce703cfa3.js\" crossorigin=\"anonymous\"></script>
-\t\t";
-        // line 33
-        $this->displayBlock('javascripts', $context, $blocks);
+        echo "\t\t\t</footer>
+\t\t\t<!-- Optional JavaScript -->
+\t\t\t<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+\t\t\t<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\" integrity=\"sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=\" crossorigin=\"anonymous\"></script>
+\t\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
+\t\t\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+\t\t\t<script src=\"https://kit.fontawesome.com/2ce703cfa3.js\" crossorigin=\"anonymous\"></script>
+\t\t\t<script src=\"/js/navbar.js\" type=\"text/javascript\"></script>
+\t\t\t";
         // line 34
-        echo "\t</body>
-</html>
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 35
+        echo "\t\t</body>
+\t</html>
 ";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -135,7 +136,7 @@ class __TwigTemplate_9facf1c5f57c300932a26ed786beaad12751d8b79dac364f0baa62be3be
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!
+        echo "Equipamiento Grafico 
 \t\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -174,10 +175,10 @@ class __TwigTemplate_9facf1c5f57c300932a26ed786beaad12751d8b79dac364f0baa62be3be
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
         // line 16
-        echo "\t\t\t\t";
+        echo "\t\t\t\t\t";
         $this->loadTemplate("header.html.twig", "base.html.twig", 16)->display($context);
         // line 17
-        echo "\t\t\t";
+        echo "\t\t\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -215,10 +216,10 @@ class __TwigTemplate_9facf1c5f57c300932a26ed786beaad12751d8b79dac364f0baa62be3be
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
         // line 24
-        echo "\t\t\t\t";
+        echo "\t\t\t\t\t";
         $this->loadTemplate("footer.html.twig", "base.html.twig", 24)->display($context);
         // line 25
-        echo "\t\t\t";
+        echo "\t\t\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -227,7 +228,7 @@ class __TwigTemplate_9facf1c5f57c300932a26ed786beaad12751d8b79dac364f0baa62be3be
 
     }
 
-    // line 33
+    // line 34
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -252,7 +253,7 @@ class __TwigTemplate_9facf1c5f57c300932a26ed786beaad12751d8b79dac364f0baa62be3be
 
     public function getDebugInfo()
     {
-        return array (  231 => 33,  221 => 25,  218 => 24,  208 => 23,  190 => 20,  180 => 17,  177 => 16,  167 => 15,  149 => 11,  129 => 7,  111 => 5,  99 => 34,  97 => 33,  88 => 26,  86 => 23,  82 => 21,  80 => 20,  76 => 18,  74 => 15,  69 => 12,  67 => 11,  63 => 9,  61 => 7,  58 => 6,  56 => 5,  50 => 1,);
+        return array (  232 => 34,  222 => 25,  219 => 24,  209 => 23,  191 => 20,  181 => 17,  178 => 16,  168 => 15,  150 => 11,  130 => 7,  112 => 5,  100 => 35,  98 => 34,  88 => 26,  86 => 23,  82 => 21,  80 => 20,  76 => 18,  74 => 15,  69 => 12,  67 => 11,  63 => 9,  61 => 7,  58 => 6,  56 => 5,  50 => 1,);
     }
 
     public function getSourceContext()
@@ -263,35 +264,36 @@ class __TwigTemplate_9facf1c5f57c300932a26ed786beaad12751d8b79dac364f0baa62be3be
 \t\t<meta charset=\"UTF-8\">
 \t\t{% block meta %}{% endblock%}
 \t\t<title>
-\t\t\t{% block title %}Welcome!
+\t\t\t{% block title %}Equipamiento Grafico 
 \t\t\t{% endblock %}
 \t\t</title>
 \t\t<link rel=\"stylesheet\" href=\"/css/css.css\">
 \t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\"> {% block stylesheets %}{% endblock %}
-\t</head>
-\t<body>
-\t\t<header>
-\t\t\t{% block header %}
-\t\t\t\t{% include 'header.html.twig' %}
-\t\t\t{% endblock %}
-\t\t</header>
-\t\t<main>
-\t\t\t{% block body %}{% endblock %}
-\t\t</main>
-\t\t<footer>
-\t\t\t{% block footer %}
-\t\t\t\t{% include 'footer.html.twig'%}
-\t\t\t{% endblock %}
-\t\t</footer>
-\t\t<!-- Optional JavaScript -->
-\t\t<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-\t\t<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\" integrity=\"sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=\" crossorigin=\"anonymous\"></script>
-\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
-\t\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
-\t\t<script src=\"https://kit.fontawesome.com/2ce703cfa3.js\" crossorigin=\"anonymous\"></script>
-\t\t{% block javascripts %}{% endblock %}
-\t</body>
-</html>
+\t\t</head>
+\t\t<body>
+\t\t\t<header>
+\t\t\t\t{% block header %}
+\t\t\t\t\t{% include 'header.html.twig' %}
+\t\t\t\t{% endblock %}
+\t\t\t</header>
+\t\t\t<main>
+\t\t\t\t{% block body %}{% endblock %}
+\t\t\t</main>
+\t\t\t<footer>
+\t\t\t\t{% block footer %}
+\t\t\t\t\t{% include 'footer.html.twig'%}
+\t\t\t\t{% endblock %}
+\t\t\t</footer>
+\t\t\t<!-- Optional JavaScript -->
+\t\t\t<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+\t\t\t<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\" integrity=\"sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=\" crossorigin=\"anonymous\"></script>
+\t\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
+\t\t\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+\t\t\t<script src=\"https://kit.fontawesome.com/2ce703cfa3.js\" crossorigin=\"anonymous\"></script>
+\t\t\t<script src=\"/js/navbar.js\" type=\"text/javascript\"></script>
+\t\t\t{% block javascripts %}{% endblock %}
+\t\t</body>
+\t</html>
 ", "base.html.twig", "/var/www/html/EGXD_symfony/templates/base.html.twig");
     }
 }

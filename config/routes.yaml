@@ -20,7 +20,9 @@ ajaxDeleteProduct:
    path: /product/borrar
    controller: App\Controller\ProductController::borrar
 
-   
+detailProduct:
+   path: /product/detail/{idproduct?}
+   controller: App\Controller\ProductController::detail
 
 ajaxFindMultimedia:
    path: /multimedia/ajaxFind
@@ -56,3 +58,8 @@ categoriaDelete:
 Categoria:
     path: /categoria/{page?}
     controller: App\Controller\CategoriaController::index
+
+
+contacto:
+    path: /contacto
+    controller: App\Controller\ContactoController::index
