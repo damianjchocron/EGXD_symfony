@@ -19,6 +19,7 @@ return [
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/usuario' => [[['_route' => 'usuario', '_controller' => 'App\\Controller\\UsuarioController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
+        '/template' => [[['_route' => 'template', '_controller' => 'App\\Controller\\HomeController::template'], null, null, null, false, false, null]],
         '/product/insertform' => [[['_route' => 'insertformProduct', '_controller' => 'App\\Controller\\ProductController::insertform'], null, null, null, false, false, null]],
         '/product/modify' => [[['_route' => 'modifyProduct', '_controller' => 'App\\Controller\\ProductController::modify'], null, null, null, false, false, null]],
         '/product/borrar' => [[['_route' => 'ajaxDeleteProduct', '_controller' => 'App\\Controller\\ProductController::borrar'], null, null, null, false, false, null]],

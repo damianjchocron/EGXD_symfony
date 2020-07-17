@@ -95,7 +95,7 @@ class __TwigTemplate_d58f9bf52faeeb812456904800324041d26d52de13991d3c90f9932de2e
 \t\t\t\t\t\t\t<img src=\"";
             // line 15
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "url", [], "any", false, false, false, 15), "html", null, true);
-            echo "\" class=\"vhImg d-block w-100\" alt=\"FotosMaquinas\">
+            echo "\" class=\"d-block w-100\" alt=\"FotosMaquinas\">
 \t\t\t\t\t\t</div>
 \t\t\t\t\t";
         }
@@ -175,7 +175,7 @@ class __TwigTemplate_d58f9bf52faeeb812456904800324041d26d52de13991d3c90f9932de2e
 \t\t\t\t\t\t\t{% set active = \"active\" %}
 \t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t<div class=\"carousel-item {{active}}\">
-\t\t\t\t\t\t\t<img src=\"{{value.url}}\" class=\"vhImg d-block w-100\" alt=\"FotosMaquinas\">
+\t\t\t\t\t\t\t<img src=\"{{value.url}}\" class=\"d-block w-100\" alt=\"FotosMaquinas\">
 \t\t\t\t\t\t</div>
 \t\t\t\t\t{% endfor %}
 \t\t\t\t</div>

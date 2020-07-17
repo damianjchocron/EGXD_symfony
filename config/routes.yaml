@@ -2,6 +2,9 @@ index:
    path: /
    controller: App\Controller\HomeController::index
 
+template:
+   path: /template
+   controller: App\Controller\HomeController::template
 
    
 allProduct:

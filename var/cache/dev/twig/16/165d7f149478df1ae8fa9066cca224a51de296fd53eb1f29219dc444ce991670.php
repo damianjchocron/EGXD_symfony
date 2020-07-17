@@ -100,7 +100,7 @@ class __TwigTemplate_684cc818b8fdc8ee79ee8de7aa7a2835de637bd0df168ec21c2795247ab
 \t\t\t\t\t\t\t<img src=\"";
             // line 13
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "url", [], "any", false, false, false, 13), "html", null, true);
-            echo "\" class=\"vhImg card-img-top\" alt=\"FotosMaquinas\">
+            echo "\" class=\"card-img-top\" alt=\"FotosMaquinas\">
 \t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t<h5 class=\"card-title\">";
             // line 15
@@ -168,7 +168,7 @@ class __TwigTemplate_684cc818b8fdc8ee79ee8de7aa7a2835de637bd0df168ec21c2795247ab
 \t\t\t\t<div class=\"col-xl-4 col-lg-6 col-md-6 col-sm-12 pr-4 pb-4\">
 \t\t\t\t\t<div class=\"card-deck\">
 \t\t\t\t\t\t<div class=\"mt1 card\">
-\t\t\t\t\t\t\t<img src=\"{{value.url}}\" class=\"vhImg card-img-top\" alt=\"FotosMaquinas\">
+\t\t\t\t\t\t\t<img src=\"{{value.url}}\" class=\"card-img-top\" alt=\"FotosMaquinas\">
 \t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t<h5 class=\"card-title\">{{value.titulo}}</h5>
 \t\t\t\t\t\t\t\t<p class=\"card-text\">{{value.descripcion}}</p>

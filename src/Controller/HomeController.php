@@ -20,4 +20,8 @@ class HomeController extends AbstractController
             'productRepo' => $productRepo,
         ]);
     }
+    public function template()
+    {
+        return $this->render('home/template.html.twig', []);
+    }
 }

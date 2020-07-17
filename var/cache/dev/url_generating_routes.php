@@ -21,6 +21,7 @@ return [
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
     'usuario' => [[], ['_controller' => 'App\\Controller\\UsuarioController::index'], [], [['text', '/usuario']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
+    'template' => [[], ['_controller' => 'App\\Controller\\HomeController::template'], [], [['text', '/template']], [], []],
     'allProduct' => [['idcategoria', 'sort', 'page', 'search'], ['idcategoria' => null, 'sort' => null, 'page' => null, 'search' => null, '_controller' => 'App\\Controller\\ProductController::all'], [], [['variable', '/', '[^/]++', 'search', true], ['variable', '/', '[^/]++', 'page', true], ['variable', '/', '[^/]++', 'sort', true], ['variable', '/', '[^/]++', 'idcategoria', true], ['text', '/product/all']], [], []],
     'insertformProduct' => [[], ['_controller' => 'App\\Controller\\ProductController::insertform'], [], [['text', '/product/insertform']], [], []],
     'modifyProduct' => [[], ['_controller' => 'App\\Controller\\ProductController::modify'], [], [['text', '/product/modify']], [], []],
