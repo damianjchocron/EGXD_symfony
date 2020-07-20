@@ -1,0 +1,16 @@
+.img-card{
+    height:342px;
+    width: 342px !important;
+}
+.imagenesHeader {
+    width: 29px;
+    height: 29px;
+}
+
+.mystyle > span{
+    color: white;
+}
+.mystyle{
+    position: absolute;
+    margin: 39px 0px 10px 700px;
+}

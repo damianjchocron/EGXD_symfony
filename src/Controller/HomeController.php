@@ -16,7 +16,11 @@ class HomeController extends AbstractController
             ->getRepository(Product::class)
             ->viewhome();
 
-        return $this->render('home/index.html.twig', [
+        /* return $this->render('home/index.html.twig', [
+            'productRepo' => $productRepo,
+        ]); */
+        
+        return $this->render('home/indexNEW.html.twig', [
             'productRepo' => $productRepo,
         ]);
     }
