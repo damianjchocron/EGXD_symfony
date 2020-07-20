@@ -1,16 +1,22 @@
-.img-card{
-    height:342px;
+.img-card {
+    height: 342px;
     width: 342px !important;
 }
+
 .imagenesHeader {
     width: 29px;
     height: 29px;
 }
 
-.mystyle > span{
+.mystyle>span {
     color: white;
 }
-.mystyle{
+
+.mystyle {
     position: absolute;
     margin: 39px 0px 10px 700px;
+}
+
+.h4 {
+    color: white;
 }

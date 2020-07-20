@@ -1,4 +1,4 @@
-<div id="page">
+<div>
 	<header>
 		<div class="header-container">
 			<div class="header-top">
@@ -42,9 +42,15 @@
 <nav>
 	<div class="container">
 		<div class="logo">
-			<a title="equipamiento grafico" href="/"><img alt="equipamiento grafico" src="images/logo.png"></a>
+			<a title="equipamiento grafico" href="/"><img alt="equipamiento grafico" src="/images/logo.png"></a>
 		</div>
-		<ul class="nav hidden-xs menu-item menu-item-left">
+		<div class="mm-toggle-wrap">
+			<div class="mm-toggle">
+				<i class="fa fa-reorder"></i>
+				<span class="mm-label">Menu</span>
+			</div>
+		</div>
+		<ul class="nav menu-item menu-item-left hidden-xs">
 			<li class="level0 parent drop-menu active">
 				<a href="/">
 					<span>Principal</span>
@@ -61,16 +67,31 @@
 				</a>
 			</li>
 		</ul>
-		{# <ul class="ml-3 nav menu-item menu-item-rigth mystyle">
-			<span class='navbar-brand mb-0 h4 col-12'>Carlos Pellegrini 1055 - CP 1842</span>
-			<span class='navbar-brand mb-0 h4 col-12'>Monte Grande - Bs. As. | Argentina
-			</span>
-			<span class='navbar-brand mb-0 h4 col-12'><img class="imagenesHeader" src="/img/header/mail.png" alt="mail">
-				equipamientografico@gmail.com
-			</span>
-			<span class='navbar-brand mb-0 h4 col-12'><img class="imagenesHeader" src="/img/header/whatsapp.png" alt="telf">
-				(011) 9 11 6110 0402
-			</span>
-		</ul> #}
+		<ul class="ml-3 nav menu-item menu-item-right hidden-xs">
+			<li class="level0 parent">
+				<div class="row">
+					<div class="col-12">
+						<span class='h4 col-12'>Carlos Pellegrini 1055 - CP 1842</span>
+					</div>
+					<div class="col-12">
+						<span class='h4 col-12'>Monte Grande - Bs. As. | Argentina</span>
+					</div>
+					<div class="col-12">
+						<span class='h4 col-12'>
+							<img class="imagenesHeader" src="/img/header/mail.png" alt="mail">
+							equipamientografico@gmail.com
+						</span>
+					</div>
+					<div class="col-12">
+
+						<span class='h4 col-12'>
+							<img class="imagenesHeader" src="/img/header/whatsapp.png" alt="telf">
+							(011) 9 11 6110 0402
+						</span>
+					</div>
+				</div>
+			</li>
+		</ul>
 	</div>
 </nav>
+
