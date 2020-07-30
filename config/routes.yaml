@@ -27,6 +27,14 @@ detailProduct:
    path: /product/detail/{idproduct?}
    controller: App\Controller\ProductController::detail
 
+updateProduct:
+   path: /product/update/{id}
+   controller: App\Controller\ProductController::update
+
+updateProductPost:
+   path: /product/updatePost
+   controller: App\Controller\ProductController::updatePost
+
 ajaxFindMultimedia:
    path: /multimedia/ajaxFind
    controller: App\Controller\MultimediaController::ajaxFind

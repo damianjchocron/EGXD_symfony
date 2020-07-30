@@ -67,49 +67,47 @@
 		<div class="container">
 			<div class="row">
 				<div class="products-grid">
-					<div class="col-md-12">
-						<div class="std">
-							<div class="home-tabs wow bounceInUp animated">
-								<div class="producttabs">
-									<div id="thm_producttabs1" class="thm-producttabs">
-										<div
-											class="thm-pdt-container">
-											{#Begin Tab Content #}
-											<div class="pdt-content pdt_new_arrivals is-loaded  tab-content-actived">
-												<ul
-													class="pdt-list products-grid zoomOut play">
-													{# La clase wide-first es importante #}
-													{% for value in productRepo %}
-														<li class="item item-animate m-3">
-															<div class="item-inner m-2">
-																<div class="item-img">
-																	<div class="item-img-info">
-																		<a href="{{ path("detailProduct", {idproduct:value.idproduct } ) }}" title="{{value.titulo}}" class="product-image">
-																			<img class="img-card" src="{{value.url}}" alt="{{value.titulo}}">
-																		</a>
-																	</div>
+					<div class="std">
+						<div class="home-tabs wow bounceInUp animated">
+							<div class="producttabs">
+								<div id="thm_producttabs1" class="thm-producttabs">
+									<div
+										class="thm-pdt-container">
+										{#Begin Tab Content #}
+										<div class="pdt-content pdt_new_arrivals is-loaded  tab-content-actived">
+											<ul
+												class="pdt-list products-grid zoomOut play">
+												{# La clase wide-first es importante #}
+												{% for value in productRepo %}
+													<li class="item item-animate m-3">
+														<div class="item-inner m-2">
+															<div class="item-img">
+																<div class="item-img-info">
+																	<a href="{{ path("detailProduct", {idproduct:value.idproduct } ) }}" title="{{value.titulo}}" class="product-image">
+																		<img class="img-card" src="{{value.url}}" alt="{{value.titulo}}">
+																	</a>
 																</div>
 															</div>
-															<div class="item-info">
-																<div class="info-inner">
-																	<div class="item-title">
-																		<h2 class="card-title">{{value.titulo}}</h2>
-																	</div>
-																	<div class="item-content">
-																		<div class="item-price">
-																			<div class="price-box">
-																				<span class="regular-price">
-																					<span class="price">U{{ value.precio|format_currency('USD') }}</span>
-																				</span>
-																			</div>
+														</div>
+														<div class="item-info">
+															<div class="info-inner">
+																<div class="item-title">
+																	<h2 class="card-title">{{value.titulo}}</h2>
+																</div>
+																<div class="item-content">
+																	<div class="item-price">
+																		<div class="price-box">
+																			<span class="regular-price">
+																				<span class="price">U{{ value.precio|format_currency('USD') }}</span>
+																			</span>
 																		</div>
 																	</div>
 																</div>
 															</div>
-														</li>
-													{% endfor %}
-												</ul>
-											</div>
+														</div>
+													</li>
+												{% endfor %}
+											</ul>
 										</div>
 									</div>
 								</div>
