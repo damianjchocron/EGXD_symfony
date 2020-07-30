@@ -25,6 +25,8 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
         $this->source = $this->getSourceContext();
 
         $this->blocks = [
+            'title' => [$this, 'block_title'],
+            'meta' => [$this, 'block_meta'],
             'body' => [$this, 'block_body'],
             'javascripts' => [$this, 'block_javascripts'],
         ];
@@ -33,7 +35,7 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base.html.twig";
+        return "baseNEW.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +47,7 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "product/modify.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "product/modify.html.twig", 1);
+        $this->parent = $this->loadTemplate("baseNEW.html.twig", "product/modify.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -56,6 +58,48 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
     }
 
     // line 3
+    public function block_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        echo "Equipamiento Grafico - Mantenimiento
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 6
+    public function block_meta($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "meta"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "meta"));
+
+        // line 7
+        echo "\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNotIndexNEW.css\" media=\"all\">
+
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 11
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -65,7 +109,7 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 4
+        // line 12
         echo "\t<table class=\"table table-dark mt-3\">
 \t\t<thead>
 \t\t\t<tr>
@@ -78,63 +122,63 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 \t\t</thead>
 \t\t<tbody>
 \t\t\t";
-        // line 15
+        // line 23
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["dataproductforrender"]) || array_key_exists("dataproductforrender", $context) ? $context["dataproductforrender"] : (function () { throw new RuntimeError('Variable "dataproductforrender" does not exist.', 15, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["dataproductforrender"]) || array_key_exists("dataproductforrender", $context) ? $context["dataproductforrender"] : (function () { throw new RuntimeError('Variable "dataproductforrender" does not exist.', 23, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
-            // line 16
+            // line 24
             echo "\t\t\t\t<tr id=\"product";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 16), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 24), "html", null, true);
             echo "\">
 \t\t\t\t\t<form method=\"POST\" action=\"/product/modify\">
 \t\t\t\t\t\t<th scope=\"row\"><input name=\"idproductmodify\" type=\"number\" class=\"form-control\" value=\"";
-            // line 18
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 18), "html", null, true);
+            // line 26
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 26), "html", null, true);
             echo "\" readonly></th>
 \t\t\t\t\t\t<td><input name=\"titulo\" type=\"text\" class=\"form-control\" value=\"";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "titulo", [], "any", false, false, false, 19), "html", null, true);
+            // line 27
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "titulo", [], "any", false, false, false, 27), "html", null, true);
             echo "\"></td>
 \t\t\t\t\t\t<td><input name=\"descripcion\" type=\"text\" class=\"form-control\" value=\"";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "descripcion", [], "any", false, false, false, 20), "html", null, true);
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "descripcion", [], "any", false, false, false, 28), "html", null, true);
             echo "\"></td>
 \t\t\t\t\t\t<td><input name=\"precio\" type=\"text\" class=\"form-control\" value=\"";
-            // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "precio", [], "any", false, false, false, 21), "html", null, true);
+            // line 29
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "precio", [], "any", false, false, false, 29), "html", null, true);
             echo "\"></td>
 \t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t<select name=\"idcategoria\" class=\"custom-select\" id=\"inputGroupSelect01\">
 \t\t\t\t\t\t\t\t<option value=\"";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "idcategoria", [], "any", false, false, false, 24), "idcategoria", [], "any", false, false, false, 24), "html", null, true);
+            // line 32
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "idcategoria", [], "any", false, false, false, 32), "idcategoria", [], "any", false, false, false, 32), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "idcategoria", [], "any", false, false, false, 24), "nombrecategoria", [], "any", false, false, false, 24), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "idcategoria", [], "any", false, false, false, 32), "nombrecategoria", [], "any", false, false, false, 32), "html", null, true);
             echo "</option>
 \t\t\t\t\t\t\t\t";
-            // line 26
+            // line 34
             echo "\t\t\t\t\t\t\t\t";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["categorias"]) || array_key_exists("categorias", $context) ? $context["categorias"] : (function () { throw new RuntimeError('Variable "categorias" does not exist.', 26, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["categorias"]) || array_key_exists("categorias", $context) ? $context["categorias"] : (function () { throw new RuntimeError('Variable "categorias" does not exist.', 34, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-                // line 27
+                // line 35
                 echo "\t\t\t\t\t\t\t\t\t<option value=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "idcategoria", [], "any", false, false, false, 27), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "idcategoria", [], "any", false, false, false, 35), "html", null, true);
                 echo "\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "nombrecategoria", [], "any", false, false, false, 27), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "nombrecategoria", [], "any", false, false, false, 35), "html", null, true);
                 echo "</option>
 \t\t\t\t\t\t\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 29
+            // line 37
             echo "\t\t\t\t\t\t\t</select>
 \t\t\t\t\t\t</td>
 \t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t<button data-idproduct=\"";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 32), "html", null, true);
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 40), "html", null, true);
             echo "\" type=\"button\" class=\"btn btn-primary botonimagenes\" data-toggle=\"modal\" data-target=\"#ModalScrollable\">
 \t\t\t\t\t\t\t\tImagenes
 \t\t\t\t\t\t\t</button>
@@ -144,8 +188,8 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 \t\t\t\t\t\t</td>
 \t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t<button data-idproduct=\"";
-            // line 40
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 40), "html", null, true);
+            // line 48
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 48), "html", null, true);
             echo "\" type=\"button\" class=\"btn btn-danger deleteproduct\" data-toggle=\"modal\" data-target=\"#ModalScrollable\">
 \t\t\t\t\t\t\t\tBorrar
 \t\t\t\t\t\t\t</button>
@@ -157,14 +201,14 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
+        // line 55
         echo "\t\t</tbody>
 \t</table>
 
 \t";
-        // line 50
-        if ( !twig_test_empty((isset($context["showmodal"]) || array_key_exists("showmodal", $context) ? $context["showmodal"] : (function () { throw new RuntimeError('Variable "showmodal" does not exist.', 50, $this->source); })()))) {
-            // line 51
+        // line 58
+        if ( !twig_test_empty((isset($context["showmodal"]) || array_key_exists("showmodal", $context) ? $context["showmodal"] : (function () { throw new RuntimeError('Variable "showmodal" does not exist.', 58, $this->source); })()))) {
+            // line 59
             echo "\t\t<div id=\"myModal\" class=\"modal\" tabindex=\"-1\" role=\"dialog\">
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
@@ -176,8 +220,8 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t<p>";
-            // line 61
-            echo twig_escape_filter($this->env, (isset($context["showmodal"]) || array_key_exists("showmodal", $context) ? $context["showmodal"] : (function () { throw new RuntimeError('Variable "showmodal" does not exist.', 61, $this->source); })()), "html", null, true);
+            // line 69
+            echo twig_escape_filter($this->env, (isset($context["showmodal"]) || array_key_exists("showmodal", $context) ? $context["showmodal"] : (function () { throw new RuntimeError('Variable "showmodal" does not exist.', 69, $this->source); })()), "html", null, true);
             echo "</p>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -185,7 +229,7 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 \t\t</div>
 \t";
         }
-        // line 67
+        // line 75
         echo "\t<!-- Button trigger modal -->
 
 \t<!-- Modal -->
@@ -220,7 +264,7 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 
     }
 
-    // line 94
+    // line 102
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -230,7 +274,7 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 95
+        // line 103
         echo "\t<script src=\"../js/jsmodalimagenesmodify.js\" type=\"text/javascript\"></script>
 ";
         
@@ -253,12 +297,20 @@ class __TwigTemplate_6321dad00c58d220d1f76cc5a60224d9bd24e948605de31ca5ad7d23c21
 
     public function getDebugInfo()
     {
-        return array (  234 => 95,  224 => 94,  189 => 67,  180 => 61,  168 => 51,  166 => 50,  161 => 47,  148 => 40,  137 => 32,  132 => 29,  121 => 27,  116 => 26,  110 => 24,  104 => 21,  100 => 20,  96 => 19,  92 => 18,  86 => 16,  82 => 15,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  278 => 103,  268 => 102,  233 => 75,  224 => 69,  212 => 59,  210 => 58,  205 => 55,  192 => 48,  181 => 40,  176 => 37,  165 => 35,  160 => 34,  154 => 32,  148 => 29,  144 => 28,  140 => 27,  136 => 26,  130 => 24,  126 => 23,  113 => 12,  103 => 11,  91 => 7,  81 => 6,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'baseNEW.html.twig' %}
+
+{% block title %}Equipamiento Grafico - Mantenimiento
+{% endblock %}
+
+{% block meta %}
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNotIndexNEW.css\" media=\"all\">
+
+{% endblock %}
 
 {% block body %}
 \t<table class=\"table table-dark mt-3\">

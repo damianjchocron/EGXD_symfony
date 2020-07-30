@@ -61,6 +61,12 @@ class __TwigTemplate_fbd6da2c74fe6611029e0f66b92801b3b4ec3d8fbe5175f254531823c1a
 
         // line 2
         echo "\t<nav class=\"navbar navbar-dark bg-dark mt-2\">
+\t\t<div class=\"mm-toggle-wrap\">
+\t\t\t<div class=\"mm-toggle\">
+\t\t\t\t<i class=\"fa fa-reorder\"></i>
+\t\t\t\t<span class=\"mm-label\">Menu</span>
+\t\t\t</div>
+\t\t</div>
 \t\t<div class=\"row justify-content-between\">
 \t\t\t<div class=\"col-xl-5 col-md-7 col-sm-12 mt-5\">
 \t\t\t\t<span class=\"mb-0 h1 col-xl-12 titulo\">Equipamiento Grafico Monte Grande</span>
@@ -95,9 +101,9 @@ class __TwigTemplate_fbd6da2c74fe6611029e0f66b92801b3b4ec3d8fbe5175f254531823c1a
 \t\t\t\t<a class=\"nav-item nav-link navbar-brand\" href=\"/contacto\">Contacto</a>
 \t\t\t</div>
 \t\t\t";
-        // line 36
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 36, $this->source); })()), "user", [], "any", false, false, false, 36)) {
-            // line 37
+        // line 42
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 42, $this->source); })()), "user", [], "any", false, false, false, 42)) {
+            // line 43
             echo "\t\t\t\t<div class=\"dropdown\">
 \t\t\t\t\t<button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
 \t\t\t\t\t\tMantenimiento
@@ -106,12 +112,12 @@ class __TwigTemplate_fbd6da2c74fe6611029e0f66b92801b3b4ec3d8fbe5175f254531823c1a
 \t\t\t\t\t\t<a id=\"linkinsert\" class=\"dropdown-item\" href=\"/product/insertform\">Insertar Maquina</a>
 \t\t\t\t\t\t<a id=\"linkmodify\" class=\"dropdown-item\" href=\"/product/modify\">Modificar Maquina</a>
 \t\t\t\t\t\t<a id=\"linkcategoria\" class=\"dropdown-item\" href=\"/categoria\">Agregar Categorias</a>
-\t\t\t\t\t\t<a  class=\"dropdown-item\" href=\"/logout\">Cerrar Sesion</a>
+\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/logout\">Cerrar Sesion</a>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t";
         }
-        // line 49
+        // line 55
         echo "\t\t</div>
 \t</nav>
 ";
@@ -130,13 +136,19 @@ class __TwigTemplate_fbd6da2c74fe6611029e0f66b92801b3b4ec3d8fbe5175f254531823c1a
 
     public function getDebugInfo()
     {
-        return array (  115 => 49,  101 => 37,  99 => 36,  63 => 2,  44 => 1,);
+        return array (  121 => 55,  107 => 43,  105 => 42,  63 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% block header %}
 \t<nav class=\"navbar navbar-dark bg-dark mt-2\">
+\t\t<div class=\"mm-toggle-wrap\">
+\t\t\t<div class=\"mm-toggle\">
+\t\t\t\t<i class=\"fa fa-reorder\"></i>
+\t\t\t\t<span class=\"mm-label\">Menu</span>
+\t\t\t</div>
+\t\t</div>
 \t\t<div class=\"row justify-content-between\">
 \t\t\t<div class=\"col-xl-5 col-md-7 col-sm-12 mt-5\">
 \t\t\t\t<span class=\"mb-0 h1 col-xl-12 titulo\">Equipamiento Grafico Monte Grande</span>
@@ -179,7 +191,7 @@ class __TwigTemplate_fbd6da2c74fe6611029e0f66b92801b3b4ec3d8fbe5175f254531823c1a
 \t\t\t\t\t\t<a id=\"linkinsert\" class=\"dropdown-item\" href=\"/product/insertform\">Insertar Maquina</a>
 \t\t\t\t\t\t<a id=\"linkmodify\" class=\"dropdown-item\" href=\"/product/modify\">Modificar Maquina</a>
 \t\t\t\t\t\t<a id=\"linkcategoria\" class=\"dropdown-item\" href=\"/categoria\">Agregar Categorias</a>
-\t\t\t\t\t\t<a  class=\"dropdown-item\" href=\"/logout\">Cerrar Sesion</a>
+\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/logout\">Cerrar Sesion</a>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t{% endif %}

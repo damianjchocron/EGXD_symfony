@@ -52,7 +52,7 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
 \t\t";
         // line 4
         $this->displayBlock('meta', $context, $blocks);
-        // line 5
+        // line 6
         echo "\t\t<meta charset=\"utf-8\">
 \t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
 \t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
@@ -60,69 +60,138 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
 \t\t<meta
 \t\tname=\"author\" content=\"\">
 \t\t";
-        // line 12
+        // line 13
         echo "
 \t\t<title>
 \t\t\t";
-        // line 14
+        // line 15
         $this->displayBlock('title', $context, $blocks);
-        // line 16
+        // line 17
         echo "\t\t</title>
 
 \t\t";
-        // line 19
+        // line 20
         echo "\t\t<meta
 \t\tname=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">
 
 \t\t";
-        // line 23
-        echo "\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/bootstrap.min.css\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/font-awesome.css\" media=\"all\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/simple-line-icons.css\" media=\"all\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/owl.carousel.css\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/owl.theme.css\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/jquery.bxslider.css\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/jquery.mobile-menu.css\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/revslider.css\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\" media=\"all\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/cssNEW.css\" media=\"all\">
-
+        // line 24
+        echo "\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/bootstrap.min.css\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/font-awesome.css\" media=\"all\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/simple-line-icons.css\" media=\"all\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/owl.carousel.css\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/owl.theme.css\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/jquery.bxslider.css\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/jquery.mobile-menu.css\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/revslider.css\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/style.css\" media=\"all\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNEW.css\" media=\"all\">
 \t\t";
         // line 35
-        echo "\t\t<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-\t\t<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        echo "
+\t\t";
+        // line 37
+        echo "\t\t<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'> <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 \t\t<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,600,600italic,400italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 \t</head>
 
-\t<body class=\"cms-index-index index\">
-\t\t";
-        // line 41
-        $this->displayBlock('header', $context, $blocks);
+\t<body class=\"cms-index-index index mmPushBody\">
+\t\t<div id=\"page\">
+
+\t\t\t";
         // line 44
-        echo "\t\t";
+        $this->displayBlock('header', $context, $blocks);
+        // line 47
+        echo "\t\t\t";
         $this->displayBlock('body', $context, $blocks);
-        // line 45
-        echo "\t\t";
+        // line 51
+        echo "
+\t\t\t";
+        // line 52
         $this->displayBlock('footer', $context, $blocks);
-        // line 48
-        echo "\t\t
-\t\t";
-        // line 50
-        echo "\t\t<script type=\"text/javascript\" src=\"js/jquery.min.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/bootstrap.min.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/common.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/countdown.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/owl.carousel.min.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/jquery.mobile-menu.min.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/revolution-slider.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/revolution.extension.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/newJSneedInforTemplate.js\"></script>
-\t\t";
-        // line 59
+        // line 55
+        echo "
+\t\t\t";
+        // line 57
+        echo "\t\t\t<script type=\"text/javascript\" src=\"/js/jquery.min.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/bootstrap.min.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/common.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/countdown.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/owl.carousel.min.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/jquery.mobile-menu.min.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/revolution-slider.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/revolution.extension.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/newJSneedInforTemplate.js\"></script>
+\t\t\t";
+        // line 67
+        echo "\t\t\t";
+        // line 68
+        echo "\t\t\t";
+        // line 69
+        echo "\t\t\t\t";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 60
-        echo "\t</body>
-</html>
+        // line 72
+        echo "\t\t</div>
+\t\t\t<div id=\"mobile-menu\"> <ul>
+\t\t\t\t<li>
+\t\t\t\t\t<div class=\"principal\">
+\t\t\t\t\t\t<a href=\"/\">
+\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Principal</a>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<div class=\"home\">
+\t\t\t\t\t\t<a href=\"/product/all\">
+\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Catelogo</a>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<div class=\"home\">
+\t\t\t\t\t\t<a href=\"/contacto\">
+\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Conocenos</a>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
+\t\t\t\t";
+        // line 92
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 92, $this->source); })()), "user", [], "any", false, false, false, 92)) {
+            // line 93
+            echo "\t\t\t\t\t<li>
+\t\t\t\t\t\t<div class=\"home\">
+\t\t\t\t\t\t\t<a href=\"/product/insertform\">
+\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Nuevo Producto</a>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</li>
+\t\t\t\t\t<li>
+\t\t\t\t\t\t<div class=\"home\">
+\t\t\t\t\t\t\t<a href=\"/product/modify\">
+\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Modificar Producto</a>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</li>
+\t\t\t\t\t<li>
+\t\t\t\t\t\t<div class=\"home\">
+\t\t\t\t\t\t\t<a href=\"/categoria\">
+\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Categorias</a>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</li>
+\t\t\t\t";
+        }
+        // line 112
+        echo "\t\t\t\t";
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 112, $this->source); })()), "user", [], "any", false, false, false, 112)) {
+            // line 113
+            echo "\t\t\t\t\t<li>
+\t\t\t\t\t\t<div class=\"home\">
+\t\t\t\t\t\t\t<a href=\"/login\">
+\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Iniciar Secion</a>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</li>
+\t\t\t\t";
+        }
+        // line 120
+        echo "\t\t\t</ul>
+\t\t</div>
+\t</body>
+</html></body></html>
 ";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -142,6 +211,8 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "meta"));
 
+        // line 5
+        echo "\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -150,7 +221,7 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
 
     }
 
-    // line 14
+    // line 15
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -170,7 +241,7 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
 
     }
 
-    // line 41
+    // line 44
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -180,11 +251,11 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
-        // line 42
+        // line 45
+        echo "\t\t\t\t";
+        $this->loadTemplate("headerNEW.html.twig", "baseNEW.html.twig", 45)->display($context);
+        // line 46
         echo "\t\t\t";
-        $this->loadTemplate("headerNEW.html.twig", "baseNEW.html.twig", 42)->display($context);
-        // line 43
-        echo "\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -193,7 +264,7 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
 
     }
 
-    // line 44
+    // line 47
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -203,6 +274,10 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
+        // line 48
+        echo "\t\t\t\t<p>Aqui falta body
+\t\t\t\t</p>
+\t\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -211,7 +286,7 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
 
     }
 
-    // line 45
+    // line 52
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -221,11 +296,11 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 46
+        // line 53
+        echo "\t\t\t\t";
+        $this->loadTemplate("footerNEW.html.twig", "baseNEW.html.twig", 53)->display($context);
+        // line 54
         echo "\t\t\t";
-        $this->loadTemplate("footerNEW.html.twig", "baseNEW.html.twig", 46)->display($context);
-        // line 47
-        echo "\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -234,7 +309,7 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
 
     }
 
-    // line 59
+    // line 69
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -244,6 +319,9 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
+        echo "<script>
+\t\t\t</script>
+\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -257,9 +335,14 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
         return "baseNEW.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  238 => 59,  228 => 47,  225 => 46,  215 => 45,  197 => 44,  187 => 43,  184 => 42,  174 => 41,  154 => 14,  136 => 4,  124 => 60,  122 => 59,  111 => 50,  108 => 48,  105 => 45,  102 => 44,  100 => 41,  92 => 35,  79 => 23,  74 => 19,  70 => 16,  68 => 14,  64 => 12,  56 => 5,  54 => 4,  49 => 1,);
+        return array (  313 => 69,  303 => 54,  300 => 53,  290 => 52,  278 => 48,  268 => 47,  258 => 46,  255 => 45,  245 => 44,  225 => 15,  215 => 5,  205 => 4,  191 => 120,  182 => 113,  179 => 112,  158 => 93,  156 => 92,  134 => 72,  131 => 69,  129 => 68,  127 => 67,  116 => 57,  113 => 55,  111 => 52,  108 => 51,  105 => 47,  103 => 44,  94 => 37,  91 => 35,  79 => 24,  74 => 20,  70 => 17,  68 => 15,  64 => 13,  56 => 6,  54 => 4,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -267,7 +350,8 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
         return new Source("<!DOCTYPE html>
 <html lang=\"en\">
 \t<head>
-\t\t{% block meta %}{% endblock%}
+\t\t{% block meta %}
+\t\t{% endblock%}
 \t\t<meta charset=\"utf-8\">
 \t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
 \t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
@@ -286,45 +370,106 @@ class __TwigTemplate_4b3d13c68f57a642cf76631dd61222455a460ff5958b3fad31c8eefa8d7
 \t\tname=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">
 
 \t\t{# CSS Style #}
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/bootstrap.min.css\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/font-awesome.css\" media=\"all\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/simple-line-icons.css\" media=\"all\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/owl.carousel.css\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/owl.theme.css\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/jquery.bxslider.css\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/jquery.mobile-menu.css\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/revslider.css\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\" media=\"all\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/cssNEW.css\" media=\"all\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/bootstrap.min.css\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/font-awesome.css\" media=\"all\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/simple-line-icons.css\" media=\"all\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/owl.carousel.css\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/owl.theme.css\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/jquery.bxslider.css\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/jquery.mobile-menu.css\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/revslider.css\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/style.css\" media=\"all\">
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNEW.css\" media=\"all\">
+\t\t{# <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css\" integrity=\"sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk\" crossorigin=\"anonymous\"> #}
 
 \t\t{# Google Fonts #}
-\t\t<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-\t\t<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+\t\t<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'> <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 \t\t<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,600,600italic,400italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 \t</head>
 
-\t<body class=\"cms-index-index index\">
-\t\t{% block header %}
-\t\t\t{% include 'headerNEW.html.twig' %}
+\t<body class=\"cms-index-index index mmPushBody\">
+\t\t<div id=\"page\">
+
+\t\t\t{% block header %}
+\t\t\t\t{% include 'headerNEW.html.twig' %}
+\t\t\t{% endblock %}
+\t\t\t{% block body %}
+\t\t\t\t<p>Aqui falta body
+\t\t\t\t</p>
+\t\t\t{% endblock %}
+
+\t\t\t{% block footer %}
+\t\t\t\t{% include 'footerNEW.html.twig' %}
+\t\t\t{% endblock %}
+
+\t\t\t{# JavaScript #}
+\t\t\t<script type=\"text/javascript\" src=\"/js/jquery.min.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/bootstrap.min.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/common.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/countdown.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/owl.carousel.min.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/jquery.mobile-menu.min.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/revolution-slider.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/revolution.extension.js\"></script>
+\t\t\t<script type=\"text/javascript\" src=\"/js/newJSneedInforTemplate.js\"></script>
+\t\t\t{# <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script> #}
+\t\t\t{# <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script> #}
+\t\t\t{# <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js\" integrity=\"sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI\" crossorigin=\"anonymous\"></script> #}
+\t\t\t\t{% block javascripts %}<script>
+\t\t\t</script>
 \t\t{% endblock %}
-\t\t{% block body %}{% endblock %}
-\t\t{% block footer %}
-\t\t\t{% include 'footerNEW.html.twig' %}
-\t\t{% endblock %}
-\t\t
-\t\t{# JavaScript #}
-\t\t<script type=\"text/javascript\" src=\"js/jquery.min.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/bootstrap.min.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/common.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/countdown.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/owl.carousel.min.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/jquery.mobile-menu.min.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/revolution-slider.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/revolution.extension.js\"></script>
-\t\t<script type=\"text/javascript\" src=\"js/newJSneedInforTemplate.js\"></script>
-\t\t{% block javascripts %}{% endblock %}
+\t\t</div>
+\t\t\t<div id=\"mobile-menu\"> <ul>
+\t\t\t\t<li>
+\t\t\t\t\t<div class=\"principal\">
+\t\t\t\t\t\t<a href=\"/\">
+\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Principal</a>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<div class=\"home\">
+\t\t\t\t\t\t<a href=\"/product/all\">
+\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Catelogo</a>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<div class=\"home\">
+\t\t\t\t\t\t<a href=\"/contacto\">
+\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Conocenos</a>
+\t\t\t\t\t</div>
+\t\t\t\t</li>
+\t\t\t\t{% if app.user %}
+\t\t\t\t\t<li>
+\t\t\t\t\t\t<div class=\"home\">
+\t\t\t\t\t\t\t<a href=\"/product/insertform\">
+\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Nuevo Producto</a>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</li>
+\t\t\t\t\t<li>
+\t\t\t\t\t\t<div class=\"home\">
+\t\t\t\t\t\t\t<a href=\"/product/modify\">
+\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Modificar Producto</a>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</li>
+\t\t\t\t\t<li>
+\t\t\t\t\t\t<div class=\"home\">
+\t\t\t\t\t\t\t<a href=\"/categoria\">
+\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Categorias</a>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</li>
+\t\t\t\t{% endif %}
+\t\t\t\t{% if not app.user %}
+\t\t\t\t\t<li>
+\t\t\t\t\t\t<div class=\"home\">
+\t\t\t\t\t\t\t<a href=\"/login\">
+\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Iniciar Secion</a>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</li>
+\t\t\t\t{% endif %}
+\t\t\t</ul>
+\t\t</div>
 \t</body>
-</html>
+</html></body></html>
 ", "baseNEW.html.twig", "/var/www/html/EGXD_symfony/templates/baseNEW.html.twig");
     }
 }

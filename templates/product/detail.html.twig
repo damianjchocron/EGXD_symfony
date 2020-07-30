@@ -4,43 +4,89 @@
 {% endblock %}
 
 {% block meta %}
-		<link rel="stylesheet" type="text/css" href="/css/cssNotIndexNEW.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/css/cssNotIndexNEW.css" media="all">
 
 {% endblock %}
 
 {% block body %}
-	<div class="row">
-		<div class="col-xl-6 mb-3 mt-3">
-			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner">
-					{% for value in forrenderimg %}
-						<!-- Aca le doy el el active para el carrusel -->
-						{% set active = "" %}
-						{% if value.priority == "1" %}
-							{% set active = "active" %}
-						{% endif %}
-						<div class="carousel-item {{active}}">
-							<img src="{{value.url}}" class="d-block w-100" alt="FotosMaquinas">
+
+	<section class="main-container col1-layout wow bounceInUp animated">
+		<div class="main container">
+			<div class="col-main">
+				<div class="row">
+					<div class="product-view">
+						<div class="product-next-prev">
+							<a class="product-next" href="#">
+								<span></span>
+							</a>
+							<a class="product-prev" href="#">
+								<span></span>
+							</a>
 						</div>
-					{% endfor %}
+						<div class="product-essential">
+							<form action="#" method="post" id="product_addtocart_form">
+								<input name="form_key" value="6UbXroakyQlbfQzK" type="hidden">
+								<div class="product-img-box col-sm-4 col-xs-12">
+									<div class="new-label new-top-left">
+										New
+									</div>
+									<div class="product-image">
+										<div class="large-image">
+											{% for value in forrenderimg %}
+												<!-- Aca le doy el el active para el carrusel -->
+												{% if value.priority == "1" %}
+													<a href="{{value.url}}" class="cloud-zoom" id="zoom1">
+														<img src="{{value.url}}" alt="product image">
+													</a>
+												{% endif %}
+											{% endfor %}
+										</div>
+										<div class="flexslider flexslider-thumb">
+											<ul class="previews-list slides">
+												{% for value in forrenderimg %}
+													<li style="width: 76px; float: left; display: block;">
+														<a href="{{value.url}}" class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '{{value.url}}' ">
+															<img src="{{value.url}}" alt="Thumbnail 1">
+														</a>
+													</li>
+												{% endfor %}
+											</ul>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="product-shop col-sm-8 col-xs-12">
+									<div class="product-name">
+										<h1>{{oneProduct.titulo}}</h1>
+									</div>
+
+									<div class="price-block">
+										<div class="price-box">
+											<p class="special-price">
+												<span class="price-label">Precio</span>
+												<span id="product-price-48" class="price">
+													{{oneProduct.precio}}
+												</span>
+											</p>
+
+										</div>
+
+									</div>
+									<div class="short-description">
+										<h2>Descripcion</h2>
+										<p>{{oneProduct.descripcion}}
+										</p>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
-				<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
 			</div>
 		</div>
-		<div class="col-xl-5 mb-3">
-			<ul class="list-group list-group-flush">
-					<li class="list-group-item"><h1>Maquina: {{oneProduct.titulo}}</h1></li>
-					<li class="list-group-item">Descripcion: {{oneProduct.descripcion}}</li>
-					<li class="list-group-item">U$D {{oneProduct.precio}}</li>
-					<li class="list-group-item">Categoria: {{categoryInstance.nombrecategoria}}</li>
-			</ul>
-		</div>
-	</div>
+	</section>
+{% endblock %}
+{% block javascripts %}
+	<script type="text/javascript" src="/js/cloud-zoom.js"></script>
 {% endblock %}

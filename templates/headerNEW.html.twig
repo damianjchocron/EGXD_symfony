@@ -4,32 +4,60 @@
 			<div class="header-top">
 				<div class="container">
 					<div class="row">
-						<div class="welcome-msg hidden-xs ml-3">
-							Bienvenido a Equipamiento Grafico
+						<div class="col-lg-6 col-xs-5 col-sm-6 hidden-xs">
+							<div class="welcome-msg hidden-xs ml-3">
+								Bienvenido a Equipamiento Grafico
+							</div>
 						</div>
-						<div class="col-xs-5 col-sm-6">
+						<div class="col-lg-6 col-xs-5 col-sm-6 hidden-xs">
 							<div class="toplinks">
 								<div
 									class="links">
 									{# Poner dentro de condicional app.user (si esta logueado) #}
-									<div class="myaccount">
-										<a title="My Account" href="login.html">
-											<span class="hidden-xs">Mantenimiento</span>
-											{# Aqui va dropDown #}
-										</a>
-									</div>
-									{# Poner dentro de condicional app.user (si esta logueado) #}
-									<div class="check">
-										<a title="Checkout" href="checkout.html">
-											<span class="hidden-xs">Cerrar Secion</span>
-										</a>
-									</div>
-									{# Poner dentro de condicional app.user (si NO esta logueado) #}
-									<div class="login">
-										<a href="login.html">
-											<span class="hidden-xs">Iniciar Secion</span>
-										</a>
-									</div>
+									{% if app.user %}
+										<div id="divmantenimiento">
+											<ul class="nav menu-item" id="ulmantemiento">
+												<li class="level0 parent drop-menu">
+													<a>
+														<span id="spanmanetenimiento">Mantenimiento</span>
+													</a>
+													<ul class="level1" style="display: none;">
+														<li class="level1 first">
+															<a href="/product/insertform">
+																<span>Nuevo Producto</span>
+															</a>
+														</li>
+														<li class="level1 first">
+															<a href="/product/modify">
+																<span>Modificar Producto</span>
+															</a>
+														</li>
+														<li class="level1 first">
+															<a href="/categoria">
+																<span>Categorias</span>
+															</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+
+										</div>
+									{% endif %}
+									{% if app.user %}
+										<div class="check">
+											<a title="Checkout" href="/logout">
+												<span class="hidden-xs">Cerrar Secion</span>
+											</a>
+										</div>
+									{% endif %}
+									{% if not app.user %}
+										{# Poner dentro de condicional app.user (si NO esta logueado) #}
+										<div class="login">
+											<a href="login">
+												<span class="hidden-xs">Iniciar Secion</span>
+											</a>
+										</div>
+									{% endif %}
 								</div>
 							</div>
 						</div>
@@ -40,58 +68,61 @@
 	</header>
 </div>
 <nav>
-	<div class="container">
+	<div class="mm-toggle-wrap">
+		<div class="mm-toggle">
+			<i class="fa fa-reorder"></i>
+			<span class="mm-label">Menu</span>
+		</div>
+	</div>
+	<div class="row">
 		<div class="logo">
 			<a title="equipamiento grafico" href="/"><img alt="equipamiento grafico" src="/images/logo.png"></a>
 		</div>
-		<div class="mm-toggle-wrap">
-			<div class="mm-toggle">
-				<i class="fa fa-reorder"></i>
-				<span class="mm-label">Menu</span>
-			</div>
-		</div>
-		<ul class="nav menu-item menu-item-left hidden-xs">
-			<li class="level0 parent drop-menu active">
-				<a href="/">
-					<span>Principal</span>
-				</a>
-			</li>
-			<li class="level0 parent drop-menu">
-				<a href="/product/all">
-					<span>Catalogo</span>
-				</a>
-			</li>
-			<li class="level0 parent drop-menu">
-				<a href="/contacto">
-					<span>Conocenos</span>
-				</a>
-			</li>
-		</ul>
-		<ul class="ml-3 nav menu-item menu-item-right hidden-xs">
-			<li class="level0 parent">
-				<div class="row">
-					<div class="col-12">
-						<span class='h4 col-12'>Carlos Pellegrini 1055 - CP 1842</span>
-					</div>
-					<div class="col-12">
-						<span class='h4 col-12'>Monte Grande - Bs. As. | Argentina</span>
-					</div>
-					<div class="col-12">
-						<span class='h4 col-12'>
-							<img class="imagenesHeader" src="/img/header/mail.png" alt="mail">
-							equipamientografico@gmail.com
-						</span>
-					</div>
-					<div class="col-12">
+		{# <div class="col-lg-4"> #}
+			<ul class="nav menu-item menu-item-left hidden-xs mt-5">
+				<li class="level0 parent drop-menu">
+					<a href="/">
+						<span>Principal</span>
+					</a>
+				</li>
+				<li class="level0 parent drop-menu">
+					<a href="/product/all">
+						<span>Catalogo</span>
+					</a>
+				</li>
+				<li class="level0 parent drop-menu">
+					<a href="/contacto">
+						<span>Conocenos</span>
+					</a>
+				</li>
+			</ul>
+		{# </div> #}
+		<div class="col-lg-5">
+			<ul class="uldatos nav menu-item menu-item-right mt-5">
+				<li class="lidatos level0 parent">
+					<div class="row mb-5">
+						<div class="col-12">
+							<span class='h4 col-12'>Carlos Pellegrini 1055 - CP 1842</span>
+						</div>
+						<div class="col-12">
+							<span class='h4 col-12'>Monte Grande - Bs. As. | Argentina</span>
+						</div>
+						<div class="col-12">
+							<span class='h4 col-12 emailheader'>
+								<img class="imagenesHeader" src="/img/header/mail.png" alt="mail">
+								equipamientografico@gmail.com
+							</span>
+						</div>
+						<div id="numtelf" class="col-12">
 
-						<span class='h4 col-12'>
-							<img class="imagenesHeader" src="/img/header/whatsapp.png" alt="telf">
-							(011) 9 11 6110 0402
-						</span>
+							<span class='h4 col-12'>
+								<img class="imagenesHeader" src="/img/header/whatsapp.png" alt="telf">
+								(011) 9 11 6110 0402
+							</span>
+						</div>
 					</div>
-				</div>
-			</li>
-		</ul>
+				</li>
+			</ul>
+		</div>
 	</div>
 </nav>
-

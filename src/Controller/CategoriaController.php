@@ -15,7 +15,7 @@ class CategoriaController extends AbstractController
         $categoria = $repo->findAll();
 
         //Para paginacion
-        $numRegisPos = 2; // Numero de objetos por pagina
+        $numRegisPos = 10; // Numero de objetos por pagina
         if(!isset($page)) $page=1;
         $pos = ($page * $numRegisPos) - $numRegisPos; 
         $numCatTotal = count($categoria); // Total objetos

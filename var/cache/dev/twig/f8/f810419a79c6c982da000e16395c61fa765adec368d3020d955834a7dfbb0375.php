@@ -25,6 +25,8 @@ class __TwigTemplate_123cca0a6f993bbef6f424b07bb5d462251d0d5ac4f88defbef2260ba09
         $this->source = $this->getSourceContext();
 
         $this->blocks = [
+            'title' => [$this, 'block_title'],
+            'meta' => [$this, 'block_meta'],
             'body' => [$this, 'block_body'],
             'javascripts' => [$this, 'block_javascripts'],
         ];
@@ -33,7 +35,7 @@ class __TwigTemplate_123cca0a6f993bbef6f424b07bb5d462251d0d5ac4f88defbef2260ba09
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base.html.twig";
+        return "baseNEW.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +47,7 @@ class __TwigTemplate_123cca0a6f993bbef6f424b07bb5d462251d0d5ac4f88defbef2260ba09
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "product/insertform.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "product/insertform.html.twig", 1);
+        $this->parent = $this->loadTemplate("baseNEW.html.twig", "product/insertform.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -56,6 +58,48 @@ class __TwigTemplate_123cca0a6f993bbef6f424b07bb5d462251d0d5ac4f88defbef2260ba09
     }
 
     // line 3
+    public function block_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        echo "Equipamiento Grafico - Insertar
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 6
+    public function block_meta($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "meta"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "meta"));
+
+        // line 7
+        echo "\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNotIndexNEW.css\" media=\"all\">
+
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 11
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -65,19 +109,19 @@ class __TwigTemplate_123cca0a6f993bbef6f424b07bb5d462251d0d5ac4f88defbef2260ba09
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 4
+        // line 12
         echo "\t";
-        if ( !twig_test_empty((isset($context["msj"]) || array_key_exists("msj", $context) ? $context["msj"] : (function () { throw new RuntimeError('Variable "msj" does not exist.', 4, $this->source); })()))) {
-            // line 5
+        if ( !twig_test_empty((isset($context["msj"]) || array_key_exists("msj", $context) ? $context["msj"] : (function () { throw new RuntimeError('Variable "msj" does not exist.', 12, $this->source); })()))) {
+            // line 13
             echo "\t\t<div class=\"alert alert-success\" role=\"alert\">
 \t\t\t";
-            // line 6
-            echo twig_escape_filter($this->env, (isset($context["msj"]) || array_key_exists("msj", $context) ? $context["msj"] : (function () { throw new RuntimeError('Variable "msj" does not exist.', 6, $this->source); })()), "html", null, true);
+            // line 14
+            echo twig_escape_filter($this->env, (isset($context["msj"]) || array_key_exists("msj", $context) ? $context["msj"] : (function () { throw new RuntimeError('Variable "msj" does not exist.', 14, $this->source); })()), "html", null, true);
             echo "
 \t\t</div>
 \t";
         }
-        // line 9
+        // line 17
         echo "\t<form action=\"/product/insertform\" enctype=\"multipart/form-data\" method=\"POST\">
 \t\t<div class=\"form-group\">
 \t\t\t<label for=\"titulo\">Titulo</label>
@@ -87,22 +131,22 @@ class __TwigTemplate_123cca0a6f993bbef6f424b07bb5d462251d0d5ac4f88defbef2260ba09
 \t\t\t<label for=\"categoria\">Seleccione Una Categoria</label>
 \t\t\t<select name=\"idcategoria\" class=\"form-control\" id=\"idcategoria\">
 \t\t\t\t";
-        // line 17
+        // line 25
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categorias"]) || array_key_exists("categorias", $context) ? $context["categorias"] : (function () { throw new RuntimeError('Variable "categorias" does not exist.', 17, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categorias"]) || array_key_exists("categorias", $context) ? $context["categorias"] : (function () { throw new RuntimeError('Variable "categorias" does not exist.', 25, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
-            // line 18
+            // line 26
             echo "\t\t\t\t\t<option value=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idcategoria", [], "any", false, false, false, 18), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idcategoria", [], "any", false, false, false, 26), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "nombrecategoria", [], "any", false, false, false, 18), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "nombrecategoria", [], "any", false, false, false, 26), "html", null, true);
             echo "</option>
 \t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 20
+        // line 28
         echo "\t\t\t</select>
 \t\t</div>
 \t\t<div class=\"form-group\">
@@ -132,7 +176,7 @@ class __TwigTemplate_123cca0a6f993bbef6f424b07bb5d462251d0d5ac4f88defbef2260ba09
 
     }
 
-    // line 41
+    // line 49
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -142,7 +186,7 @@ class __TwigTemplate_123cca0a6f993bbef6f424b07bb5d462251d0d5ac4f88defbef2260ba09
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 42
+        // line 50
         echo "\t<script src=\"../js/insertform.js\" type=\"text/javascript\"></script>
 ";
         
@@ -165,12 +209,20 @@ class __TwigTemplate_123cca0a6f993bbef6f424b07bb5d462251d0d5ac4f88defbef2260ba09
 
     public function getDebugInfo()
     {
-        return array (  146 => 42,  136 => 41,  106 => 20,  95 => 18,  91 => 17,  81 => 9,  75 => 6,  72 => 5,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  190 => 50,  180 => 49,  150 => 28,  139 => 26,  135 => 25,  125 => 17,  119 => 14,  116 => 13,  113 => 12,  103 => 11,  91 => 7,  81 => 6,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'baseNEW.html.twig' %}
+
+{% block title %}Equipamiento Grafico - Insertar
+{% endblock %}
+
+{% block meta %}
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNotIndexNEW.css\" media=\"all\">
+
+{% endblock %}
 
 {% block body %}
 \t{% if msj is not empty %}

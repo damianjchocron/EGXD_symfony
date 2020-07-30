@@ -53,10 +53,10 @@ class __TwigTemplate_fd3af3b075fa85107e989e43a5e52a3dcd5ae5b66c540633ad092625c48
 \t\t\t\t\t\t\t<h4>Redes Sociales en las que estamos</h4>
 \t\t\t\t\t\t\t<ul class=\"link\">
 \t\t\t\t\t\t\t\t<li class=\"fb\">
-\t\t\t\t\t\t\t\t\t<a href=\"#\"></a>
+\t\t\t\t\t\t\t\t\t<a href=\"https://es-la.facebook.com/maquinasgraficas.equipamientografico\"></a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li class=\"youtube\">
-\t\t\t\t\t\t\t\t\t<a href=\"#\"></a>
+\t\t\t\t\t\t\t\t\t<a href=\"https://www.youtube.com/channel/UCxNjuIw_tjX27-3-MUw1zaA\"></a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t</div>
@@ -64,15 +64,15 @@ class __TwigTemplate_fd3af3b075fa85107e989e43a5e52a3dcd5ae5b66c540633ad092625c48
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t\t<div class=\"container\">
-\t\t\t\t<div class=\"col-sm-12 col-xs-12 footer-logo\"><img alt=\"Datson\" src=\"images/logo.png\"></div>
+\t\t\t\t<div class=\"col-sm-12 col-xs-12 footer-logo\"><img alt=\"Equipamiento Grafico Monte Grande\" src=\"/images/logo.png\"></div>
 \t\t\t\t<address>
-\t\t\t\t\t<i class=\"fa fa-map-marker\"></i>ThemesGround, 789 Main rd, Anytown, CA 12345  USA
+\t\t\t\t\t<i class=\"fa fa-map-marker\"></i>Carlos Pellegrini, 1055, Monte Grande, CP 1842  Argentina
 \t\t\t\t\t<i class=\"fa fa-mobile\"></i>
 \t\t\t\t\t<span>
-\t\t\t\t\t\t+(888) 123-4567</span>
+\t\t\t\t\t\t+(54) 11 6110 0402</span>
 \t\t\t\t\t<i class=\"fa fa-envelope\"></i>
 \t\t\t\t\t<span>
-\t\t\t\t\t\tsuperb@themesground.com</span>
+\t\t\t\t\t\tequipamientografico@gmail.com</span>
 \t\t\t\t</address>
 \t\t\t</div>
 \t\t</div>
@@ -80,7 +80,7 @@ class __TwigTemplate_fd3af3b075fa85107e989e43a5e52a3dcd5ae5b66c540633ad092625c48
 \t\t<div class=\"footer-bottom\">
 \t\t\t<div class=\"container\">
 \t\t\t\t<div class=\"row\">
-\t\t\t\t\t<div class=\"col-sm-12 col-xs-12 coppyright\">&copy; 2016 ThemesGround. All Rights Reserved.</div>
+\t\t\t\t\t<div class=\"col-sm-12 col-xs-12 coppyright\">&copy; 2020 DamianJoseChocronMartinez. All Rights Reserved.</div>
 
 \t\t\t\t</div>
 \t\t\t</div>
@@ -120,10 +120,10 @@ class __TwigTemplate_fd3af3b075fa85107e989e43a5e52a3dcd5ae5b66c540633ad092625c48
 \t\t\t\t\t\t\t<h4>Redes Sociales en las que estamos</h4>
 \t\t\t\t\t\t\t<ul class=\"link\">
 \t\t\t\t\t\t\t\t<li class=\"fb\">
-\t\t\t\t\t\t\t\t\t<a href=\"#\"></a>
+\t\t\t\t\t\t\t\t\t<a href=\"https://es-la.facebook.com/maquinasgraficas.equipamientografico\"></a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li class=\"youtube\">
-\t\t\t\t\t\t\t\t\t<a href=\"#\"></a>
+\t\t\t\t\t\t\t\t\t<a href=\"https://www.youtube.com/channel/UCxNjuIw_tjX27-3-MUw1zaA\"></a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t</div>
@@ -131,15 +131,15 @@ class __TwigTemplate_fd3af3b075fa85107e989e43a5e52a3dcd5ae5b66c540633ad092625c48
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t\t<div class=\"container\">
-\t\t\t\t<div class=\"col-sm-12 col-xs-12 footer-logo\"><img alt=\"Datson\" src=\"images/logo.png\"></div>
+\t\t\t\t<div class=\"col-sm-12 col-xs-12 footer-logo\"><img alt=\"Equipamiento Grafico Monte Grande\" src=\"/images/logo.png\"></div>
 \t\t\t\t<address>
-\t\t\t\t\t<i class=\"fa fa-map-marker\"></i>ThemesGround, 789 Main rd, Anytown, CA 12345  USA
+\t\t\t\t\t<i class=\"fa fa-map-marker\"></i>Carlos Pellegrini, 1055, Monte Grande, CP 1842  Argentina
 \t\t\t\t\t<i class=\"fa fa-mobile\"></i>
 \t\t\t\t\t<span>
-\t\t\t\t\t\t+(888) 123-4567</span>
+\t\t\t\t\t\t+(54) 11 6110 0402</span>
 \t\t\t\t\t<i class=\"fa fa-envelope\"></i>
 \t\t\t\t\t<span>
-\t\t\t\t\t\tsuperb@themesground.com</span>
+\t\t\t\t\t\tequipamientografico@gmail.com</span>
 \t\t\t\t</address>
 \t\t\t</div>
 \t\t</div>
@@ -147,7 +147,7 @@ class __TwigTemplate_fd3af3b075fa85107e989e43a5e52a3dcd5ae5b66c540633ad092625c48
 \t\t<div class=\"footer-bottom\">
 \t\t\t<div class=\"container\">
 \t\t\t\t<div class=\"row\">
-\t\t\t\t\t<div class=\"col-sm-12 col-xs-12 coppyright\">&copy; 2016 ThemesGround. All Rights Reserved.</div>
+\t\t\t\t\t<div class=\"col-sm-12 col-xs-12 coppyright\">&copy; 2020 DamianJoseChocronMartinez. All Rights Reserved.</div>
 
 \t\t\t\t</div>
 \t\t\t</div>

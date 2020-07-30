@@ -47,6 +47,7 @@ class ComposerStaticInit4b8dd6609b964ce6537e1dca22f25d39
         'T' => 
         array (
             'Twig\\Extra\\TwigExtraBundle\\' => 27,
+            'Twig\\Extra\\Intl\\' => 16,
             'Twig\\' => 5,
         ),
         'S' => 
@@ -203,6 +204,10 @@ class ComposerStaticInit4b8dd6609b964ce6537e1dca22f25d39
         'Twig\\Extra\\TwigExtraBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/extra-bundle/src',
+        ),
+        'Twig\\Extra\\Intl\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/intl-extra/src',
         ),
         'Twig\\' => 
         array (
@@ -880,19 +885,27 @@ class ComposerStaticInit4b8dd6609b964ce6537e1dca22f25d39
         'Amp\\TimeoutException' => __DIR__ . '/..' . '/amphp/amp/lib/TimeoutException.php',
         'Amp\\WindowsRegistry\\KeyNotFoundException' => __DIR__ . '/..' . '/amphp/windows-registry/lib/KeyNotFoundException.php',
         'Amp\\WindowsRegistry\\WindowsRegistry' => __DIR__ . '/..' . '/amphp/windows-registry/lib/WindowsRegistry.php',
+        'App\\Controller\\CategoriaController' => __DIR__ . '/../..' . '/src/Controller/CategoriaController.php',
+        'App\\Controller\\ContactoController' => __DIR__ . '/../..' . '/src/Controller/ContactoController.php',
         'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
+        'App\\Controller\\MultimediaController' => __DIR__ . '/../..' . '/src/Controller/MultimediaController.php',
         'App\\Controller\\ProductController' => __DIR__ . '/../..' . '/src/Controller/ProductController.php',
+        'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
+        'App\\Controller\\SecurityController' => __DIR__ . '/../..' . '/src/Controller/SecurityController.php',
         'App\\Controller\\UsuarioController' => __DIR__ . '/../..' . '/src/Controller/UsuarioController.php',
         'App\\Entity\\Categoria' => __DIR__ . '/../..' . '/src/Entity/Categoria.php',
         'App\\Entity\\Multimedia' => __DIR__ . '/../..' . '/src/Entity/Multimedia.php',
         'App\\Entity\\Product' => __DIR__ . '/../..' . '/src/Entity/Product.php',
+        'App\\Entity\\Rol' => __DIR__ . '/../..' . '/src/Entity/Rol.php',
         'App\\Entity\\Usuario' => __DIR__ . '/../..' . '/src/Entity/Usuario.php',
+        'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\CategoriaRepository' => __DIR__ . '/../..' . '/src/Repository/CategoriaRepository.php',
         'App\\Repository\\MultimediaRepository' => __DIR__ . '/../..' . '/src/Repository/MultimediaRepository.php',
         'App\\Repository\\ProductRepository' => __DIR__ . '/../..' . '/src/Repository/ProductRepository.php',
         'App\\Repository\\UsuarioRepository' => __DIR__ . '/../..' . '/src/Repository/UsuarioRepository.php',
-        'App\\vm\\productmodel' => __DIR__ . '/../..' . '/src/vm/Product.php',
+        'App\\Security\\AuthCustomAuthenticator' => __DIR__ . '/../..' . '/src/Security/AuthCustomAuthenticator.php',
+        'App\\vm\\ProductModel' => __DIR__ . '/../..' . '/src/vm/ProductModel.php',
         'Collator' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/Collator.php',
         'Doctrine\\Bundle\\DoctrineBundle\\Command\\CreateDatabaseDoctrineCommand' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Command/CreateDatabaseDoctrineCommand.php',
         'Doctrine\\Bundle\\DoctrineBundle\\Command\\DoctrineCommand' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Command/DoctrineCommand.php',
@@ -5316,6 +5329,7 @@ class ComposerStaticInit4b8dd6609b964ce6537e1dca22f25d39
         'Twig\\Extension\\SandboxExtension' => __DIR__ . '/..' . '/twig/twig/src/Extension/SandboxExtension.php',
         'Twig\\Extension\\StagingExtension' => __DIR__ . '/..' . '/twig/twig/src/Extension/StagingExtension.php',
         'Twig\\Extension\\StringLoaderExtension' => __DIR__ . '/..' . '/twig/twig/src/Extension/StringLoaderExtension.php',
+        'Twig\\Extra\\Intl\\IntlExtension' => __DIR__ . '/..' . '/twig/intl-extra/src/IntlExtension.php',
         'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\Compiler\\MissingExtensionSuggestorPass' => __DIR__ . '/..' . '/twig/extra-bundle/src/DependencyInjection/Compiler/MissingExtensionSuggestorPass.php',
         'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/twig/extra-bundle/src/DependencyInjection/Configuration.php',
         'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\TwigExtraExtension' => __DIR__ . '/..' . '/twig/extra-bundle/src/DependencyInjection/TwigExtraExtension.php',

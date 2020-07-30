@@ -12,9 +12,11 @@
 						<div class="mt1 card">
 							<img src="{{value.url}}" class="card-img-top" alt="FotosMaquinas">
 							<div class="card-body">
-								<h5 class="card-title">{{value.titulo}}</h5>
+								<div class="item-title">
+									<h2 class="card-title">{{value.titulo}}</h2>
+								</div>
 								<p class="card-text">{{value.descripcion}}</p>
-								<p class="card-text">Precio ${{value.precio}}</p>
+								<p class="card-text">Precio U{{ value.precio|format_currency('USD') }}</p>
 								<a href={{ path("detailProduct", {idproduct:value.idproduct } ) }} class="btn btn-primary">Ver Mas</a>
 							</div>
 						</div>

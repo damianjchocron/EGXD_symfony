@@ -4,114 +4,159 @@
 {% endblock %}
 
 {% block meta %}
-		<link rel="stylesheet" type="text/css" href="/css/cssNotIndexNEW.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/css/cssNotIndexNEW.css" media="all">
 
 {% endblock %}
 
 {% block body %}
 	<main>
-		<div class="container">
-			<div class="row justify-content-between">
-				<div class="row">
-					<div class="m-4 dropdown">
-						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Categoria
-						</button>
-						<div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
-							{% for value in categorias %}
-								<!-- Aca en los href van los FILTROS  -->
-								<a class="dropdown-item" href={{ path("allProduct", {idcategoria: value.idcategoria, sort: sort, page: page,search: search} ) }}>{{value.nombrecategoria}}</a>
-								{# <a class="dropdown-item" href="all?{{value.idcategoria}} {{filtersort}} {{filterpage}}"> {{value.nombrecategoria}}</a> #}
-							{% endfor %}
-						</div>
+		<div class="row mt-7">
+			<div class="col-lg-5 col-md-5 col-xs-12">
+				<ul class="nav menu-item">
+					<div class="col-lg-6 col-md-6 col-xs-6 divfilter">
+						<li class="level0 parent drop-menu">
+							<span id="btn-categoria" class="btn-filter btn">Categorias</span>
+							<ul class="level1" style="display: none;">
+								{% for value in categorias %}
+									<li class="level1 first">
+										<a href={{ path("allProduct", {idcategoria: value.idcategoria, sort: sort, page: page,search: search} ) }}>
+											<span>{{value.nombrecategoria}}</span>
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</li>
 					</div>
-					<div class="m-4 dropdown">
-						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Ordenar Por
-						</button>
-						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<!-- Aca en los href van los FILTROS  -->
-							{# Aca espera qe el ID categoria no sea vacio ! #}
-								<a class="dropdown-item" href={{ path("allProduct", {idcategoria: idcategoria, sort: "1", page: page,search: search} ) }}> Mas Reciente</a>
-							<a class="dropdown-item" href={{ path("allProduct", {idcategoria: idcategoria, sort: "2", page: page,search: search} ) }}>Mas Antiguo</a>
-							<a class="dropdown-item" href={{ path("allProduct", {idcategoria: idcategoria, sort: "3", page: page,search: search} ) }}>Mayor Precio</a>
-							<a class="dropdown-item" href={{ path("allProduct", {idcategoria: idcategoria, sort: "4", page: page,search: search} ) }}>Menor Precio</a>
-						</div>
-					</div>
-				</div>
-				{% if categoriaunica is not empty %}
-					<div>
-						<span class="badge badge-info">{{categoriaunica.nombrecategoria}}
-						</span>
-					</div>
-				{% endif %}
-				<form id="formSearch" action={{ path("allProduct", {idcategoria: idcategoria, sort: sort, page: page} ) }} method="GET">
-					<div class="input-group col-xl-11 m-3 aling-self-start">
-						<div class="input-group-prepend">
-							<button class="btn btn-outline-secondary" type="submit" id="button-addon1">Buscar</button>
-						</div>
-						<input type="text" id="inputForm" class="form-control col" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-					</div>
-				</form>
+					<div class="col-lg-6 col-md-6 col-xs-6 divfilter">
+						<li class="level0 parent drop-menu">
+							<span id="btn-orden" class="btn-filter btn">Ordenar Por</span>
+							<ul class="level1">
+								<li class="level1 first">
+									<a class="" href={{ path("allProduct", {idcategoria: idcategoria, sort: "1", page: page,search: search} ) }}>
+										<span>Mas Reciente</span>
+									</a>
+								</li>
+								<li class="level1 first">
+									<a class="" href={{ path("allProduct", {idcategoria: idcategoria, sort: "2", page: page,search: search} ) }}>
+										<span>Mas Antiguo</span>
+									</a>
+								</li>
+								<li class="level1 first">
+									<a class="" href={{ path("allProduct", {idcategoria: idcategoria, sort: "3", page: page,search: search} ) }}>
+										<span>Mayor Precio</span>
+									</a>
+								</li>
+								<li class="level1 first">
+									<a class="" href={{ path("allProduct", {idcategoria: idcategoria, sort: "4", page: page,search: search} ) }}>
+										<span>Menor Precio</span>
+									</a>
+								</li>
+							</li>
+						</li>
+					</ul>
+				</li>
 			</div>
+		</ul>
+	</div>
+	<div class="col-lg-2 col-md-2 col-xs-2">
+		{% if categoriaunica is not empty %}
+			<span class="badge badge-info">{{categoriaunica.nombrecategoria}}
+			</span>
+		{% endif %}
+	</div>
+	<div class="col-lg-3 col-md-3 divsearch">
+		<form id="formSearch" action={{ path("allProduct", {idcategoria: idcategoria, sort: sort, page: page} ) }} method="GET">
+			<div class="input-group">
+				<input type="text" id="inputForm" class="form-control simple" placeholder="Buscar ..." name="srch-term" id="srch-term">
+				<div class="input-group-btn">
+					<button type="submit" class="btn-search">
+						<i class="fa fa-search"></i>
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
 
-
-			<div class="container">
-				<div class="row">
-					{% for value in dataproductforrender %}
-						<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 pr-4 pb-4">
-							<div class="card-deck">
-								<div class="mt1 card">
-									<img src="{{value.url}}" class="card-img-top img-card" alt="FotosMaquinas">
-									<div class="card-body">
-										<h5 class="card-title">{{value.nombre}}</h5>
-										<p class="card-text">{{value.descripcion}}</p>
-										<p class="card-text">Precio ${{value.precio}}</p>
-										<a href={{ path("detailProduct", {idproduct:value.idproduct } ) }} class="btn btn-primary">Ver Mas</a>
+<div class="container">
+	<div class="row">
+		<div class="products-grid">
+			<div class="col-md-12">
+				<div class="std">
+					<div class="home-tabs wow bounceInUp animated">
+						<div class="producttabs">
+							<div id="thm_producttabs1" class="thm-producttabs">
+								<div
+									class="thm-pdt-container">
+									{#Begin Tab Content #}
+									<div class="pdt-content pdt_new_arrivals is-loaded  tab-content-actived">
+										<ul
+											class="pdt-list products-grid zoomOut play">
+											{# La clase wide-first es importante #}
+											{% for value in dataproductforrender %}
+												<li class="item item-animate m-3">
+													<div class="item-inner m-2">
+														<div class="item-img">
+															<div class="item-img-info">
+																<a href="{{ path("detailProduct", {idproduct:value.idproduct } ) }}" title="{{value.nombre}}" class="product-image">
+																	<img class="img-card" src="{{value.url}}" alt="{{value.nombre}}">
+																</a>
+															</div>
+														</div>
+													</div>
+													<div class="item-info">
+														<div class="info-inner">
+															<div class="item-title">
+																<h2 class="card-title">{{value.nombre}}</h2>
+															</div>
+															<div class="item-content">
+																<div class="item-price">
+																	<div class="price-box">
+																		<span class="regular-price">
+																			<span class="price">U{{ value.precio|format_currency('USD') }}</span>
+																		</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											{% endfor %}
+										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
-					{% endfor %}
+					</div>
 				</div>
 			</div>
-
-			{% if numPaginas != "0" %}
-				<nav aria-label="Page navigation example" class="m-5">
-					<ul
-						class="pagination">
-						<!-- Aca en los href van los FILTROS  -->
-						<li class="page-item">
-							<a class="page-link" href={{ path("allProduct", {idcategoria: idcategoria, sort: sort, page: prev,search: search} ) }}>Anterior</a>
-						</li>
-						{# {{numPaginas}} #}
-						{% for i in 1..numPaginas %}
-							{% set active = "" %}
-							{% if page==i %}
-								{% set active = "active" %}
-							{% endif %}
-							<li class="page-item {{active}}">
-								<a class="page-link" href={{ path("allProduct", {idcategoria: idcategoria, sort: sort, page: i,search: search} ) }}>
-									{{i}}
-								</a>
-							</li>
-						{% endfor %}
-						<li class="page-item">
-							<a class="page-link" href={{ path("allProduct", {idcategoria: idcategoria, sort: sort, page: next,search: search} ) }}>Siguiente</a>
-						</li>
-					</ul>
-				</nav>
-			{% else %}
-				<div class="alert alert-info" role="alert">
-					Proximamente habra productos en esta categoria, Gracias !
-				</div>
-			{% endif %}
 		</div>
-	</main>
-
-{% endblock %}
-
-
-{% block javascripts %}
-	<script src="/js/productAll.js" type="text/javascript"></script>
-{% endblock %}
+	</div>
+</div></div>{% if numPaginas != "0" %}
+<div aria-label="Page navigation example" class="m-3">
+	<ul
+		class="pagination">
+		<!-- Aca en los href van los FILTROS  -->
+		<li class="page-item">
+			<a class="page-link" href={{ path("allProduct", {idcategoria: idcategoria, sort: sort, page: prev,search: search} ) }}>Anterior</a>
+		</li>
+		{# {{numPaginas}} #}
+		{% for i in 1..numPaginas %}
+			{% set active = "" %}
+			{% if page==i %}
+				{% set active = "active" %}
+			{% endif %}
+			<li class="page-item {{active}}">
+				<a class="page-link" href={{ path("allProduct", {idcategoria: idcategoria, sort: sort, page: i,search: search} ) }}>
+					{{i}}
+				</a>
+			</li>
+		{% endfor %}
+		<li class="page-item">
+			<a class="page-link" href={{ path("allProduct", {idcategoria: idcategoria, sort: sort, page: next,search: search} ) }}>Siguiente</a>
+		</li>
+	</ul>
+</div>{% else %}
+<div class="alert alert-info" role="alert">
+	Proximamente habra productos en esta categoria, Gracias !
+</div>{% endif %}</div></main>{% endblock %}{% block javascripts %}<script src="/js/productAll.js" type="text/javascript"></script>{% endblock %}
