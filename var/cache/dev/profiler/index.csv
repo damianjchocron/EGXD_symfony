@@ -11455,3 +11455,12 @@ b48bbc,127.0.0.1,GET,http://egxdsymfony.com/images/footer-bg.jpg,1596034790,,404
 4ba51f,127.0.0.1,GET,http://egxdsymfony.com/product/all/1/1/1/empty,1596039467,,200
 2b08e2,127.0.0.1,GET,http://egxdsymfony.com/images/footer-bg.jpg,1596039470,f34a52,404
 f34a52,127.0.0.1,GET,http://egxdsymfony.com/images/footer-bg.jpg,1596039471,,404
+928e50,127.0.0.1,GET,http://egxdsymfony.com/,1596108175,,200
+ba3d46,127.0.0.1,GET,http://egxdsymfony.com/images/footer-bg.jpg,1596108178,8471d4,404
+8471d4,127.0.0.1,GET,http://egxdsymfony.com/images/footer-bg.jpg,1596108178,,404
+6916a5,127.0.0.1,GET,http://egxdsymfony.com/product/all,1596108185,,200
+c9b4fd,127.0.0.1,GET,http://egxdsymfony.com/product/all/1/1/1/empty,1596108191,,200
+7326ec,127.0.0.1,GET,http://egxdsymfony.com/,1596185255,,200
+237870,127.0.0.1,GET,http://egxdsymfony.com/images/footer-bg.jpg,1596185258,989c6d,404
+989c6d,127.0.0.1,GET,http://egxdsymfony.com/images/footer-bg.jpg,1596185258,,404
+d3ef12,127.0.0.1,GET,http://egxdsymfony.com/login,1596185268,,200
