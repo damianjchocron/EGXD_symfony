@@ -13,15 +13,68 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ProductController extends AbstractController
 {
-    /**
-     * @Route("/product", name="product")
-     */
-    public function index()
+    public function update($id)
     {
-        return $this->render('product/index.html.twig', [
-            'controller_name' => 'ProductController',
+        $productrepositoryinstance = $this
+            ->getDoctrine()
+            ->getRepository(Product::class);
+
+        $categoriarepositoryinstace = $this
+            ->getDoctrine()
+            ->getRepository(Categoria::class);
+
+
+        $productInstance = $productrepositoryinstance->find($id);
+
+        $msj = "";
+
+        $categorias = $categoriarepositoryinstace->findAll();
+
+        return $this->render('product/update.html.twig', [
+            'product' => $productInstance,
+            'categorias' => $categorias,
+            'msj' => $msj,
         ]);
     }
+
+    public function updatePost(Request $request)
+    {
+        $productrepositoryinstance = $this
+            ->getDoctrine()
+            ->getRepository(Product::class);
+
+        $categoriarepositoryinstace = $this
+            ->getDoctrine()
+            ->getRepository(Categoria::class);
+
+        $msj = "";
+        $id = $request->request->get('idproduct');
+        $titulo = $request->request->get('titulo');
+        $descripcion = $request->request->get('descripcion');
+        $precio = $request->request->get('precio');
+        $idcategoria = $request->request->get('idcategoria');
+
+        $productInstance = $productrepositoryinstance->find($id);
+        $categoriainstace = $categoriarepositoryinstace->find($idcategoria);
+
+        $productInstance->setTitulo($titulo);
+        $productInstance->setDescripcion($descripcion);
+        $productInstance->setPrecio($precio);
+        $productInstance->setIdcategoria($categoriainstace);
+
+
+        $nuevoProduct = $productrepositoryinstance->Guardar($productInstance);
+        if ($nuevoProduct) $msj = "El producto se guardo Correctamente";
+
+        $categorias = $categoriarepositoryinstace->findAll();
+
+        return $this->render('product/update.html.twig', [
+            'product' => $productInstance,
+            'categorias' => $categorias,
+            'msj' => $msj,
+        ]);
+    }
+
     public function all(Request $request)
     {
         $productdatainstace = $this

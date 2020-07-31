@@ -87,6 +87,11 @@ ul {
     color: #fff;
 }
 
+.volver{
+    color: white !important;
+    text-decoration: none !important;
+}
+
 @media (max-width: 425px) {
     
     
