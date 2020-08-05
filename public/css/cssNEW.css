@@ -1,3 +1,4 @@
+
 .img-card {
     height: 342px;
     width: 342px !important;
@@ -80,21 +81,41 @@ ul {
     margin-top: 7vh;
 }
 
-.btn-search{
+.btn-search {
     width: 40px;
     height: 33px;
     background-color: #B6B4B5;
     color: #fff;
 }
 
-.volver{
+.volver {
     color: white !important;
     text-decoration: none !important;
 }
 
+.idmodifyinput {
+    width: 34px !important;
+}
+
+.cienxcienmodify {
+    width: 100% !important;
+}
+
+.h4 {
+    font-size: 18px !important;
+}
+
+.item-info{
+    text-align: center !important;
+}
+
+@media (max-width: 376px) {
+    .h4 {
+        font-size: 14px !important;
+    }
+}
+
 @media (max-width: 425px) {
-    
-    
     #btn-filter:hover {
         display: block;
     }
@@ -108,8 +129,8 @@ ul {
     .logo {
         position: relative !important;
     }
-    .emailheader {
-        font-size: 1.45rem !important;
+    .hidden-xs {
+        display: none !important;
     }
     /* .divfilter{
         width: 48% !important;
@@ -135,5 +156,11 @@ ul {
 @media (min-width: 770px) and (max-width: 1024) {
     .menu-item-right {
         padding-left: 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-msg {
+        display: none;
     }
 }

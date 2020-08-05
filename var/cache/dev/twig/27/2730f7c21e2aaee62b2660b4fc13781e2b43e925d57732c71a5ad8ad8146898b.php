@@ -110,7 +110,7 @@ class __TwigTemplate_b7f3d56e05f28808ab4053613a396943be09183ca4e38dd9171e32bc9ef
         // line 13
         echo "\t<main>
 \t\t<div class=\"container mt-5\">
-\t\t\t<div class=\"row container-fluid m-5\">
+\t\t\t<div class=\"row container-fluid\">
 \t\t\t\t<div class=\"col-xl-3 col-md-8\">
 \t\t\t\t\t<img src=\"/img/contacto/Carlos.jpeg\" alt=\"Carlos A. Gonzalez\" class=\"img-thumbnail\">
 \t\t\t\t</div>
@@ -170,7 +170,7 @@ class __TwigTemplate_b7f3d56e05f28808ab4053613a396943be09183ca4e38dd9171e32bc9ef
 {% block body %}
 \t<main>
 \t\t<div class=\"container mt-5\">
-\t\t\t<div class=\"row container-fluid m-5\">
+\t\t\t<div class=\"row container-fluid\">
 \t\t\t\t<div class=\"col-xl-3 col-md-8\">
 \t\t\t\t\t<img src=\"/img/contacto/Carlos.jpeg\" alt=\"Carlos A. Gonzalez\" class=\"img-thumbnail\">
 \t\t\t\t</div>

@@ -76,8 +76,11 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
 
 \t\t";
         // line 24
-        echo "\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/bootstrap.min.css\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/font-awesome.css\" media=\"all\">
+        echo "\t\t<link
+\t\trel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css\" integrity=\"sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk\" crossorigin=\"anonymous\">
+\t\t";
+        // line 27
+        echo "\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/font-awesome.css\" media=\"all\">
 \t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/simple-line-icons.css\" media=\"all\">
 \t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/owl.carousel.css\">
 \t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/owl.theme.css\">
@@ -85,12 +88,13 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
 \t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/jquery.mobile-menu.css\">
 \t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/revslider.css\">
 \t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/style.css\" media=\"all\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNEW.css\" media=\"all\">
-\t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css\" integrity=\"sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk\" crossorigin=\"anonymous\">
+\t\t<link
+\t\trel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNEW.css\" media=\"all\">
 
 \t\t";
-        // line 37
-        echo "\t\t<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'> <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        // line 39
+        echo "\t\t<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+\t\t<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 \t\t<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,600,600italic,400italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 \t</head>
 
@@ -98,20 +102,20 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
 \t\t<div id=\"page\">
 
 \t\t\t";
-        // line 44
-        $this->displayBlock('header', $context, $blocks);
         // line 47
+        $this->displayBlock('header', $context, $blocks);
+        // line 50
         echo "\t\t\t";
         $this->displayBlock('body', $context, $blocks);
-        // line 51
+        // line 54
         echo "
 \t\t\t";
-        // line 52
-        $this->displayBlock('footer', $context, $blocks);
         // line 55
+        $this->displayBlock('footer', $context, $blocks);
+        // line 58
         echo "
 \t\t\t";
-        // line 57
+        // line 60
         echo "\t\t\t<script type=\"text/javascript\" src=\"/js/jquery.min.js\"></script>
 \t\t\t<script type=\"text/javascript\" src=\"/js/bootstrap.min.js\"></script>
 \t\t\t<script type=\"text/javascript\" src=\"/js/common.js\"></script>
@@ -122,74 +126,73 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
 \t\t\t<script type=\"text/javascript\" src=\"/js/revolution.extension.js\"></script>
 \t\t\t<script type=\"text/javascript\" src=\"/js/newJSneedInforTemplate.js\"></script>
 \t\t\t";
-        // line 67
+        // line 70
         echo "\t\t\t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
 \t\t\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js\" integrity=\"sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI\" crossorigin=\"anonymous\"></script>
-\t\t\t\t";
-        // line 69
-        $this->displayBlock('javascripts', $context, $blocks);
+\t\t\t";
         // line 72
-        echo "\t\t</div>
-\t\t\t<div id=\"mobile-menu\"> <ul>
-\t\t\t\t<li>
-\t\t\t\t\t<div class=\"principal\">
-\t\t\t\t\t\t<a href=\"/\">
-\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Principal</a>
-\t\t\t\t\t</div>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<div class=\"home\">
-\t\t\t\t\t\t<a href=\"/product/all\">
-\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Catelogo</a>
-\t\t\t\t\t</div>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<div class=\"home\">
-\t\t\t\t\t\t<a href=\"/contacto\">
-\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Conocenos</a>
-\t\t\t\t\t</div>
-\t\t\t\t</li>
-\t\t\t\t";
-        // line 92
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 92, $this->source); })()), "user", [], "any", false, false, false, 92)) {
-            // line 93
-            echo "\t\t\t\t\t<li>
-\t\t\t\t\t\t<div class=\"home\">
-\t\t\t\t\t\t\t<a href=\"/product/insertform\">
-\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Nuevo Producto</a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<div class=\"home\">
-\t\t\t\t\t\t\t<a href=\"/product/modify\">
-\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Modificar Producto</a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<div class=\"home\">
-\t\t\t\t\t\t\t<a href=\"/categoria\">
-\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Categorias</a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</li>
-\t\t\t\t";
-        }
-        // line 112
-        echo "\t\t\t\t";
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 112, $this->source); })()), "user", [], "any", false, false, false, 112)) {
-            // line 113
-            echo "\t\t\t\t\t<li>
-\t\t\t\t\t\t<div class=\"home\">
-\t\t\t\t\t\t\t<a href=\"/login\">
-\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Iniciar Secion</a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</li>
-\t\t\t\t";
-        }
-        // line 120
-        echo "\t\t\t</ul>
-\t\t</div>
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 75
+        echo "\t\t</body>
 \t</body>
-</html>
+</html></div><div id=\"mobile-menu\">
+<ul>
+\t<li>
+\t\t<div class=\"principal\">
+\t\t\t<a href=\"/\">
+\t\t\t\t<i class=\"icon-home\"></i>Principal</a>
+\t\t</div>
+\t</li>
+\t<li>
+\t\t<div class=\"home\">
+\t\t\t<a href=\"/product/all\">
+\t\t\t\t<i class=\"icon-home\"></i>Catelogo</a>
+\t\t</div>
+\t</li>
+\t<li>
+\t\t<div class=\"home\">
+\t\t\t<a href=\"/contacto\">
+\t\t\t\t<i class=\"icon-home\"></i>Conocenos</a>
+\t\t</div>
+\t</li>
+\t";
+        // line 97
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 97, $this->source); })()), "user", [], "any", false, false, false, 97)) {
+            // line 98
+            echo "\t\t<li>
+\t\t\t<div class=\"home\">
+\t\t\t\t<a href=\"/product/insertform\">
+\t\t\t\t\t<i class=\"icon-home\"></i>Nuevo Producto</a>
+\t\t\t</div>
+\t\t</li>
+\t\t<li>
+\t\t\t<div class=\"home\">
+\t\t\t\t<a href=\"/product/modify\">
+\t\t\t\t\t<i class=\"icon-home\"></i>Modificar Producto</a>
+\t\t\t</div>
+\t\t</li>
+\t\t<li>
+\t\t\t<div class=\"home\">
+\t\t\t\t<a href=\"/categoria\">
+\t\t\t\t\t<i class=\"icon-home\"></i>Categorias</a>
+\t\t\t</div>
+\t\t</li>
+\t";
+        }
+        // line 117
+        echo "\t";
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 117, $this->source); })()), "user", [], "any", false, false, false, 117)) {
+            // line 118
+            echo "\t\t<li>
+\t\t\t<div class=\"home\">
+\t\t\t\t<a href=\"/login\">
+\t\t\t\t\t<i class=\"icon-home\"></i>Iniciar Secion</a>
+\t\t\t</div>
+\t\t</li>
+\t";
+        }
+        // line 125
+        echo "</ul></div></body></html>
 ";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -239,7 +242,7 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
 
     }
 
-    // line 44
+    // line 47
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -249,10 +252,10 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
-        // line 45
+        // line 48
         echo "\t\t\t\t";
-        $this->loadTemplate("headerNEW.html.twig", "baseNEW.html.twig", 45)->display($context);
-        // line 46
+        $this->loadTemplate("headerNEW.html.twig", "baseNEW.html.twig", 48)->display($context);
+        // line 49
         echo "\t\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -262,7 +265,7 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
 
     }
 
-    // line 47
+    // line 50
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -272,7 +275,7 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 48
+        // line 51
         echo "\t\t\t\t<p>Aqui falta body
 \t\t\t\t</p>
 \t\t\t";
@@ -284,7 +287,7 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
 
     }
 
-    // line 52
+    // line 55
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -294,10 +297,10 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 53
+        // line 56
         echo "\t\t\t\t";
-        $this->loadTemplate("footerNEW.html.twig", "baseNEW.html.twig", 53)->display($context);
-        // line 54
+        $this->loadTemplate("footerNEW.html.twig", "baseNEW.html.twig", 56)->display($context);
+        // line 57
         echo "\t\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -307,7 +310,7 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
 
     }
 
-    // line 69
+    // line 72
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -317,9 +320,9 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        echo "<script>
-\t\t\t</script>
-\t\t";
+        // line 73
+        echo "\t\t\t\t<script></script>
+\t\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -340,7 +343,7 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
 
     public function getDebugInfo()
     {
-        return array (  311 => 69,  301 => 54,  298 => 53,  288 => 52,  276 => 48,  266 => 47,  256 => 46,  253 => 45,  243 => 44,  223 => 15,  213 => 5,  203 => 4,  189 => 120,  180 => 113,  177 => 112,  156 => 93,  154 => 92,  132 => 72,  130 => 69,  126 => 67,  115 => 57,  112 => 55,  110 => 52,  107 => 51,  104 => 47,  102 => 44,  93 => 37,  79 => 24,  74 => 20,  70 => 17,  68 => 15,  64 => 13,  56 => 6,  54 => 4,  49 => 1,);
+        return array (  324 => 73,  314 => 72,  304 => 57,  301 => 56,  291 => 55,  279 => 51,  269 => 50,  259 => 49,  256 => 48,  246 => 47,  226 => 15,  216 => 5,  206 => 4,  195 => 125,  186 => 118,  183 => 117,  162 => 98,  160 => 97,  136 => 75,  134 => 72,  130 => 70,  119 => 60,  116 => 58,  114 => 55,  111 => 54,  108 => 50,  106 => 47,  96 => 39,  83 => 27,  79 => 24,  74 => 20,  70 => 17,  68 => 15,  64 => 13,  56 => 6,  54 => 4,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -368,7 +371,9 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
 \t\tname=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">
 
 \t\t{# CSS Style #}
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/bootstrap.min.css\">
+\t\t<link
+\t\trel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css\" integrity=\"sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk\" crossorigin=\"anonymous\">
+\t\t{# <link rel=\"stylesheet\" type=\"text/css\" href=\"/css/bootstrap.min.css\"> #}
 \t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/font-awesome.css\" media=\"all\">
 \t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/simple-line-icons.css\" media=\"all\">
 \t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/owl.carousel.css\">
@@ -377,11 +382,12 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
 \t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/jquery.mobile-menu.css\">
 \t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/revslider.css\">
 \t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/style.css\" media=\"all\">
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNEW.css\" media=\"all\">
-\t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css\" integrity=\"sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk\" crossorigin=\"anonymous\">
+\t\t<link
+\t\trel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNEW.css\" media=\"all\">
 
 \t\t{# Google Fonts #}
-\t\t<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'> <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+\t\t<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+\t\t<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 \t\t<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,600,600italic,400italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 \t</head>
 
@@ -410,64 +416,63 @@ class __TwigTemplate_0d3ba918d031ceef8042186bf850888545f179ddaf39512b86281a52995
 \t\t\t<script type=\"text/javascript\" src=\"/js/revolution-slider.js\"></script>
 \t\t\t<script type=\"text/javascript\" src=\"/js/revolution.extension.js\"></script>
 \t\t\t<script type=\"text/javascript\" src=\"/js/newJSneedInforTemplate.js\"></script>
-\t\t\t{# <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script> #}
+\t\t\t{# <script src=\"https://code.jquery.com/jquery-3.5.1.js\" integrity=\"sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=\" crossorigin=\"anonymous\"></script> #}
 \t\t\t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
 \t\t\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js\" integrity=\"sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI\" crossorigin=\"anonymous\"></script>
-\t\t\t\t{% block javascripts %}<script>
-\t\t\t</script>
-\t\t{% endblock %}
-\t\t</div>
-\t\t\t<div id=\"mobile-menu\"> <ul>
-\t\t\t\t<li>
-\t\t\t\t\t<div class=\"principal\">
-\t\t\t\t\t\t<a href=\"/\">
-\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Principal</a>
-\t\t\t\t\t</div>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<div class=\"home\">
-\t\t\t\t\t\t<a href=\"/product/all\">
-\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Catelogo</a>
-\t\t\t\t\t</div>
-\t\t\t\t</li>
-\t\t\t\t<li>
-\t\t\t\t\t<div class=\"home\">
-\t\t\t\t\t\t<a href=\"/contacto\">
-\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Conocenos</a>
-\t\t\t\t\t</div>
-\t\t\t\t</li>
-\t\t\t\t{% if app.user %}
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<div class=\"home\">
-\t\t\t\t\t\t\t<a href=\"/product/insertform\">
-\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Nuevo Producto</a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<div class=\"home\">
-\t\t\t\t\t\t\t<a href=\"/product/modify\">
-\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Modificar Producto</a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<div class=\"home\">
-\t\t\t\t\t\t\t<a href=\"/categoria\">
-\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Categorias</a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</li>
-\t\t\t\t{% endif %}
-\t\t\t\t{% if not app.user %}
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<div class=\"home\">
-\t\t\t\t\t\t\t<a href=\"/login\">
-\t\t\t\t\t\t\t\t<i class=\"icon-home\"></i>Iniciar Secion</a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</li>
-\t\t\t\t{% endif %}
-\t\t\t</ul>
-\t\t</div>
+\t\t\t{% block javascripts %}
+\t\t\t\t<script></script>
+\t\t\t{% endblock %}
+\t\t</body>
 \t</body>
-</html>
+</html></div><div id=\"mobile-menu\">
+<ul>
+\t<li>
+\t\t<div class=\"principal\">
+\t\t\t<a href=\"/\">
+\t\t\t\t<i class=\"icon-home\"></i>Principal</a>
+\t\t</div>
+\t</li>
+\t<li>
+\t\t<div class=\"home\">
+\t\t\t<a href=\"/product/all\">
+\t\t\t\t<i class=\"icon-home\"></i>Catelogo</a>
+\t\t</div>
+\t</li>
+\t<li>
+\t\t<div class=\"home\">
+\t\t\t<a href=\"/contacto\">
+\t\t\t\t<i class=\"icon-home\"></i>Conocenos</a>
+\t\t</div>
+\t</li>
+\t{% if app.user %}
+\t\t<li>
+\t\t\t<div class=\"home\">
+\t\t\t\t<a href=\"/product/insertform\">
+\t\t\t\t\t<i class=\"icon-home\"></i>Nuevo Producto</a>
+\t\t\t</div>
+\t\t</li>
+\t\t<li>
+\t\t\t<div class=\"home\">
+\t\t\t\t<a href=\"/product/modify\">
+\t\t\t\t\t<i class=\"icon-home\"></i>Modificar Producto</a>
+\t\t\t</div>
+\t\t</li>
+\t\t<li>
+\t\t\t<div class=\"home\">
+\t\t\t\t<a href=\"/categoria\">
+\t\t\t\t\t<i class=\"icon-home\"></i>Categorias</a>
+\t\t\t</div>
+\t\t</li>
+\t{% endif %}
+\t{% if not app.user %}
+\t\t<li>
+\t\t\t<div class=\"home\">
+\t\t\t\t<a href=\"/login\">
+\t\t\t\t\t<i class=\"icon-home\"></i>Iniciar Secion</a>
+\t\t\t</div>
+\t\t</li>
+\t{% endif %}
+</ul></div></body></html>
 ", "baseNEW.html.twig", "/var/www/html/EGXD_symfony/templates/baseNEW.html.twig");
     }
 }

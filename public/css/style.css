@@ -1136,7 +1136,7 @@ nav {
 .menu-item {
 	display: block;
 	margin-top: 35px;
-	float: left;
+	float: right;
 }
 
 .menu-item-left {
@@ -1149,7 +1149,7 @@ nav {
 }
 
 .menu-item-right {
-	padding-left: 120px !important; 
+	padding-left: 120px !important;
 	text-align: left;
 }
 
@@ -2040,7 +2040,7 @@ ul.level1 {
 }
 
 .nav li.drop-menu ul li a {
-	color:#FFF;
+	color: #FFF;
 	line-height: 30px;
 	font-size: 13px;
 	padding: 0 12px;

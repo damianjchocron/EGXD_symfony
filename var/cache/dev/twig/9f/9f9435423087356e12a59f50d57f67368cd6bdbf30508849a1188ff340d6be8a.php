@@ -88,7 +88,7 @@ class __TwigTemplate_25c6c586fd8b6aa6927c01d0168e556e4a841ed33a3c346dfbefe6aab6f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "meta"));
 
         // line 7
-        echo "\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNotIndexNEW.css\" media=\"all\">
+        echo "\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNotIndexNEW.css\" media=\"all\">
 
 ";
         
@@ -110,105 +110,68 @@ class __TwigTemplate_25c6c586fd8b6aa6927c01d0168e556e4a841ed33a3c346dfbefe6aab6f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 12
-        echo "\t<table class=\"table table-dark mt-3\">
-\t\t<thead>
-\t\t\t<tr>
-\t\t\t\t<th scope=\"col\">ID</th>
-\t\t\t\t<th scope=\"col\">Titulo</th>
-\t\t\t\t<th scope=\"col\">Descripcion</th>
-\t\t\t\t<th scope=\"col\">Precio</th>
-\t\t\t\t<th scope=\"col\">Categoria</th>
-\t\t\t</tr>
-\t\t</thead>
-\t\t<tbody>
-\t\t\t";
-        // line 23
+        echo "\t<div class=\"container mt-3 mb-3\">
+\t\t";
+        // line 13
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["dataproductforrender"]) || array_key_exists("dataproductforrender", $context) ? $context["dataproductforrender"] : (function () { throw new RuntimeError('Variable "dataproductforrender" does not exist.', 23, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["dataproductforrender"]) || array_key_exists("dataproductforrender", $context) ? $context["dataproductforrender"] : (function () { throw new RuntimeError('Variable "dataproductforrender" does not exist.', 13, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
-            // line 24
-            echo "\t\t\t\t<tr id=\"product";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 24), "html", null, true);
+            // line 14
+            echo "\t\t\t<div class=\"row\" id=\"product";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 14), "html", null, true);
             echo "\">
-\t\t\t\t\t<form method=\"POST\" action=\"/product/modify\">
-\t\t\t\t\t\t<th scope=\"row\"><input name=\"idproductmodify\" type=\"number\" class=\"form-control\" value=\"";
-            // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 26), "html", null, true);
-            echo "\" readonly></th>
-\t\t\t\t\t\t<td><input name=\"titulo\" type=\"text\" class=\"form-control\" value=\"";
+\t\t\t\t<div class=\"col-xl-1 col-lg-1 col-sm-2\">
+\t\t\t\t\t<input class=\"cienxcienmodify form-control\" name=\"idproductmodify\" type=\"number\" value=\"";
+            // line 16
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 16), "html", null, true);
+            echo "\" readonly>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"col-xl-5 col-lg-5 col-sm-10\">
+\t\t\t\t\t<input name=\"titulo\" type=\"text\" class=\"cienxcienmodify form-control\" value=\"";
+            // line 19
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "titulo", [], "any", false, false, false, 19), "html", null, true);
+            echo "\" readonly>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"col-xl-2 col-lg-2 col-sm-3\">
+\t\t\t\t\t<button data-idproduct=\"";
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 22), "html", null, true);
+            echo "\" type=\"button\" class=\"btn btn-primary botonimagenes cienxcienmodify\" data-toggle=\"modal\" data-target=\"#ModalScrollable\">
+\t\t\t\t\t\tImagenes
+\t\t\t\t\t</button>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"col-xl-2 col-lg-2 col-sm-3\">
+\t\t\t\t\t<a class=\"btn btn-success cienxcienmodify\" href=";
             // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "titulo", [], "any", false, false, false, 27), "html", null, true);
-            echo "\"></td>
-\t\t\t\t\t\t<td><input name=\"descripcion\" type=\"text\" class=\"form-control\" value=\"";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "descripcion", [], "any", false, false, false, 28), "html", null, true);
-            echo "\"></td>
-\t\t\t\t\t\t<td><input name=\"precio\" type=\"text\" class=\"form-control\" value=\"";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "precio", [], "any", false, false, false, 29), "html", null, true);
-            echo "\"></td>
-\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<select name=\"idcategoria\" class=\"custom-select\" id=\"inputGroupSelect01\">
-\t\t\t\t\t\t\t\t<option value=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updateProduct", ["id" => twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 27)]), "html", null, true);
+            echo ">
+\t\t\t\t\t\tActualizar
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"col-xl-2 col-lg-2 col-sm-3\">
+\t\t\t\t\t<button data-idproduct=\"";
             // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "idcategoria", [], "any", false, false, false, 32), "idcategoria", [], "any", false, false, false, 32), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["value"], "idcategoria", [], "any", false, false, false, 32), "nombrecategoria", [], "any", false, false, false, 32), "html", null, true);
-            echo "</option>
-\t\t\t\t\t\t\t\t";
-            // line 34
-            echo "\t\t\t\t\t\t\t\t";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["categorias"]) || array_key_exists("categorias", $context) ? $context["categorias"] : (function () { throw new RuntimeError('Variable "categorias" does not exist.', 34, $this->source); })()));
-            foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-                // line 35
-                echo "\t\t\t\t\t\t\t\t\t<option value=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "idcategoria", [], "any", false, false, false, 35), "html", null, true);
-                echo "\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "nombrecategoria", [], "any", false, false, false, 35), "html", null, true);
-                echo "</option>
-\t\t\t\t\t\t\t\t";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 37
-            echo "\t\t\t\t\t\t\t</select>
-\t\t\t\t\t\t</td>
-\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<button data-idproduct=\"";
-            // line 40
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 40), "html", null, true);
-            echo "\" type=\"button\" class=\"btn btn-primary botonimagenes\" data-toggle=\"modal\" data-target=\"#ModalScrollable\">
-\t\t\t\t\t\t\t\tImagenes
-\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t</td>
-\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-success\">Actualizar</button>
-\t\t\t\t\t\t</td>
-\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<button data-idproduct=\"";
-            // line 48
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 48), "html", null, true);
-            echo "\" type=\"button\" class=\"btn btn-danger deleteproduct\" data-toggle=\"modal\" data-target=\"#ModalScrollable\">
-\t\t\t\t\t\t\t\tBorrar
-\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t</td>
-\t\t\t\t\t</form>
-\t\t\t\t</tr>
-\t\t\t";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 32), "html", null, true);
+            echo "\" type=\"button\" class=\"btn btn-danger deleteproduct cienxcienmodify mb-3\" data-toggle=\"modal\" data-target=\"#ModalScrollable\">
+\t\t\t\t\t\tBorrar
+\t\t\t\t\t</button>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 55
-        echo "\t\t</tbody>
-\t</table>
+        // line 38
+        echo "\t</div>
 
 \t";
-        // line 58
-        if ( !twig_test_empty((isset($context["showmodal"]) || array_key_exists("showmodal", $context) ? $context["showmodal"] : (function () { throw new RuntimeError('Variable "showmodal" does not exist.', 58, $this->source); })()))) {
-            // line 59
+        // line 66
+        echo "
+\t";
+        // line 67
+        if ( !twig_test_empty((isset($context["showmodal"]) || array_key_exists("showmodal", $context) ? $context["showmodal"] : (function () { throw new RuntimeError('Variable "showmodal" does not exist.', 67, $this->source); })()))) {
+            // line 68
             echo "\t\t<div id=\"myModal\" class=\"modal\" tabindex=\"-1\" role=\"dialog\">
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
@@ -220,8 +183,8 @@ class __TwigTemplate_25c6c586fd8b6aa6927c01d0168e556e4a841ed33a3c346dfbefe6aab6f
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t<p>";
-            // line 69
-            echo twig_escape_filter($this->env, (isset($context["showmodal"]) || array_key_exists("showmodal", $context) ? $context["showmodal"] : (function () { throw new RuntimeError('Variable "showmodal" does not exist.', 69, $this->source); })()), "html", null, true);
+            // line 78
+            echo twig_escape_filter($this->env, (isset($context["showmodal"]) || array_key_exists("showmodal", $context) ? $context["showmodal"] : (function () { throw new RuntimeError('Variable "showmodal" does not exist.', 78, $this->source); })()), "html", null, true);
             echo "</p>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -229,7 +192,7 @@ class __TwigTemplate_25c6c586fd8b6aa6927c01d0168e556e4a841ed33a3c346dfbefe6aab6f
 \t\t</div>
 \t";
         }
-        // line 75
+        // line 84
         echo "\t<!-- Button trigger modal -->
 
 \t<!-- Modal -->
@@ -264,7 +227,7 @@ class __TwigTemplate_25c6c586fd8b6aa6927c01d0168e556e4a841ed33a3c346dfbefe6aab6f
 
     }
 
-    // line 102
+    // line 111
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -274,7 +237,7 @@ class __TwigTemplate_25c6c586fd8b6aa6927c01d0168e556e4a841ed33a3c346dfbefe6aab6f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 103
+        // line 112
         echo "\t<script src=\"../js/jsmodalimagenesmodify.js\" type=\"text/javascript\"></script>
 ";
         
@@ -297,7 +260,7 @@ class __TwigTemplate_25c6c586fd8b6aa6927c01d0168e556e4a841ed33a3c346dfbefe6aab6f
 
     public function getDebugInfo()
     {
-        return array (  278 => 103,  268 => 102,  233 => 75,  224 => 69,  212 => 59,  210 => 58,  205 => 55,  192 => 48,  181 => 40,  176 => 37,  165 => 35,  160 => 34,  154 => 32,  148 => 29,  144 => 28,  140 => 27,  136 => 26,  130 => 24,  126 => 23,  113 => 12,  103 => 11,  91 => 7,  81 => 6,  61 => 3,  38 => 1,);
+        return array (  241 => 112,  231 => 111,  196 => 84,  187 => 78,  175 => 68,  173 => 67,  170 => 66,  166 => 38,  154 => 32,  146 => 27,  138 => 22,  132 => 19,  126 => 16,  120 => 14,  116 => 13,  113 => 12,  103 => 11,  91 => 7,  81 => 6,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -308,56 +271,65 @@ class __TwigTemplate_25c6c586fd8b6aa6927c01d0168e556e4a841ed33a3c346dfbefe6aab6f
 {% endblock %}
 
 {% block meta %}
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNotIndexNEW.css\" media=\"all\">
+\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNotIndexNEW.css\" media=\"all\">
 
 {% endblock %}
 
 {% block body %}
-\t<table class=\"table table-dark mt-3\">
-\t\t<thead>
-\t\t\t<tr>
-\t\t\t\t<th scope=\"col\">ID</th>
-\t\t\t\t<th scope=\"col\">Titulo</th>
-\t\t\t\t<th scope=\"col\">Descripcion</th>
-\t\t\t\t<th scope=\"col\">Precio</th>
-\t\t\t\t<th scope=\"col\">Categoria</th>
-\t\t\t</tr>
-\t\t</thead>
-\t\t<tbody>
-\t\t\t{% for value in dataproductforrender %}
-\t\t\t\t<tr id=\"product{{value.idproduct}}\">
-\t\t\t\t\t<form method=\"POST\" action=\"/product/modify\">
-\t\t\t\t\t\t<th scope=\"row\"><input name=\"idproductmodify\" type=\"number\" class=\"form-control\" value=\"{{value.idproduct}}\" readonly></th>
-\t\t\t\t\t\t<td><input name=\"titulo\" type=\"text\" class=\"form-control\" value=\"{{value.titulo}}\"></td>
-\t\t\t\t\t\t<td><input name=\"descripcion\" type=\"text\" class=\"form-control\" value=\"{{value.descripcion}}\"></td>
-\t\t\t\t\t\t<td><input name=\"precio\" type=\"text\" class=\"form-control\" value=\"{{value.precio}}\"></td>
-\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<select name=\"idcategoria\" class=\"custom-select\" id=\"inputGroupSelect01\">
-\t\t\t\t\t\t\t\t<option value=\"{{value.idcategoria.idcategoria}}\">{{value.idcategoria.nombrecategoria}}</option>
-\t\t\t\t\t\t\t\t{# Este ciclo ford quiza de problemas y tengo qe utilizar el otro?? #}
-\t\t\t\t\t\t\t\t{% for item in categorias %}
-\t\t\t\t\t\t\t\t\t<option value=\"{{item.idcategoria}}\">{{item.nombrecategoria}}</option>
-\t\t\t\t\t\t\t\t{% endfor %}
-\t\t\t\t\t\t\t</select>
-\t\t\t\t\t\t</td>
-\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<button data-idproduct=\"{{value.idproduct}}\" type=\"button\" class=\"btn btn-primary botonimagenes\" data-toggle=\"modal\" data-target=\"#ModalScrollable\">
-\t\t\t\t\t\t\t\tImagenes
+\t<div class=\"container mt-3 mb-3\">
+\t\t{% for value in dataproductforrender %}
+\t\t\t<div class=\"row\" id=\"product{{value.idproduct}}\">
+\t\t\t\t<div class=\"col-xl-1 col-lg-1 col-sm-2\">
+\t\t\t\t\t<input class=\"cienxcienmodify form-control\" name=\"idproductmodify\" type=\"number\" value=\"{{value.idproduct}}\" readonly>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"col-xl-5 col-lg-5 col-sm-10\">
+\t\t\t\t\t<input name=\"titulo\" type=\"text\" class=\"cienxcienmodify form-control\" value=\"{{value.titulo}}\" readonly>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"col-xl-2 col-lg-2 col-sm-3\">
+\t\t\t\t\t<button data-idproduct=\"{{value.idproduct}}\" type=\"button\" class=\"btn btn-primary botonimagenes cienxcienmodify\" data-toggle=\"modal\" data-target=\"#ModalScrollable\">
+\t\t\t\t\t\tImagenes
+\t\t\t\t\t</button>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"col-xl-2 col-lg-2 col-sm-3\">
+\t\t\t\t\t<a class=\"btn btn-success cienxcienmodify\" href={{ path(\"updateProduct\", {id: value.idproduct} ) }}>
+\t\t\t\t\t\tActualizar
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"col-xl-2 col-lg-2 col-sm-3\">
+\t\t\t\t\t<button data-idproduct=\"{{value.idproduct}}\" type=\"button\" class=\"btn btn-danger deleteproduct cienxcienmodify mb-3\" data-toggle=\"modal\" data-target=\"#ModalScrollable\">
+\t\t\t\t\t\tBorrar
+\t\t\t\t\t</button>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t{% endfor %}
+\t</div>
+
+\t{# <!-- Button trigger modal -->
+\t\t\t<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal\">
+\t\t\t\tLaunch demo modal
+\t\t\t</button>
+\t\t
+\t\t\t<!-- Modal -->
+\t\t\t<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+\t\t\t\t<div class=\"modal-dialog\" role=\"document\">
+\t\t\t\t\t<div class=\"modal-content\">
+\t\t\t\t\t\t<div class=\"modal-header\">
+\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Modal title</h5>
+\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t</td>
-\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-success\">Actualizar</button>
-\t\t\t\t\t\t</td>
-\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<button data-idproduct=\"{{value.idproduct}}\" type=\"button\" class=\"btn btn-danger deleteproduct\" data-toggle=\"modal\" data-target=\"#ModalScrollable\">
-\t\t\t\t\t\t\t\tBorrar
-\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t</td>
-\t\t\t\t\t</form>
-\t\t\t\t</tr>
-\t\t\t{% endfor %}
-\t\t</tbody>
-\t</table>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"modal-body\">
+\t\t\t\t\t\t\t...
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"modal-footer\">
+\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t #}
 
 \t{% if showmodal is not empty %}
 \t\t<div id=\"myModal\" class=\"modal\" tabindex=\"-1\" role=\"dialog\">

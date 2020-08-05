@@ -29,11 +29,11 @@ class RegistrationController extends AbstractController
             $user->setPasswordd(
                 $passwordEncoder->encodePassword(
                     $user,
-                    $form->get('plainPassword')->getData()
+                    $request->request->get('password')
                 )
             );
 
-            $email = $form->get('email')->getData();
+            $email = $request->request->get('email');
             $nombre = $request->request->get('nombreusuario');
             $user->setNombreusuario($nombre);
             $rol=$this->getDoctrine()->getRepository(Rol::class)->find(1);

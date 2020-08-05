@@ -4,44 +4,65 @@
 {% endblock %}
 
 {% block meta %}
-		<link rel="stylesheet" type="text/css" href="/css/cssNotIndexNEW.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/css/cssNotIndexNEW.css" media="all">
 
 {% endblock %}
 
 {% block body %}
-	<table class="table table-dark mt-3">
-		<thead>
-			<tr>
-				<th scope="col" class="col-2">ID</th>
-				<th scope="col" class="col-4">Titulo</th>
-				
-			</tr>
-		</thead>
-		<tbody>
-			{% for value in dataproductforrender %}
-				<tr id="product{{value.idproduct}}">
-					<form method="POST" action="/product/modify">
-						<th class="col-2" scope="row"><input name="idproductmodify" type="number" class="form-control" value="{{value.idproduct}}" readonly></th>
-						<td class="col-2" ><input name="titulo" type="text" class="form-control" value="{{value.titulo}}"></td>
-						
-						<td class="col-2">
-							<button data-idproduct="{{value.idproduct}}" type="button" class="btn btn-primary botonimagenes" data-toggle="modal" data-target="#ModalScrollable">
-								Imagenes
+	<div class="container mt-3 mb-3">
+		{% for value in dataproductforrender %}
+			<div class="row" id="product{{value.idproduct}}">
+				<div class="col-xl-1 col-lg-1 col-sm-2">
+					<input class="cienxcienmodify form-control hidden-xs" name="idproductmodify" type="number" value="{{value.idproduct}}" readonly>
+				</div>
+				<div class="col-xl-5 col-lg-5 col-sm-10">
+					<input name="titulo" type="text" class="cienxcienmodify form-control" value="{{value.titulo}}" readonly>
+				</div>
+				<div class="col-xl-2 col-lg-2 col-sm-3">
+					<button data-idproduct="{{value.idproduct}}" type="button" class="btn btn-primary botonimagenes cienxcienmodify" data-toggle="modal" data-target="#ModalScrollable">
+						Imagenes
+					</button>
+				</div>
+				<div class="col-xl-2 col-lg-2 col-sm-3">
+					<a class="btn btn-success cienxcienmodify" href={{ path("updateProduct", {id: value.idproduct} ) }}>
+						Actualizar
+					</a>
+				</div>
+				<div class="col-xl-2 col-lg-2 col-sm-3">
+					<button data-idproduct="{{value.idproduct}}" type="button" class="btn btn-danger deleteproduct cienxcienmodify mb-3" data-toggle="modal" data-target="#ModalScrollable">
+						Borrar
+					</button>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+
+	{# <!-- Button trigger modal -->
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+				Launch demo modal
+			</button>
+		
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
 							</button>
-						</td>
-						<td class="col-2">
-							<a class="btn btn-success" href={{ path("updateProduct", {id: value.idproduct} ) }}>Actualizar</a>
-						</td>
-						<td class="col-2">
-							<button data-idproduct="{{value.idproduct}}" type="button" class="btn btn-danger deleteproduct" data-toggle="modal" data-target="#ModalScrollable">
-								Borrar
-							</button>
-						</td>
-					</form>
-				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+						</div>
+						<div class="modal-body">
+							...
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		 #}
 
 	{% if showmodal is not empty %}
 		<div id="myModal" class="modal" tabindex="-1" role="dialog">

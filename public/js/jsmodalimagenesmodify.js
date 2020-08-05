@@ -8,9 +8,10 @@ function inicializaEventos() {
         ajaxWithImg(this);
     });
 
-    $('#ModalScrollable').on('show.bs.modal', function (event) {
+    /* $('#ModalScrollable').on('show.bs.modal', function (event) {
         EventShowModal(this)
-    });
+    }); */
+
     //borra elementos cuando cierra modal
     $('#ModalScrollable').on('hidden.bs.modal', function (event) {
         $('.elementsmodal').remove();

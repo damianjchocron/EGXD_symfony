@@ -87,7 +87,7 @@ class __TwigTemplate_99dc65f67af8561516aa4e42f7e2ee19fb9b9154f46c823b8f5aae5cd64
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "meta"));
 
         // line 7
-        echo "\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNotIndexNEW.css\" media=\"all\">
+        echo "\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNotIndexNEW.css\" media=\"all\">
 
 ";
         
@@ -109,37 +109,38 @@ class __TwigTemplate_99dc65f67af8561516aa4e42f7e2ee19fb9b9154f46c823b8f5aae5cd64
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 13
-        echo "\t<h1>Register</h1>
+        echo "\t<div class=\"container\">
+\t\t<h1>Registro</h1>
 
-\t";
-        // line 15
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 15, $this->source); })()), 'form_start');
-        echo "
-\t";
+\t\t";
         // line 16
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 16, $this->source); })()), "email", [], "any", false, false, false, 16), 'row');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 16, $this->source); })()), 'form_start');
         echo "
-\t";
+\t\t";
         // line 17
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 17, $this->source); })()), "plainPassword", [], "any", false, false, false, 17), 'row');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 17, $this->source); })()), "email", [], "any", false, false, false, 17), 'row');
+        echo "
+\t\t";
+        // line 18
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 18, $this->source); })()), "plainPassword", [], "any", false, false, false, 18), 'row');
         echo "
 
-\t<label for=\"nombreusuario\">Nombre</label>
-\t<div class=\"input-group mb-3\">
-\t\t<input type=\"text\" class=\"form-control\" name=\"nombreusuario\" id=\"basic-url\" aria-describedby=\"basic-addon3\">
+\t\t<label for=\"nombreusuario\">Nombre</label>
+\t\t<div class=\"input-group mb-3\">
+\t\t\t<input type=\"text\" class=\"form-control\" name=\"nombreusuario\" id=\"basic-url\" aria-describedby=\"basic-addon3\">
+\t\t</div>
+
+\t\t";
+        // line 25
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 25, $this->source); })()), "agreeTerms", [], "any", false, false, false, 25), 'row');
+        echo "
+
+\t\t<button type=\"submit\" class=\"btn\">Register</button>
+\t\t";
+        // line 28
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 28, $this->source); })()), 'form_end');
+        echo "
 \t</div>
-
-\t";
-        // line 24
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 24, $this->source); })()), "agreeTerms", [], "any", false, false, false, 24), 'row');
-        echo "
-
-\t<button type=\"submit\" class=\"btn\">Register</button>
-\t";
-        // line 27
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 27, $this->source); })()), 'form_end');
-        echo "
-
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -161,7 +162,7 @@ class __TwigTemplate_99dc65f67af8561516aa4e42f7e2ee19fb9b9154f46c823b8f5aae5cd64
 
     public function getDebugInfo()
     {
-        return array (  140 => 27,  134 => 24,  124 => 17,  120 => 16,  116 => 15,  112 => 13,  102 => 12,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
+        return array (  141 => 28,  135 => 25,  125 => 18,  121 => 17,  117 => 16,  112 => 13,  102 => 12,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -172,29 +173,50 @@ class __TwigTemplate_99dc65f67af8561516aa4e42f7e2ee19fb9b9154f46c823b8f5aae5cd64
 {% endblock %}
 
 {% block meta %}
-\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNotIndexNEW.css\" media=\"all\">
+\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/cssNotIndexNEW.css\" media=\"all\">
 
 {% endblock %}
 
 
 {% block body %}
-\t<h1>Register</h1>
+\t<div class=\"container\">
+\t\t<h1>Registro</h1>
 
-\t{{ form_start(registrationForm) }}
-\t{{ form_row(registrationForm.email) }}
-\t{{ form_row(registrationForm.plainPassword) }}
+\t\t{{ form_start(registrationForm) }}
+\t\t{{ form_row(registrationForm.email) }}
+\t\t{{ form_row(registrationForm.plainPassword) }}
 
-\t<label for=\"nombreusuario\">Nombre</label>
-\t<div class=\"input-group mb-3\">
-\t\t<input type=\"text\" class=\"form-control\" name=\"nombreusuario\" id=\"basic-url\" aria-describedby=\"basic-addon3\">
+\t\t<label for=\"nombreusuario\">Nombre</label>
+\t\t<div class=\"input-group mb-3\">
+\t\t\t<input type=\"text\" class=\"form-control\" name=\"nombreusuario\" id=\"basic-url\" aria-describedby=\"basic-addon3\">
+\t\t</div>
+
+\t\t{{ form_row(registrationForm.agreeTerms) }}
+
+\t\t<button type=\"submit\" class=\"btn\">Register</button>
+\t\t{{ form_end(registrationForm) }}
 \t</div>
-
-\t{{ form_row(registrationForm.agreeTerms) }}
-
-\t<button type=\"submit\" class=\"btn\">Register</button>
-\t{{ form_end(registrationForm) }}
-
 {% endblock %}
+
+
+{# <form method=\"POST\">
+\t\t\t<label for=\"nombreusuario\">Email</label>
+\t\t\t<div class=\"input-group mb-3\">
+\t\t\t\t<input type=\"email\" class=\"form-control\" name=\"email\" id=\"basic-url\" aria-describedby=\"basic-addon3\">
+\t\t\t</div>
+\t\t\t<label for=\"nombreusuario\">Nombre</label>
+\t\t\t<div class=\"input-group mb-3\">
+\t\t\t\t<input type=\"text\" class=\"form-control\" name=\"nombreusuario\" id=\"basic-url\" aria-describedby=\"basic-addon3\">
+\t\t\t</div>
+\t\t\t<label for=\"nombreusuario\">Contraseña</label>
+\t\t\t<div class=\"input-group mb-3\">
+\t\t\t\t<input type=\"password\" class=\"form-control\" name=\"password\" id=\"basic-url\" aria-describedby=\"basic-addon3\">
+\t\t\t</div>
+
+\t\t\t{{ form_row(registrationForm.agreeTerms) }}
+
+<button type=\"submit\" class=\"btn btn-primary mt-3 mb-3\">Registrar</button>
+{{ form_end(registrationForm) }}</form>#}
 ", "registration/register.html.twig", "/var/www/html/EGXD_symfony/templates/registration/register.html.twig");
     }
 }

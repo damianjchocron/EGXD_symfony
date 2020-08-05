@@ -163,165 +163,141 @@ class __TwigTemplate_4e41f580d72df1bb058728ce76661284ad4edcf61aabbb124a368fa91e9
         echo "
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row\">
-\t\t\t\t<div class=\"products-grid\">
-\t\t\t\t\t<div class=\"col-md-12\">
-\t\t\t\t\t\t<div class=\"std\">
-\t\t\t\t\t\t\t<div class=\"home-tabs wow bounceInUp animated\">
-\t\t\t\t\t\t\t\t<div class=\"producttabs\">
-\t\t\t\t\t\t\t\t\t<div id=\"thm_producttabs1\" class=\"thm-producttabs\">
-\t\t\t\t\t\t\t\t\t\t<div
-\t\t\t\t\t\t\t\t\t\t\tclass=\"thm-pdt-container\">
-\t\t\t\t\t\t\t\t\t\t\t";
-        // line 78
-        echo "\t\t\t\t\t\t\t\t\t\t\t<div class=\"pdt-content pdt_new_arrivals is-loaded  tab-content-actived\">
-\t\t\t\t\t\t\t\t\t\t\t\t<ul
-\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"pdt-list products-grid zoomOut play\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t";
-        // line 82
-        echo "\t\t\t\t\t\t\t\t\t\t\t\t\t";
+\t\t\t\t";
+        // line 69
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["productRepo"]) || array_key_exists("productRepo", $context) ? $context["productRepo"] : (function () { throw new RuntimeError('Variable "productRepo" does not exist.', 82, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["productRepo"]) || array_key_exists("productRepo", $context) ? $context["productRepo"] : (function () { throw new RuntimeError('Variable "productRepo" does not exist.', 69, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
-            // line 83
-            echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"item item-animate m-3\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item-inner m-2\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item-img\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item-img-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 87
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("detailProduct", ["idproduct" => twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 87)]), "html", null, true);
+            // line 70
+            echo "\t\t\t\t\t<div class=\"divcard col-lg-4 col-md-6 col-sm-12\">
+\t\t\t\t\t\t<div class=\"item-img\">
+\t\t\t\t\t\t\t<div class=\"item-img-info\">
+\t\t\t\t\t\t\t\t<a href=\"";
+            // line 73
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("detailProduct", ["idproduct" => twig_get_attribute($this->env, $this->source, $context["value"], "idproduct", [], "any", false, false, false, 73)]), "html", null, true);
             echo "\" title=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "titulo", [], "any", false, false, false, 87), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "titulo", [], "any", false, false, false, 73), "html", null, true);
             echo "\" class=\"product-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"img-card\" src=\"";
-            // line 88
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "url", [], "any", false, false, false, 88), "html", null, true);
+\t\t\t\t\t\t\t\t\t<img class=\"img-card\" src=\"";
+            // line 74
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "url", [], "any", false, false, false, 74), "html", null, true);
             echo "\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "titulo", [], "any", false, false, false, 88), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "titulo", [], "any", false, false, false, 74), "html", null, true);
             echo "\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"info-inner\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item-title\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2 class=\"card-title\">";
-            // line 96
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "titulo", [], "any", false, false, false, 96), "html", null, true);
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"item-info\">
+\t\t\t\t\t\t\t<div class=\"info-inner\">
+\t\t\t\t\t\t\t\t<div class=\"item-title\">
+\t\t\t\t\t\t\t\t\t<h2 class=\"card-title\">";
+            // line 81
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["value"], "titulo", [], "any", false, false, false, 81), "html", null, true);
             echo "</h2>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item-content\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item-price\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"price-box\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"regular-price\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price\">U";
-            // line 102
-            echo twig_escape_filter($this->env, $this->extensions['Twig\Extra\Intl\IntlExtension']->formatCurrency(twig_get_attribute($this->env, $this->source, $context["value"], "precio", [], "any", false, false, false, 102), "USD"), "html", null, true);
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"item-content\">
+\t\t\t\t\t\t\t\t\t<div class=\"item-price\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"price-box\">
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"regular-price\">
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price\">U";
+            // line 87
+            echo twig_escape_filter($this->env, $this->extensions['Twig\Extra\Intl\IntlExtension']->formatCurrency(twig_get_attribute($this->env, $this->source, $context["value"], "precio", [], "any", false, false, false, 87), "USD"), "html", null, true);
             echo "</span>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 111
-        echo "\t\t\t\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t</span>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</div>
+\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 96
+        echo "\t\t\t</div>
+
 \t\t</div>
-\t</div>
-\t<div class=\"brand-logo wow bounceInUp animated\">
-\t\t<div class=\"container\">
-\t\t\t<div class=\"slider-items-products\">
-\t\t\t\t<div id=\"brand-logo-slider\" class=\"product-flexslider hidden-buttons\">
-\t\t\t\t\t<div
-\t\t\t\t\t\tclass=\"slider-items slider-width-col6\">
+\t\t<div class=\"brand-logo wow bounceInUp animated\">
+\t\t\t<div class=\"container\">
+\t\t\t\t<div class=\"slider-items-products\">
+\t\t\t\t\t<div id=\"brand-logo-slider\" class=\"product-flexslider hidden-buttons\">
+\t\t\t\t\t\t<div
+\t\t\t\t\t\t\tclass=\"slider-items slider-width-col6\">
 
-\t\t\t\t\t\t";
-        // line 131
-        echo "\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo3.png\" alt=\"Image\"></a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t";
-        // line 135
+\t\t\t\t\t\t\t";
+        // line 107
+        echo "\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo3.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
+        // line 111
         echo "
-\t\t\t\t\t\t";
-        // line 137
-        echo "\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo2.png\" alt=\"Image\"></a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t";
-        // line 141
+\t\t\t\t\t\t\t";
+        // line 113
+        echo "\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo2.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
+        // line 117
         echo "
-\t\t\t\t\t\t";
-        // line 143
-        echo "\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo1.png\" alt=\"Image\"></a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t";
-        // line 147
+\t\t\t\t\t\t\t";
+        // line 119
+        echo "\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo1.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
+        // line 123
         echo "
 
-\t\t\t\t\t\t";
+\t\t\t\t\t\t\t";
+        // line 126
+        echo "\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo4.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
+        // line 130
+        echo "
+\t\t\t\t\t\t\t";
+        // line 132
+        echo "\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo5.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
+        // line 136
+        echo "
+\t\t\t\t\t\t\t";
+        // line 138
+        echo "\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo6.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
+        // line 142
+        echo "
+\t\t\t\t\t\t\t";
+        // line 144
+        echo "\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo1.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
+        // line 148
+        echo "
+\t\t\t\t\t\t\t";
         // line 150
-        echo "\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo4.png\" alt=\"Image\"></a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t";
+        echo "\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo4.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
         // line 154
         echo "
-\t\t\t\t\t\t";
-        // line 156
-        echo "\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo5.png\" alt=\"Image\"></a>
 \t\t\t\t\t\t</div>
-\t\t\t\t\t\t";
-        // line 160
-        echo "
-\t\t\t\t\t\t";
-        // line 162
-        echo "\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo6.png\" alt=\"Image\"></a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t";
-        // line 166
-        echo "
-\t\t\t\t\t\t";
-        // line 168
-        echo "\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo1.png\" alt=\"Image\"></a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t";
-        // line 172
-        echo "
-\t\t\t\t\t\t";
-        // line 174
-        echo "\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo4.png\" alt=\"Image\"></a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t";
-        // line 178
-        echo "
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
-\t</div>
-</main>";
+\t</main>
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -342,7 +318,7 @@ class __TwigTemplate_4e41f580d72df1bb058728ce76661284ad4edcf61aabbb124a368fa91e9
 
     public function getDebugInfo()
     {
-        return array (  318 => 178,  313 => 174,  310 => 172,  305 => 168,  302 => 166,  297 => 162,  294 => 160,  289 => 156,  286 => 154,  281 => 150,  277 => 147,  272 => 143,  269 => 141,  264 => 137,  261 => 135,  256 => 131,  235 => 111,  220 => 102,  211 => 96,  198 => 88,  192 => 87,  186 => 83,  181 => 82,  176 => 78,  163 => 66,  154 => 58,  148 => 53,  143 => 49,  139 => 46,  135 => 43,  131 => 40,  128 => 39,  126 => 38,  118 => 31,  113 => 27,  108 => 23,  104 => 20,  100 => 17,  96 => 14,  89 => 8,  79 => 7,  59 => 2,  36 => 1,);
+        return array (  293 => 154,  288 => 150,  285 => 148,  280 => 144,  277 => 142,  272 => 138,  269 => 136,  264 => 132,  261 => 130,  256 => 126,  252 => 123,  247 => 119,  244 => 117,  239 => 113,  236 => 111,  231 => 107,  219 => 96,  204 => 87,  195 => 81,  183 => 74,  177 => 73,  172 => 70,  168 => 69,  163 => 66,  154 => 58,  148 => 53,  143 => 49,  139 => 46,  135 => 43,  131 => 40,  128 => 39,  126 => 38,  118 => 31,  113 => 27,  108 => 23,  104 => 20,  100 => 17,  96 => 14,  89 => 8,  79 => 7,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -415,122 +391,99 @@ class __TwigTemplate_4e41f580d72df1bb058728ce76661284ad4edcf61aabbb124a368fa91e9
 
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row\">
-\t\t\t\t<div class=\"products-grid\">
-\t\t\t\t\t<div class=\"col-md-12\">
-\t\t\t\t\t\t<div class=\"std\">
-\t\t\t\t\t\t\t<div class=\"home-tabs wow bounceInUp animated\">
-\t\t\t\t\t\t\t\t<div class=\"producttabs\">
-\t\t\t\t\t\t\t\t\t<div id=\"thm_producttabs1\" class=\"thm-producttabs\">
-\t\t\t\t\t\t\t\t\t\t<div
-\t\t\t\t\t\t\t\t\t\t\tclass=\"thm-pdt-container\">
-\t\t\t\t\t\t\t\t\t\t\t{#Begin Tab Content #}
-\t\t\t\t\t\t\t\t\t\t\t<div class=\"pdt-content pdt_new_arrivals is-loaded  tab-content-actived\">
-\t\t\t\t\t\t\t\t\t\t\t\t<ul
-\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"pdt-list products-grid zoomOut play\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t{# La clase wide-first es importante #}
-\t\t\t\t\t\t\t\t\t\t\t\t\t{% for value in productRepo %}
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"item item-animate m-3\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item-inner m-2\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item-img\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item-img-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path(\"detailProduct\", {idproduct:value.idproduct } ) }}\" title=\"{{value.titulo}}\" class=\"product-image\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img class=\"img-card\" src=\"{{value.url}}\" alt=\"{{value.titulo}}\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item-info\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"info-inner\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item-title\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2 class=\"card-title\">{{value.titulo}}</h2>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item-content\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item-price\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"price-box\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"regular-price\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price\">U{{ value.precio|format_currency('USD') }}</span>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t{% endfor %}
-\t\t\t\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t{% for value in productRepo %}
+\t\t\t\t\t<div class=\"divcard col-lg-4 col-md-6 col-sm-12\">
+\t\t\t\t\t\t<div class=\"item-img\">
+\t\t\t\t\t\t\t<div class=\"item-img-info\">
+\t\t\t\t\t\t\t\t<a href=\"{{ path(\"detailProduct\", {idproduct:value.idproduct } ) }}\" title=\"{{value.titulo}}\" class=\"product-image\">
+\t\t\t\t\t\t\t\t\t<img class=\"img-card\" src=\"{{value.url}}\" alt=\"{{value.titulo}}\">
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"item-info\">
+\t\t\t\t\t\t\t<div class=\"info-inner\">
+\t\t\t\t\t\t\t\t<div class=\"item-title\">
+\t\t\t\t\t\t\t\t\t<h2 class=\"card-title\">{{value.titulo}}</h2>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"item-content\">
+\t\t\t\t\t\t\t\t\t<div class=\"item-price\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"price-box\">
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"regular-price\">
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"price\">U{{ value.precio|format_currency('USD') }}</span>
+\t\t\t\t\t\t\t\t\t\t\t</span>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
-\t\t\t\t</div>
+\t\t\t\t{% endfor %}
 \t\t\t</div>
+
 \t\t</div>
-\t</div>
-\t<div class=\"brand-logo wow bounceInUp animated\">
-\t\t<div class=\"container\">
-\t\t\t<div class=\"slider-items-products\">
-\t\t\t\t<div id=\"brand-logo-slider\" class=\"product-flexslider hidden-buttons\">
-\t\t\t\t\t<div
-\t\t\t\t\t\tclass=\"slider-items slider-width-col6\">
+\t\t<div class=\"brand-logo wow bounceInUp animated\">
+\t\t\t<div class=\"container\">
+\t\t\t\t<div class=\"slider-items-products\">
+\t\t\t\t\t<div id=\"brand-logo-slider\" class=\"product-flexslider hidden-buttons\">
+\t\t\t\t\t\t<div
+\t\t\t\t\t\t\tclass=\"slider-items slider-width-col6\">
 
-\t\t\t\t\t\t{# item #}
-\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo3.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t{# item #}
+\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo3.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t{# END item #}
+
+\t\t\t\t\t\t\t{# item #}
+\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo2.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t{# END item #}
+
+\t\t\t\t\t\t\t{# item #}
+\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo1.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t{# END item #}
+
+
+\t\t\t\t\t\t\t{# item #}
+\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo4.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t{# END item #}
+
+\t\t\t\t\t\t\t{# item #}
+\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo5.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t{# END item #}
+
+\t\t\t\t\t\t\t{# item #}
+\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo6.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t{# END item #}
+
+\t\t\t\t\t\t\t{# item #}
+\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo1.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t{# END item #}
+
+\t\t\t\t\t\t\t{# item #}
+\t\t\t\t\t\t\t<div class=\"item\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo4.png\" alt=\"Image\"></a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t{# END item #}
+
 \t\t\t\t\t\t</div>
-\t\t\t\t\t\t{# END item #}
-
-\t\t\t\t\t\t{# item #}
-\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo2.png\" alt=\"Image\"></a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t{# END item #}
-
-\t\t\t\t\t\t{# item #}
-\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo1.png\" alt=\"Image\"></a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t{# END item #}
-
-
-\t\t\t\t\t\t{# item #}
-\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo4.png\" alt=\"Image\"></a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t{# END item #}
-
-\t\t\t\t\t\t{# item #}
-\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo5.png\" alt=\"Image\"></a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t{# END item #}
-
-\t\t\t\t\t\t{# item #}
-\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo6.png\" alt=\"Image\"></a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t{# END item #}
-
-\t\t\t\t\t\t{# item #}
-\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo1.png\" alt=\"Image\"></a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t{# END item #}
-
-\t\t\t\t\t\t{# item #}
-\t\t\t\t\t\t<div class=\"item\">
-\t\t\t\t\t\t\t<a href=\"#\"><img src=\"images/b-logo4.png\" alt=\"Image\"></a>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t{# END item #}
-
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
-\t</div>
-</main>{% endblock %}
+\t</main>
+{% endblock %}
 ", "home/indexNEW.html.twig", "/var/www/html/EGXD_symfony/templates/home/indexNEW.html.twig");
     }
 }
