@@ -26,6 +26,7 @@ return [
         '/multimedia/ajaxFind' => [[['_route' => 'ajaxFindMultimedia', '_controller' => 'App\\Controller\\MultimediaController::ajaxFind'], null, null, null, false, false, null]],
         '/multimedia/borrar' => [[['_route' => 'ajaxDeleteMultimedia', '_controller' => 'App\\Controller\\MultimediaController::Borrar'], null, null, null, false, false, null]],
         '/multimedia/guardar' => [[['_route' => 'ajaxGuardarMultimedia', '_controller' => 'App\\Controller\\MultimediaController::Guardar'], null, null, null, false, false, null]],
+        '/multimedia/priority' => [[['_route' => 'priorityMultimedia', '_controller' => 'App\\Controller\\MultimediaController::priority'], null, null, null, false, false, null]],
         '/categoria/guardar' => [[['_route' => 'categoriaguardarpost', '_controller' => 'App\\Controller\\CategoriaController::insertupdatepost'], null, ['POST' => 0], null, false, false, null]],
         '/contacto' => [[['_route' => 'contacto', '_controller' => 'App\\Controller\\ContactoController::index'], null, null, null, false, false, null]],
     ],

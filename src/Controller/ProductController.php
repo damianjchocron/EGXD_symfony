@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ProductController extends AbstractController
 {
+    
     public function update($id)
     {
         $productrepositoryinstance = $this
@@ -22,10 +23,6 @@ class ProductController extends AbstractController
         $categoriarepositoryinstace = $this
             ->getDoctrine()
             ->getRepository(Categoria::class);
-
-
-        $productInstance = $productrepositoryinstance->find($id);
-
         $msj = "";
 
         $categorias = $categoriarepositoryinstace->findAll();

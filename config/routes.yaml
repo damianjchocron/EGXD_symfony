@@ -35,6 +35,7 @@ updateProductPost:
    path: /product/updatePost
    controller: App\Controller\ProductController::updatePost
 
+
 ajaxFindMultimedia:
    path: /multimedia/ajaxFind
    controller: App\Controller\MultimediaController::ajaxFind
@@ -47,6 +48,10 @@ ajaxGuardarMultimedia:
    path: /multimedia/guardar
    controller: App\Controller\MultimediaController::Guardar
 
+
+priorityMultimedia:
+   path: /multimedia/priority
+   controller: App\Controller\MultimediaController::priority
 
 categorianuevopost:
     path: /categoria/nuevo/{id?}

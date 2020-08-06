@@ -31,6 +31,7 @@ return [
     'ajaxFindMultimedia' => [[], ['_controller' => 'App\\Controller\\MultimediaController::ajaxFind'], [], [['text', '/multimedia/ajaxFind']], [], []],
     'ajaxDeleteMultimedia' => [[], ['_controller' => 'App\\Controller\\MultimediaController::Borrar'], [], [['text', '/multimedia/borrar']], [], []],
     'ajaxGuardarMultimedia' => [[], ['_controller' => 'App\\Controller\\MultimediaController::Guardar'], [], [['text', '/multimedia/guardar']], [], []],
+    'priorityMultimedia' => [[], ['_controller' => 'App\\Controller\\MultimediaController::priority'], [], [['text', '/multimedia/priority']], [], []],
     'categorianuevopost' => [['id'], ['id' => null, '_controller' => 'App\\Controller\\CategoriaController::insertupdate'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/categoria/nuevo']], [], []],
     'categoriaeditarpost' => [['id'], ['_controller' => 'App\\Controller\\CategoriaController::insertupdate'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/categoria/editar']], [], []],
     'categoriaguardarpost' => [[], ['_controller' => 'App\\Controller\\CategoriaController::insertupdatepost'], [], [['text', '/categoria/guardar']], [], []],

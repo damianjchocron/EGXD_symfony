@@ -6,18 +6,23 @@ function inicializaEventos() {
     var idproduct;
     $('.botonimagenes').on('click', function () {
         ajaxWithImg(this);
+        giveIdProductToSubmit(this);
+        giveEventAjaxToModal();
     });
 
-    /* $('#ModalScrollable').on('show.bs.modal', function (event) {
-        EventShowModal(this)
-    }); */
+    // saveChanges();
 
     //borra elementos cuando cierra modal
     $('#ModalScrollable').on('hidden.bs.modal', function (event) {
         $('.elementsmodal').remove();
     });
+
     $('.deleteproduct').on('click', function () {
         CheckDelete(this);
+    });
+
+    $('.callModalImg').on('click',function(){
+        giveIdProductToSubmit(this);
     });
 }
 
@@ -62,9 +67,27 @@ function ajaxDeleteMultimedia(idmultimedia, url) {
 function callBackAjaxWithImg(objImg) {
     console.log(objImg);
     var inputfile;
+
+    var formpriority = $('<form>',{
+        'method':'POST',
+        'class' : 'elementsmodal',
+        'id':'formPriority',
+    });
+
+    // var divForFormPriority = $('<div>');
+
+    var labelForFormPriority = $('<label>',{
+        'for':'priorityIdMultimedia'
+    });
+
+
+    $(formpriority).append(labelForFormPriority);
+
+
     $(objImg.objImg).each(function (index) {
         var element = this;
         console.log(this);
+        var checkedforcheck = "";
         inputfile = `
                     <form id="uploadimage" class="elementsmodal" method="POST" enctype="multipart/form-data" >
                         <div class="input-group mb-3 elementsmodal">
@@ -79,6 +102,7 @@ function callBackAjaxWithImg(objImg) {
                     <form>`
         var idmultimedia = element['idmultimedia'];
         var url = element['url'];
+
         var img = $('<img>', {
             'src': url,
             'class': 'elementsmodal imagenesmodal img-thumbnail idmultimedia' + idmultimedia,
@@ -91,12 +115,44 @@ function callBackAjaxWithImg(objImg) {
                 'data-idmultimedia': idmultimedia,
                 click: function () { ajaxDeleteMultimedia(idmultimedia, url); },// Como agrego la funcion al boton?
             });
+            var msjPriority = "";
+        } else {
+            var checkedforcheck = "checked";
+            msjPriority = "Predefinida";
         }
-        $('.modal-body').append(img);
-        $('.modal-body').append(btn);
 
+        var checkpriority = `
+                                        <input value="`+idmultimedia+`" type="radio" `+ checkedforcheck +` class="radio" name="priorityIdMultimedia" aria-label="Checkbox for following text input" >
+                                        <span class="badge badge-primary">`+ msjPriority +`</span>`
+
+ 
+
+        var divRowForEachImg = $('<div>', {
+            "class": "row mb-3"
+        });
+
+        var divColForEeachImg = $('<div>',{
+            "class":"col-12"
+        })
+
+        var divColForEeachImgOptions = $('<div>',{
+            "class":"col-12"
+        })
+
+        $(divRowForEachImg).append(divColForEeachImg);
+        $(divRowForEachImg).append(divColForEeachImgOptions);
+
+        
+        $(divColForEeachImg).append(img);
+        $(divColForEeachImgOptions).append(btn);
+        $(divColForEeachImgOptions).append(checkpriority);
+        
+        $(formpriority).append(divRowForEachImg);
     });
     $('.modal-body').prepend(inputfile);
+
+    $('.modal-body').append(formpriority);
+
     guardarImg(idproduct);
 }
 
@@ -185,4 +241,45 @@ function guardarImg(idproduct){
             alert("Hubo un error: " + textStatus);
         });
     });
+}
+
+// function saveChanges(){
+ 
+// }
+
+function giveIdProductToSubmit(btnCallModal){
+    var idproduct = btnCallModal.getAttribute('data-idProduct');
+ 
+    $('#saveChanges').attr('data-idProduct',idproduct);
+}
+
+
+function giveEventAjaxToModal(){
+    $('#saveChanges').on('click',function() {
+
+        var idproduct = this.getAttribute('data-idProduct');
+        
+        var idMultimedia = $('input:radio[name=priorityIdMultimedia]:checked').val();
+        
+        var formData = new FormData();
+        formData.append('idProducto',idproduct);
+        formData.append('idMultimedia',idMultimedia);
+        /* Probe push */
+
+        var ruta = "/multimedia/priority"; /* Tengo qe hacer backend */
+
+        var request = $.ajax({
+            url: ruta,
+            method: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+        });
+        request.done(function (response) {
+            alert("Modificado con exito");
+        });
+        request.fail(function (jqXHR, textStatus) {
+            alert("Hubo un error: " + textStatus);
+        });
+    })
 }

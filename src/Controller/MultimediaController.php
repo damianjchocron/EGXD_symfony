@@ -13,6 +13,28 @@ use Symfony\Component\Routing\Annotation\Route;
 class MultimediaController extends AbstractController
 {
 
+    public function priority(Request $request)
+    {
+        $productrepositoryinstance = $this
+            ->getDoctrine()
+            ->getRepository(Product::class);
+
+
+        $multimediarepositoryinstace = $this
+            ->getDoctrine()
+            ->getRepository(Multimedia::class);
+
+        dump($request);
+
+        $idproduct = $request->request->get('idProducto');
+        $idmultimedia = $request->request->get('idMultimedia');
+
+        $multimediarepositoryinstace->updatePriority($idproduct,$idmultimedia);
+
+
+
+        return new JsonResponse(array('objImg' => 'OKK'));
+    }
     public function ajaxFind(Request $request)
     {
         $multimediaRepositoryInstance = $this->getDoctrine()->getRepository(Multimedia::class);

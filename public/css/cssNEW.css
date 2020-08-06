@@ -65,6 +65,7 @@ nav {
 .btn-filter {
     background-color: #B6B4B5 !important;
     border-color: #B6B4B5 !important;
+    color: white;
 }
 
 ul {
@@ -107,6 +108,14 @@ ul {
 
 .item-info{
     text-align: center !important;
+}
+
+.imagenesmodal {
+    height: 270px;
+}
+
+#inputForm{
+    height: 33px;
 }
 
 @media (max-width: 376px) {
